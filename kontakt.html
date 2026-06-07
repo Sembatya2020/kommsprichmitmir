@@ -157,7 +157,7 @@
               4. Copy her Calendly username/link (e.g. "pascale-kohli")
                  and replace it in the data-url below.
        ─────────────────────────────────────────────────────────── -->
-  <div class="kontakt-booking fade-up" id="kontaktBooking" data-calendly-handle="pascale-kohli">
+  <div class="kontakt-booking fade-up" id="kontaktBooking" data-calendly-handle="kommsprichmitmir">
     <div class="kontakt-booking-head">
       <span class="eyebrow" id="k-book-eb">Online-Buchung</span>
       <h2 id="k-book-h">Termin direkt buchen</h2>
@@ -180,7 +180,7 @@
   // To go live: set data-calendly-handle="<her-real-handle>" on #kontaktBooking.
   const booking = document.getElementById('kontaktBooking');
   const handle  = booking?.dataset.calendlyHandle;
-  if (handle && handle !== 'pascale-kohli') {
+  if (handle) {
     const url = `https://calendly.com/${handle}?hide_landing_page_details=1&hide_gdpr_banner=1`;
     const widget = document.createElement('div');
     widget.className = 'calendly-inline-widget';

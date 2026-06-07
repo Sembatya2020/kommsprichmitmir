@@ -106,7 +106,7 @@
       'cta.btn2': 'Preise ansehen',
 
       /* Footer */
-      'footer.brand':           'Prozessorientierte Psychosoziale Beratung, Supervision und Coaching – online oder in Bern.',
+      'footer.brand':           'Prozessorientierte Psychosoziale Beratung, Supervision und Coaching.',
       'footer.nav.header':      'Navigation',
       'footer.contact.header':  'Kontakt',
       'footer.note':            'Anfragen bitte nur per E-Mail.',
@@ -223,7 +223,7 @@
       'cta.btn2': 'View pricing',
 
       /* Footer */
-      'footer.brand':           'Process-oriented psychosocial counselling, supervision and coaching — online or in Bern.',
+      'footer.brand':           'Process-oriented psychosocial counselling, supervision and coaching.',
       'footer.nav.header':      'Navigation',
       'footer.contact.header':  'Contact',
       'footer.note':            'Enquiries by email only, please.',

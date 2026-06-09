@@ -267,17 +267,24 @@
     }, {});
   }
 
-  /* Load content.json from CMS and merge into t, then apply language */
+  /* Remap flat underscore keys (hero_h1) to dot-notation (hero.h1) */
+  function remapKeys(obj) {
+    return Object.keys(obj).reduce(function(acc, key) {
+      acc[key.replace(/_/g, '.')] = obj[key];
+      return acc;
+    }, {});
+  }
+
+  /* Load content-de.json and content-en.json from CMS and merge into t */
   function loadCMSContent(callback) {
-    fetch('content.json?v=' + Date.now())
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        ['de', 'en'].forEach(function(lang) {
-          if (data[lang]) Object.assign(t[lang], flattenContent(data[lang], ''));
-        });
-      })
-      .catch(function() { /* silently fall back to hardcoded defaults */ })
-      .finally(callback);
+    var ts = Date.now();
+    Promise.all([
+      fetch('content-de.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; }),
+      fetch('content-en.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; })
+    ]).then(function(results) {
+      if (results[0]) Object.assign(t.de, remapKeys(results[0]));
+      if (results[1]) Object.assign(t.en, remapKeys(results[1]));
+    }).catch(function() {}).finally(callback);
   }
 
   function applyLang(lang) {

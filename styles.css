@@ -637,7 +637,16 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
     margin-bottom: 1.8rem;
   }
   .hero-bg {
-    background-position: center 15%;
+    background-position: top center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 85, 80, 0.55) 0%,
+      rgba(10, 85, 80, 0.35) 50%,
+      rgba(10, 85, 80, 0.65) 100%
+    );
   }
 }
 

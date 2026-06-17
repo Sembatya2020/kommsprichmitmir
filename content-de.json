@@ -577,7 +577,8 @@
       "unit": "/ 90 Minuten",
       "desc": "SUPERVISION\nFür Fachpersonen in den Bereichen Beratung und Therapie, die ihre Arbeit reflektieren und weiterentwickeln möchten.",
       "link_text": "Mehr zu Supervision →",
-      "link": "supervision.html"
+      "link": "supervision.html",
+      "featured": false
     },
     {
       "eyebrow": "15 Minuten",
@@ -586,13 +587,15 @@
       "unit": "/ Sitzung",
       "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
       "link_text": "Termin anfragen →",
-      "link": "kontakt.html"
+      "link": "kontakt.html",
+      "featured": true
     },
     {
       "currency": "CHF",
       "eyebrow": "Beratung & Coaching",
       "price": "160",
-      "unit": "/ Sitzung"
+      "unit": "/ Sitzung",
+      "featured": false
     }
   ],
   "supervision_p1": "Wenn du selbst mit Menschen arbeitest, kennst du die Komplexität, die diese Arbeit mit sich bringt.",

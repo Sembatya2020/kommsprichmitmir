@@ -214,15 +214,17 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
 }
 
 /* ─── ANIMATIONS ─────────────────────────────────────────────── */
+/* Content is visible immediately (no scroll-gated "lazy" reveal). The small
+   transition only adds a gentle settle once JS marks elements .visible; it
+   never hides text while the page or fetch is loading. */
 .fade-up {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  opacity: 1;
+  transform: none;
 }
 
 .fade-up.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ─── COOKIE BANNER ──────────────────────────────────────────── */

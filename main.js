@@ -340,6 +340,14 @@
       var sv = fieldValue(item, el.getAttribute('data-src-field'), isString);
       if (sv) el.setAttribute('src', sv);
     }
+    if (el.hasAttribute('data-class-field')) {
+      // "fieldName:className" — adds className when the item's field is truthy.
+      el.getAttribute('data-class-field').split(',').forEach(function(pair) {
+        var p = pair.split(':');
+        var cls = p[1] && p[1].trim();
+        if (cls && fieldValue(item, p[0].trim(), isString)) el.classList.add(cls);
+      });
+    }
   }
 
   function clearDynamic(container) {
@@ -359,7 +367,7 @@
         node.classList.add('visible'); // dynamic items aren't watched by the reveal observer
         var isString = (item === null || typeof item !== 'object');
         applyFields(node, item, isString);
-        node.querySelectorAll('[data-field],[data-field-html],[data-href-field],[data-src-field]')
+        node.querySelectorAll('[data-field],[data-field-html],[data-href-field],[data-src-field],[data-class-field]')
           .forEach(function(el) { applyFields(el, item, isString); });
         container.insertBefore(node, tpl);
       });

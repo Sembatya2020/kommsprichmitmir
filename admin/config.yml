@@ -143,6 +143,7 @@ collections:
               - { name: desc,      label: "Beschreibung", widget: text, required: false, hint: "Fett: <strong>Text</strong> · Kursiv: <em>Text</em>" }
               - { name: link_text, label: "Link-Text", widget: string, required: false }
               - { name: link,      label: "Link-Ziel", widget: string, required: false }
+              - { name: featured,  label: "Hervorheben (dunkelgrüne Karte)", widget: boolean, required: false, default: false }
           - { name: preise_disc_h,     label: "Preise – Rabatt Titel", widget: string, required: false }
           - { name: preise_disc_intro, label: "Preise – Rabatt Einleitung", widget: text, required: false }
           - name: preise_discounts
@@ -336,6 +337,7 @@ collections:
               - { name: desc,      label: "Description", widget: text, required: false, hint: "Bold: <strong>text</strong> · Italic: <em>text</em>" }
               - { name: link_text, label: "Link text", widget: string, required: false }
               - { name: link,      label: "Link target", widget: string, required: false }
+              - { name: featured,  label: "Highlight (dark green card)", widget: boolean, required: false, default: false }
           - { name: preise_disc_h,     label: "Pricing – Discount heading", widget: string, required: false }
           - { name: preise_disc_intro, label: "Pricing – Discount intro", widget: text, required: false }
           - name: preise_discounts

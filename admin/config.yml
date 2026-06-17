@@ -59,7 +59,7 @@ collections:
             required: false
             fields:
               - { name: title,     label: "Titel", widget: string, required: false }
-              - { name: desc,      label: "Beschreibung", widget: text, required: false }
+              - { name: desc,      label: "Beschreibung", widget: text, required: false, hint: "Fett: <strong>Text</strong> · Kursiv: <em>Text</em>" }
               - { name: link_text, label: "Link-Text (z.B. Mehr erfahren →)", widget: string, required: false }
               - { name: link,      label: "Link-Ziel (z.B. beratung.html)", widget: string, required: false }
 
@@ -93,7 +93,7 @@ collections:
             widget: list
             required: false
             fields:
-              - { name: quote, label: "Text", widget: text, required: false }
+              - { name: quote, label: "Text", widget: text, required: false, hint: "Fett/Bold: <strong>…</strong>" }
               - { name: cite,  label: "Name / Quelle", widget: string, required: false }
 
           # ─── Startseite: CTA & Footer ───
@@ -132,7 +132,7 @@ collections:
               - { name: currency,  label: "Währung", widget: string, required: false, default: "CHF" }
               - { name: price,     label: "Betrag (nur Zahl)", widget: string, required: false }
               - { name: unit,      label: "Einheit (z.B. / Stunde)", widget: string, required: false }
-              - { name: desc,      label: "Beschreibung", widget: text, required: false }
+              - { name: desc,      label: "Beschreibung", widget: text, required: false, hint: "Fett: <strong>Text</strong> · Kursiv: <em>Text</em>" }
               - { name: link_text, label: "Link-Text", widget: string, required: false }
               - { name: link,      label: "Link-Ziel", widget: string, required: false }
           - { name: preise_disc_h,     label: "Preise – Rabatt Titel", widget: string, required: false }
@@ -244,7 +244,7 @@ collections:
             required: false
             fields:
               - { name: title,     label: "Title", widget: string, required: false }
-              - { name: desc,      label: "Description", widget: text, required: false }
+              - { name: desc,      label: "Description", widget: text, required: false, hint: "Bold: <strong>text</strong> · Italic: <em>text</em>" }
               - { name: link_text, label: "Link text (e.g. Learn more →)", widget: string, required: false }
               - { name: link,      label: "Link target (e.g. beratung.html)", widget: string, required: false }
 
@@ -278,7 +278,7 @@ collections:
             widget: list
             required: false
             fields:
-              - { name: quote, label: "Text", widget: text, required: false }
+              - { name: quote, label: "Text", widget: text, required: false, hint: "Fett/Bold: <strong>…</strong>" }
               - { name: cite,  label: "Name / source", widget: string, required: false }
 
           # ─── Home: CTA & Footer ───
@@ -317,7 +317,7 @@ collections:
               - { name: currency,  label: "Currency", widget: string, required: false, default: "CHF" }
               - { name: price,     label: "Amount (number only)", widget: string, required: false }
               - { name: unit,      label: "Unit (e.g. / hour)", widget: string, required: false }
-              - { name: desc,      label: "Description", widget: text, required: false }
+              - { name: desc,      label: "Description", widget: text, required: false, hint: "Bold: <strong>text</strong> · Italic: <em>text</em>" }
               - { name: link_text, label: "Link text", widget: string, required: false }
               - { name: link,      label: "Link target", widget: string, required: false }
           - { name: preise_disc_h,     label: "Pricing – Discount heading", widget: string, required: false }

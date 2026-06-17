@@ -199,7 +199,6 @@
   "gallery_h2": "Every path has its own rhythm",
   "gallery_p": "Nature is a daily mirror of life for me — full of wisdom, beauty and change.",
   "gallery": [
-
     {
       "image": "images/WhatsApp Image 2026-05-07 at 23.13.27 (1).jpeg",
       "caption": "Alpine peaks · Switzerland"
@@ -611,5 +610,10 @@
       "type": "text",
       "text": "All texts and images on this website may not be used without the consent of the author and site owner. Not even in excerpts or in modified form. All external links published by me were reviewed at the time of publication and found to be appropriate; however, visiting them is done at your own risk."
     }
-  ]
+  ],
+  "footer_link_agb": "T & C",
+  "footer_link_nutzung": "Usage & Imprint",
+  "footer_link_datenschutz": "Privacy Policy",
+  "footer_link_privacy": "Privacy",
+  "footer_link_imprint": "Imprint"
 }

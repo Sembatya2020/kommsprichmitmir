@@ -107,6 +107,11 @@ collections:
           - { name: footer_brand,     label: "Footer – Kurzbeschreibung", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
           - { name: footer_note,      label: "Footer – Hinweis", widget: string, required: false }
+          - { name: footer_link_agb,         label: "Footer-Link – AGB", widget: string, required: false }
+          - { name: footer_link_nutzung,     label: "Footer-Link – Nutzung & Impressum", widget: string, required: false }
+          - { name: footer_link_datenschutz, label: "Footer-Link – Datenschutz (lang)", widget: string, required: false }
+          - { name: footer_link_privacy,     label: "Footer-Link – Datenschutz (kurz)", widget: string, required: false }
+          - { name: footer_link_imprint,     label: "Footer-Link – Impressum", widget: string, required: false }
 
           # ─── Beratung ───
           - { name: beratung_page_title, label: "Beratung – Seitentitel", widget: string, required: false }
@@ -295,6 +300,11 @@ collections:
           - { name: footer_brand,     label: "Footer – Description", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
           - { name: footer_note,      label: "Footer – Note", widget: string, required: false }
+          - { name: footer_link_agb,         label: "Footer link – T & C", widget: string, required: false }
+          - { name: footer_link_nutzung,     label: "Footer link – Usage & Imprint", widget: string, required: false }
+          - { name: footer_link_datenschutz, label: "Footer link – Privacy Policy (long)", widget: string, required: false }
+          - { name: footer_link_privacy,     label: "Footer link – Privacy (short)", widget: string, required: false }
+          - { name: footer_link_imprint,     label: "Footer link – Imprint", widget: string, required: false }
 
           # ─── Counselling ───
           - { name: beratung_page_title, label: "Counselling – Page title", widget: string, required: false }

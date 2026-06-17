@@ -703,13 +703,18 @@
     document.body.appendChild(floatingBtn);
   }
 
-  function startWithCMS() {
-    loadCMSContent(init);
+  function start() {
+    // Render immediately with the built-in defaults + the static fallback
+    // markup, so text appears instantly (no waiting on the content fetch).
+    init();
+    // Then load the CMS content in the background and re-render once it
+    // arrives — same text in almost all cases, so the swap is invisible.
+    loadCMSContent(function () { applyLang(currentLang); });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', startWithCMS);
+    document.addEventListener('DOMContentLoaded', start);
   } else {
-    startWithCMS();
+    start();
   }
 })();

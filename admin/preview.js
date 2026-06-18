@@ -68,7 +68,7 @@
 
     return h('div', { className: 'cms-preview-page' }, [
       h('header', { className: 'cms-preview-header', key: 'header' }, [
-        h('div', { className: 'cms-preview-brand', key: 'brand' }, 'Komm, sprich mit mir'),
+        h('div', { className: 'cms-preview-brand', key: 'brand' }, data.footer_logo || 'Komm · sprich · mit mir'),
         h('div', { className: 'cms-preview-lang', key: 'lang' }, lang)
       ]),
 
@@ -100,6 +100,17 @@
         h('h2', { className: 'cms-preview-section-title', key: 'pricing-title' }, data.preise_h1 || data.preise_page_title || ''),
         htmlTag('p', 'cms-preview-section-intro', data.preise_intro),
         h('div', { className: 'cms-preview-grid cms-preview-grid--pricing', key: 'pricing-grid' }, prices)
+      ]),
+
+      h('section', { className: 'cms-preview-section', key: 'gallery' }, [
+        h('div', { className: 'cms-preview-eyebrow', key: 'gallery-eyebrow' }, data.gallery_eyebrow || ''),
+        h('h2', { className: 'cms-preview-section-title', key: 'gallery-title' }, data.gallery_h2 || ''),
+        htmlTag('p', 'cms-preview-section-intro', data.gallery_p)
+      ]),
+
+      h('footer', { className: 'cms-preview-footer', key: 'footer' }, [
+        h('div', { className: 'cms-preview-footer-logo', key: 'footer-logo' }, data.footer_logo || 'Komm · sprich · mit mir'),
+        htmlTag('p', 'cms-preview-footer-brand', data.footer_brand)
       ])
     ]);
   }

@@ -104,6 +104,7 @@ collections:
           - { name: cta_p,    label: "Start · CTA – Text", widget: text, required: false }
           - { name: cta_btn1, label: "Start · CTA – Button 1", widget: string, required: false }
           - { name: cta_btn2, label: "Start · CTA – Button 2", widget: string, required: false }
+          - { name: footer_logo,      label: "Footer – Markenzeile (z.B. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Kurzbeschreibung", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
           - { name: footer_note,      label: "Footer – Hinweis", widget: string, required: false }
@@ -124,6 +125,8 @@ collections:
           - { name: supervision_h1,         label: "Supervision – Hauptüberschrift", widget: string, required: false }
           - { name: supervision_subtitle,   label: "Supervision – Untertitel", widget: string, required: false }
           - { name: supervision_blocks, label: "Supervision – Inhalt", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
+          - { name: supervision_cta,       label: "Supervision – Button Text", widget: string, required: false }
+          - { name: supervision_cta_link,  label: "Supervision – Button Link (z.B. kontakt.html#kontaktBooking)", widget: string, required: false }
 
           # ─── Preise ───
           - { name: preise_page_title, label: "Preise – Seitentitel", widget: string, required: false }
@@ -298,6 +301,7 @@ collections:
           - { name: cta_p,    label: "Home · CTA – Text", widget: text, required: false }
           - { name: cta_btn1, label: "Home · CTA – Button 1", widget: string, required: false }
           - { name: cta_btn2, label: "Home · CTA – Button 2", widget: string, required: false }
+          - { name: footer_logo,      label: "Footer – Brand line (e.g. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Description", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
           - { name: footer_note,      label: "Footer – Note", widget: string, required: false }
@@ -318,6 +322,8 @@ collections:
           - { name: supervision_h1,         label: "Supervision – Main heading", widget: string, required: false }
           - { name: supervision_subtitle,   label: "Supervision – Subtitle", widget: string, required: false }
           - { name: supervision_blocks, label: "Supervision – Content", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
+          - { name: supervision_cta,       label: "Supervision – Button text", widget: string, required: false }
+          - { name: supervision_cta_link,  label: "Supervision – Button link (e.g. kontakt.html#kontaktBooking)", widget: string, required: false }
 
           # ─── Pricing ───
           - { name: preise_page_title, label: "Pricing – Page title", widget: string, required: false }

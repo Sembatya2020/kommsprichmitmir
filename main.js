@@ -107,6 +107,7 @@
 
       /* Footer */
       'footer.brand':           'Prozessorientierte Psychosoziale Beratung, Supervision und Coaching.',
+      'footer.logo':            'Komm · sprich · mit mir',
       'footer.nav.header':      'Navigation',
       'footer.contact.header':  'Kontakt',
       'footer.note':            'Anfragen bitte nur per E-Mail.',
@@ -129,6 +130,7 @@
 
       /* Form */
       'contact.submit': 'Nachricht senden',
+      'supervision_cta_link': 'kontakt.html#kontaktBooking',
     },
 
     en: {
@@ -224,6 +226,7 @@
 
       /* Footer */
       'footer.brand':           'Process-oriented psychosocial counselling, supervision and coaching.',
+      'footer.logo':            'Komm · sprich · mit mir',
       'footer.nav.header':      'Navigation',
       'footer.contact.header':  'Contact',
       'footer.note':            'Enquiries by email only, please.',
@@ -246,6 +249,7 @@
 
       /* Form */
       'contact.submit': 'Send message',
+      'supervision_cta_link': 'kontakt.html#kontaktBooking',
     }
   };
 
@@ -457,6 +461,10 @@
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const v = dict[el.dataset.i18nPlaceholder];
       if (v !== undefined) el.placeholder = v;
+    });
+    document.querySelectorAll('[data-i18n-href]').forEach(el => {
+      const v = dict[el.dataset.i18nHref || el.dataset.i18n_href];
+      if (v !== undefined) el.setAttribute('href', v);
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);

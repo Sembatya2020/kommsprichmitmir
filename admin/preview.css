@@ -29,7 +29,8 @@ body {
 
 .cms-preview-header,
 .cms-preview-hero,
-.cms-preview-section {
+.cms-preview-section,
+.cms-preview-footer {
   max-width: 1040px;
   margin: 0 auto 28px;
 }
@@ -45,6 +46,7 @@ body {
 .cms-preview-brand,
 .cms-preview-lang,
 .cms-preview-eyebrow,
+.cms-preview-footer-logo,
 .cms-preview-price-eyebrow,
 .cms-preview-card-link,
 .cms-preview-price-link,
@@ -54,13 +56,15 @@ body {
 }
 
 .cms-preview-brand,
-.cms-preview-lang {
+.cms-preview-lang,
+.cms-preview-footer-logo {
   font-size: 12px;
   color: var(--preview-text);
 }
 
 .cms-preview-hero,
-.cms-preview-section {
+.cms-preview-section,
+.cms-preview-footer {
   background: rgba(255, 253, 248, 0.84);
   border: 1px solid rgba(230, 220, 200, 0.8);
   border-radius: 24px;
@@ -226,6 +230,12 @@ body {
 .cms-preview-price-number {
   font-size: 56px;
   line-height: 1;
+}
+
+.cms-preview-footer-brand {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 @media (max-width: 760px) {

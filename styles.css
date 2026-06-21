@@ -579,6 +579,9 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* Reserve room at the bottom so the centered content never collides
+     with the absolutely-positioned "Discover" scroll cue. */
+  padding-bottom: clamp(5rem, 9vh, 7.5rem);
 }
 
 .hero-bg {
@@ -721,6 +724,12 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
   width: 1px;
   height: 38px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+}
+
+/* Too little vertical room for both the content and the scroll cue —
+   drop the cue so it can't overlap the buttons. */
+@media (max-height: 720px) {
+  .hero-scroll { display: none; }
 }
 
 @keyframes bobble {

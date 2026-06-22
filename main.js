@@ -132,6 +132,7 @@
       /* Form */
       'contact.submit': 'Nachricht senden',
       'supervision_cta_link': 'https://calendly.com/kommsprichmitmir/supervision-90-min',
+      'beratung_cta_link': 'https://calendly.com/kommsprichmitmir/coaching90min',
       'kontakt_book_fallback': 'Zur Buchungsseite',
     },
 
@@ -253,6 +254,7 @@
       /* Form */
       'contact.submit': 'Send message',
       'supervision_cta_link': 'https://calendly.com/kommsprichmitmir/supervision-90-min',
+      'beratung_cta_link': 'https://calendly.com/kommsprichmitmir/coaching90min',
       'kontakt_book_fallback': 'Go to booking page',
     }
   };

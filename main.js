@@ -56,7 +56,7 @@
       'services.card3.h3': 'Erstgespräch',
       'services.card3.p':  'Du bist unsicher, ob mein Angebot zu dir passt? Melde dich gerne unverbindlich – ich freue mich, von dir zu hören.',
       'services.more':     'Mehr erfahren →',
-      'services.contact':  'Kontakt aufnehmen →',
+      'services.contact':  'Erstgespräch buchen →',
 
       /* Philosophy */
       'phil.quote': '„Ewig forschend, weit reisend, immer wieder Neues entdeckend…"',
@@ -131,7 +131,7 @@
 
       /* Form */
       'contact.submit': 'Nachricht senden',
-      'supervision_cta_link': 'kontakt.html#kontaktBooking',
+      'supervision_cta_link': 'https://calendly.com/kommsprichmitmir/supervision-90-min',
       'kontakt_book_fallback': 'Zur Buchungsseite',
     },
 
@@ -177,7 +177,7 @@
       'services.card3.h3': 'First conversation',
       'services.card3.p':  'Unsure whether my offering suits you? Get in touch without obligation — I look forward to hearing from you.',
       'services.more':     'Learn more →',
-      'services.contact':  'Get in touch →',
+      'services.contact':  'Book initial consultation →',
 
       /* Philosophy */
       'phil.quote': '"Forever curious, widely travelled, always discovering something new…"',
@@ -252,7 +252,7 @@
 
       /* Form */
       'contact.submit': 'Send message',
-      'supervision_cta_link': 'kontakt.html#kontaktBooking',
+      'supervision_cta_link': 'https://calendly.com/kommsprichmitmir/supervision-90-min',
       'kontakt_book_fallback': 'Go to booking page',
     }
   };

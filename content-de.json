@@ -67,8 +67,8 @@
     {
       "title": "Erstgespräch",
       "desc": "Du bist unsicher, ob mein Angebot zu Dir passt? Melde dich gerne unverbindlich – ich freue mich, von Dir zu hören.",
-      "link_text": "Kontakt aufnehmen →",
-      "link": "kontakt.html"
+      "link_text": "Erstgespräch buchen →",
+      "link": "kontakt.html#kontaktBooking"
     }
   ],
   "supervision_p6": "Ich arbeite strukturiert und gleichzeitig offen für das, was sich zeigt.",
@@ -143,7 +143,7 @@
     {
       "type": "button",
       "text": "Supervisionsanfrage stellen",
-      "link": "kontakt.html"
+      "link": "https://calendly.com/kommsprichmitmir/supervision-90-min"
     }
   ],
   "footer_link_datenschutz": "Datenschutzrichtlinie",
@@ -466,6 +466,7 @@
   "beratung_p1": "Vielleicht befindest du dich an einem Punkt, an dem vieles unklar ist, trägst Fragen in dir, fühlst dich bewegt, angespannt oder suchend. Möglicherweise bist du traurig oder auch wütend. Und du wünschst dir dabei Begleitung.",
   "preise_d1": "Für Fachpersonen, die ihre Arbeit reflektieren und weiterentwickeln möchten.",
   "supervision_cta": "Supervisionsanfrage stellen",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min",
   "supervision_p11": "Ich begegne dir auf Augenhöhe, mit Respekt für deine Arbeit und mit dem Interesse, dich in deiner fachlichen und persönlichen Entwicklung zu unterstützen.",
   "kontakt_book_eb": "Online-Buchung",
   "about_p2": "Diese unterschiedlichen Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.",
@@ -551,7 +552,7 @@
     },
     {
       "type": "button",
-      "text": "Unverbindlich anfragen",
+      "text": "Beratung buchen",
       "link": "kontakt.html"
     }
   ],
@@ -607,13 +608,13 @@
       "unit": "kostenlose Sitzung",
       "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
       "link_text": "Termin anfragen →",
-      "link": "kontakt.html"
+      "link": "kontakt.html#kontaktBooking"
     }
   ],
   "gallery_eyebrow": "Inspiration",
   "supervision_p1": "Wenn du selbst mit Menschen arbeitest, kennst du die Komplexität, die diese Arbeit mit sich bringt.",
   "about_insp_h": "Inspirationen",
-  "beratung_cta": "Unverbindlich anfragen",
+  "beratung_cta": "Beratung buchen",
   "supervision_p2": "Möchtest du deine Fälle reflektieren, mehr Klarheit gewinnen oder dich in deiner Rolle als Fachperson weiterentwickeln? Oder gibt es Situationen, die dich herausfordern, berühren oder auch verunsichern?",
   "about_cta": "Kontakt aufnehmen",
   "welcome_p1": "Du befindest dich in einer Phase der Unklarheit, bist vielleicht unsicher, wie es bei dir weitergehen könnte? Belastet dich eine Krise, fühlst du Ängste oder Trauer oder möchtest dich weiterentwickeln und neue Wege entdecken?",

@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "PowerShell(foreach \\($f in \"content-de.json\",\"content-en.json\",\"content.json\"\\) { Write-Output \"=== $f ===\"; try { Get-Content $f -Raw -Encoding UTF8 | ConvertFrom-Json | Out-Null; Write-Output \"VALID JSON\" } catch { Write-Output \\(\"INVALID: \" + $_.Exception.Message\\) } })",
+      "Bash(grep -nP '[^\\\\\\\\\\\\\\\\]\"[^,:{}\\\\[\\\\]\\\\s]|[a-zäöüA-ZÄÖÜ.…]\"[^,]' content-de.json)",
+      "Bash(git config *)",
+      "Bash(git checkout *)",
+      "Bash(perl -0pi -e 's{<div class=\"gallery-item\">\\\\s*\\\\n\\(\\\\s*<img src=\"images/WhatsApp\\)}{<div class=\"gallery-item\" data-default>\\\\n$1}g' index.html)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('content-de.json','utf8'\\)\\); JSON.parse\\(require\\('fs'\\).readFileSync\\('content-en.json','utf8'\\)\\); console.log\\('JSON OK'\\)\")",
+      "Bash(node -e \"new Function\\(require\\('fs'\\).readFileSync\\('main.js','utf8'\\)\\); console.log\\('main.js parses'\\)\")",
+      "Bash(npx vite *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5179/index.html)",
+      "Bash(ls .claude)",
+      "Bash(cat .pascale/launch.json)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install *)",
+      "Bash(node -e ' *)",
+      "Bash(npm uninstall *)",
+      "Bash(rm -f migrate-content.cjs)",
+      "Bash(git show *)",
+      "Bash(rm -f _base-de.json _main-de.json)",
+      "Bash(git merge *)",
+      "Bash(node _fix-legal-nav.cjs)",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const c=JSON.parse\\(s\\);console.log\\('welcome_blocks:',Array.isArray\\(c.welcome_blocks\\),'| services_cards:',Array.isArray\\(c.services_cards\\),'| preise_cards:',Array.isArray\\(c.preise_cards\\),'| keys:',Object.keys\\(c\\).length\\);console.log\\('her preise_eb2 scalar:',JSON.stringify\\(c.preise_eb2\\)\\);console.log\\('her services_card1_p scalar:',JSON.stringify\\(c.services_card1_p\\).slice\\(0,60\\)\\);}\\)\")",
+      "Bash(node -e \"new Function\\(require\\('fs'\\).readFileSync\\('main.js','utf8'\\)\\);console.log\\('main.js OK'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('content-de.json','utf8'\\)\\);JSON.parse\\(require\\('fs'\\).readFileSync\\('content-en.json','utf8'\\)\\);console.log\\('both JSON valid'\\)\")",
+      "WebFetch(domain:kommsprichmitmir.netlify.app)",
+      "Bash(echo \"=== exit: $? ===\")",
+      "Bash(git fetch *)",
+      "Bash(git diff *)"
+    ]
+  }
+}

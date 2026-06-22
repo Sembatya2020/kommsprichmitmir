@@ -59,7 +59,7 @@
   "beratung_p9": "<em>If this speaks to you, you are very welcome to reach out.</em>",
   "beratung_info": "<strong>Process-oriented Psychosocial Counsellor SGFB</strong>",
   "beratung_info2": "Member of the Swiss Society for Counselling (SGfB).",
-  "beratung_cta": "Get in touch",
+  "beratung_cta": "Book counselling",
   "supervision_page_title": "Supervision",
   "supervision_h1": "Supervision",
   "supervision_subtitle": "BSO-certified Supervisor · Bern",
@@ -79,8 +79,8 @@
   "supervision_p11": "I meet you at eye level, with respect for your work and with genuine interest in supporting you in your professional and personal development.",
   "supervision_bso": "<strong>BSO-certified Supervisor</strong>",
   "supervision_bso2": "As a member of the professional association for supervision, coaching and organisational consulting (BSO), I work to recognised quality standards.",
-  "supervision_cta": "Request supervision",
-  "supervision_cta_link": "kontakt.html#kontaktBooking",
+  "supervision_cta": "Book supervision",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min",
   "preise_page_title": "Pricing",
   "preise_h1": "Pricing",
   "preise_subtitle": "So you can find your bearings",
@@ -185,8 +185,8 @@
     {
       "title": "First conversation",
       "desc": "Unsure whether my offering suits you? Get in touch without obligation — I look forward to hearing from you.",
-      "link_text": "Get in touch →",
-      "link": "kontakt.html"
+      "link_text": "Book initial consultation →",
+      "link": "kontakt.html#kontaktBooking"
     }
   ],
   "testimonials": [
@@ -299,7 +299,7 @@
     },
     {
       "type": "button",
-      "text": "Get in touch",
+      "text": "Book counselling",
       "link": "kontakt.html"
     }
   ],
@@ -472,7 +472,7 @@
       "unit": "",
       "desc": "Sessions via Zoom – location-independent, from home or on the go.",
       "link_text": "Request appointment →",
-      "link": "kontakt.html"
+      "link": "kontakt.html#kontaktBooking"
     }
   ],
   "preise_discounts": [

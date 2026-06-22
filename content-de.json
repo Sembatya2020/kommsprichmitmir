@@ -602,8 +602,8 @@
     },
     {
       "eyebrow": "15 Minuten",
-      "currency": "CHF",
-      "price": "0",
+      "currency": "",
+      "price": "kostenlos",
       "unit": "",
       "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
       "link_text": "Termin anfragen →",

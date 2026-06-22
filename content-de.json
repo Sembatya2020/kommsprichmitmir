@@ -603,8 +603,8 @@
     {
       "eyebrow": "15 Minuten",
       "currency": "",
-      "price": "kostenlos",
-      "unit": "",
+      "price": "0",
+      "unit": "kostenlose Sitzung",
       "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
       "link_text": "Termin anfragen →",
       "link": "kontakt.html"

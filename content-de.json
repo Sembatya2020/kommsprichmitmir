@@ -553,7 +553,7 @@
     {
       "type": "button",
       "text": "Beratung buchen",
-      "link": "kontakt.html"
+      "link": "https://calendly.com/kommsprichmitmir/coaching90min"
     }
   ],
   "kontakt_book_fallback": "Zur Buchungsseite",

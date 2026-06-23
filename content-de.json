@@ -244,7 +244,7 @@
     }
   ],
   "cta_btn2": "Preise ansehen",
-  "supervision_cta_link": "kontakt.html#kontaktBooking",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min",
   "preise_intro": "Damit du dich orientieren kannst, hier meine Preise.",
   "about_insp_p": "Wichtige Impulse für meine Arbeit erhielt ich unter anderem durch das Wirken von Arnold Mindell, Charlotte Perry, Daan van Kampenhout, Richard Schwartz, Bessel van der Kolk, Deb Dana. Ausserdem von allen Dozierenden des Instituts für Prozessarbeit, insbesondere Martin Boss.",
   "kontakt_tel_h": "Telefon",
@@ -324,7 +324,7 @@
   "preise_pay_h": "Bezahlung",
   "about_quote": "„Nicht alles muss vollständig heilen. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist.“",
   "services_h2": "Zwei Wege, miteinander zu arbeiten",
-  "hero_p": "Psychosoziale Beratung und Coaching. Ein prozessorientierter Raum für dich, damit das was dich beschäftigt, sichtbar und verstehbar werden darf.",
+  "hero_p": "Ein prozessorientierter Raum für dich, damit das was dich beschäftigt, sichtbar und verstehbar werden darf.",
   "about_intro_blocks": [
     {
       "type": "text",
@@ -466,7 +466,6 @@
   "beratung_p1": "Vielleicht befindest du dich an einem Punkt, an dem vieles unklar ist, trägst Fragen in dir, fühlst dich bewegt, angespannt oder suchend. Möglicherweise bist du traurig oder auch wütend. Und du wünschst dir dabei Begleitung.",
   "preise_d1": "Für Fachpersonen, die ihre Arbeit reflektieren und weiterentwickeln möchten.",
   "supervision_cta": "Supervisionsanfrage stellen",
-  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min",
   "supervision_p11": "Ich begegne dir auf Augenhöhe, mit Respekt für deine Arbeit und mit dem Interesse, dich in deiner fachlichen und persönlichen Entwicklung zu unterstützen.",
   "kontakt_book_eb": "Online-Buchung",
   "about_p2": "Diese unterschiedlichen Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.",
@@ -581,6 +580,7 @@
   "nutzung_resp_name": "Pascale Myriam Kohli,  Bern",
   "beratung_p9": "<em>Wenn dich das anspricht, komm sehr gerne auf mich zu.</em>",
   "preise_uns_h": "Unsicher, ob es passt?",
+  "beratung_cta_link": "https://calendly.com/kommsprichmitmir/coaching90min",
   "preise_cards": [
     {
       "eyebrow": "Supervision 90 Min.",
@@ -615,7 +615,6 @@
   "supervision_p1": "Wenn du selbst mit Menschen arbeitest, kennst du die Komplexität, die diese Arbeit mit sich bringt.",
   "about_insp_h": "Inspirationen",
   "beratung_cta": "Beratung buchen",
-  "beratung_cta_link": "https://calendly.com/kommsprichmitmir/coaching90min",
   "supervision_p2": "Möchtest du deine Fälle reflektieren, mehr Klarheit gewinnen oder dich in deiner Rolle als Fachperson weiterentwickeln? Oder gibt es Situationen, die dich herausfordern, berühren oder auch verunsichern?",
   "about_cta": "Kontakt aufnehmen",
   "welcome_p1": "Du befindest dich in einer Phase der Unklarheit, bist vielleicht unsicher, wie es bei dir weitergehen könnte? Belastet dich eine Krise, fühlst du Ängste oder Trauer oder möchtest dich weiterentwickeln und neue Wege entdecken?",

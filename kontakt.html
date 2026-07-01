@@ -179,10 +179,11 @@
     </div>
     <div class="kontakt-booking-placeholder" id="k-book-placeholder">
       <p id="k-book-soon" data-i18n="kontakt_book_soon">Das Buchungssystem wird bald aktiviert.</p>
+      <a id="k-book-cta" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="kontakt_book_fallback" hidden>Zur Buchungsseite</a>
     </div>
     <noscript>
       <p style="text-align:center;margin-top:1rem">
-        <a id="k-book-fallback" href="#" target="_blank" rel="noopener" class="btn-primary" data-i18n="kontakt_book_fallback">Zur Buchungsseite</a>
+        <a href="https://calendly.com/kommsprichmitmir/15minfuerdich" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="kontakt_book_fallback">Zur Buchungsseite</a>
       </p>
     </noscript>
   </div>
@@ -190,24 +191,15 @@
 </section>
 
 <script type="module">
-  // Activate the Calendly widget only once the real handle is in place.
-  // To go live: set data-calendly-handle="<her-real-handle>" on #kontaktBooking.
+  // Booking opens Calendly in a NEW TAB (not embedded inside the page).
+  // To change the target: set data-calendly-handle="<her-real-handle>" on #kontaktBooking.
   const booking = document.getElementById('kontaktBooking');
   const handle  = booking?.dataset.calendlyHandle;
   if (handle) {
-    const url = `https://calendly.com/${handle}?hide_landing_page_details=1&hide_gdpr_banner=1`;
-    const widget = document.createElement('div');
-    widget.className = 'calendly-inline-widget';
-    widget.dataset.url = url;
-    widget.style.minWidth = '320px';
-    widget.style.height = '720px';
-    document.getElementById('k-book-placeholder').replaceWith(widget);
-    const fb = document.getElementById('k-book-fallback');
-    if (fb) fb.href = `https://calendly.com/${handle}`;
-    const s = document.createElement('script');
-    s.src = 'https://assets.calendly.com/assets/external/widget.js';
-    s.async = true;
-    document.body.appendChild(s);
+    const cta  = document.getElementById('k-book-cta');
+    const soon = document.getElementById('k-book-soon');
+    if (cta)  { cta.href = `https://calendly.com/${handle}`; cta.hidden = false; }
+    if (soon) soon.hidden = true;
   }
 </script>
 

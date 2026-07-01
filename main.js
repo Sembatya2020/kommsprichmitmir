@@ -472,6 +472,11 @@
       const v = dict[el.dataset.i18nHref || el.dataset.i18n_href];
       if (v !== undefined) el.setAttribute('href', v);
     });
+    // Calendly booking links always open in a new tab, never inside the page.
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(a => {
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    });
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
       btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');

@@ -425,8 +425,8 @@
   "kontakt_methods": [
     {
       "title": "Telefon",
-      "value": "+41 79 855 58 27",
-      "value_href": "tel:+41798555827"
+      "value": "+27 79 589 2831",
+      "value_href": "tel:+27795892831"
     },
     {
       "title": "E-Mail",
@@ -442,7 +442,7 @@
     {
       "title": "WhatsApp",
       "value": "Nachricht senden →",
-      "value_href": "https://wa.me/41798555827"
+      "value_href": "https://wa.me/27795892831"
     }
   ],
   "supervision_p10": "Manchmal entsteht gerade im gemeinsamen Innehalten und Reflektieren eine neue Klarheit.",

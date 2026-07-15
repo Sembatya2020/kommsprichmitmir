@@ -724,7 +724,7 @@
 
     /* Inject Floating Contact Button globally */
     const floatingBtn = document.createElement('a');
-    floatingBtn.href = "https://wa.me/41798555827";
+    floatingBtn.href = "https://wa.me/27795892831";
     floatingBtn.className = "floating-contact";
     floatingBtn.target = "_blank";
     floatingBtn.rel = "noopener";
@@ -744,6 +744,166 @@
     // arrives — same text in almost all cases, so the swap is invisible.
     loadCMSContent(function () { applyLang(currentLang); });
   }
+
+  /* ─── VANILLA SPA ROUTER ─────────────────────────────────────── */
+  const routerCache = new Map();
+
+  function prefetchPage(url) {
+    if (!routerCache.has(url)) {
+      fetch(url)
+        .then(r => r.text())
+        .then(html => { routerCache.set(url, html); })
+        .catch(e => { /* silent */ });
+    }
+  }
+
+  function swapContent(newDoc, url, push) {
+    const getPageContent = (doc) => {
+      const els = Array.from(doc.body.children);
+      return els.filter(el => {
+        const id = el.id || '';
+        const tag = el.tagName.toLowerCase();
+        const cls = el.className || '';
+        if (tag === 'nav' || tag === 'footer' || tag === 'script' || id === 'scrollProgress' || id === 'cookieBanner' || cls.includes('floating-contact')) {
+          return false;
+        }
+        return true;
+      });
+    };
+
+    const currentContent = getPageContent(document);
+    const newContent = getPageContent(newDoc);
+
+    const doSwap = () => {
+      currentContent.forEach(el => el.remove());
+      
+      const footer = document.querySelector('footer');
+      newContent.forEach(el => {
+        if (footer) {
+          document.body.insertBefore(el, footer);
+        } else {
+          document.body.appendChild(el);
+        }
+      });
+
+      document.title = newDoc.title;
+      
+      if (push) {
+        history.pushState({ url }, newDoc.title, url);
+      }
+      
+      window.scrollTo(0, 0);
+      
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.href === location.href || (location.pathname === '/' && link.getAttribute('href') === 'index.html')) {
+          link.classList.add('active');
+        }
+      });
+
+      if (typeof applyLang === 'function') {
+        applyLang(currentLang);
+      }
+      
+      const fadeEls = document.querySelectorAll('.fade-up:not(.visible)');
+      if (fadeEls.length && 'IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(el => obs.observe(el));
+      } else {
+        fadeEls.forEach(el => el.classList.add('visible'));
+      }
+
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu) {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      }
+    };
+
+    if (document.startViewTransition) {
+      document.startViewTransition(doSwap);
+    } else {
+      doSwap();
+    }
+  }
+
+  function handleNavigation(url, push = true) {
+    if (routerCache.has(url)) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(routerCache.get(url), 'text/html');
+      swapContent(doc, url, push);
+    } else {
+
+      fetch(url)
+        .then(r => r.text())
+        .then(html => {
+          routerCache.set(url, html);
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          swapContent(doc, url, push);
+        })
+        .catch(() => {
+          window.location.href = url;
+        });
+    }
+  }
+
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    
+    const url = link.href;
+    if (!url) return;
+    try {
+      const urlObj = new URL(url);
+      if (urlObj.origin === location.origin && 
+          !link.hash && 
+          link.target !== '_blank' &&
+          !link.hasAttribute('download')) {
+        
+        const path = urlObj.pathname;
+        if (path.endsWith('.html') || path === '/' || path === '') {
+          e.preventDefault();
+          if (urlObj.href !== location.href) {
+            handleNavigation(urlObj.href);
+          }
+        }
+      }
+    } catch(e) {}
+  });
+
+  document.addEventListener('mouseover', e => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    
+    const url = link.href;
+    if (!url) return;
+    try {
+      const urlObj = new URL(url);
+      if (urlObj.origin === location.origin && 
+          !link.hash && 
+          link.target !== '_blank' &&
+          (urlObj.pathname.endsWith('.html') || urlObj.pathname === '/' || urlObj.pathname === '')) {
+        prefetchPage(urlObj.href);
+      }
+    } catch(e) {}
+  });
+
+  window.addEventListener('popstate', (e) => {
+    handleNavigation(location.href, false);
+  });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start);

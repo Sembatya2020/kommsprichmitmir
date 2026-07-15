@@ -489,8 +489,8 @@
   "kontakt_methods": [
     {
       "title": "Phone",
-      "value": "+41 79 855 58 27",
-      "value_href": "tel:+41798555827"
+      "value": "+27 79 589 2831",
+      "value_href": "tel:+27795892831"
     },
     {
       "title": "Email",
@@ -506,7 +506,7 @@
     {
       "title": "WhatsApp",
       "value": "Send message →",
-      "value_href": "https://wa.me/41798555827"
+      "value_href": "https://wa.me/27795892831"
     }
   ],
   "agb_page_title": "T & C",

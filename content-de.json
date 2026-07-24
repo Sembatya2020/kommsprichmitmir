@@ -424,11 +424,6 @@
   "testi_h2": "Was Klient:innen sagen",
   "kontakt_methods": [
     {
-      "title": "Telefon",
-      "value": "+27 79 589 2831",
-      "value_href": "tel:+27795892831"
-    },
-    {
       "title": "E-Mail",
       "value": "pascale.kohli@hin.ch",
       "value_href": "mailto:pascale.kohli@hin.ch"
@@ -442,7 +437,7 @@
     {
       "title": "WhatsApp",
       "value": "Nachricht senden →",
-      "value_href": "https://wa.me/27795892831"
+      "value_href": "https://wa.me/41795551222"
     }
   ],
   "supervision_p10": "Manchmal entsteht gerade im gemeinsamen Innehalten und Reflektieren eine neue Klarheit.",

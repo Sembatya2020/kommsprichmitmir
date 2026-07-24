@@ -724,7 +724,7 @@
 
     /* Inject Floating Contact Button globally */
     const floatingBtn = document.createElement('a');
-    floatingBtn.href = "https://wa.me/27795892831";
+    floatingBtn.href = "https://wa.me/41795551222";
     floatingBtn.className = "floating-contact";
     floatingBtn.target = "_blank";
     floatingBtn.rel = "noopener";

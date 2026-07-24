@@ -488,11 +488,6 @@
   ],
   "kontakt_methods": [
     {
-      "title": "Phone",
-      "value": "+27 79 589 2831",
-      "value_href": "tel:+27795892831"
-    },
-    {
       "title": "Email",
       "value": "pascale.kohli@hin.ch",
       "value_href": "mailto:pascale.kohli@hin.ch"
@@ -506,7 +501,7 @@
     {
       "title": "WhatsApp",
       "value": "Send message →",
-      "value_href": "https://wa.me/27795892831"
+      "value_href": "https://wa.me/41795551222"
     }
   ],
   "agb_page_title": "T & C",

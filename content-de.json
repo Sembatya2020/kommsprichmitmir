@@ -466,12 +466,8 @@
   "about_p2": "Diese unterschiedlichen Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.",
   "testimonials": [
     {
-      "quote": "Die Zusammenarbeit mit Pascale gab mir die Klarheit, nach der ich jahrelang gesucht hatte. Sie hört tief zu und hält den Raum auf wunderbare Weise.",
-      "cite": "S.M., Klientin für Psychosoziale Beratung"
-    },
-    {
-      "quote": "Die Supervisionssitzungen haben mir geholfen, sowohl beruflich als auch persönlich zu wachsen. Ich ging jedes Mal ein Stück geerdeter aus der Sitzung.",
-      "cite": "T.B., Supervisions-Klient, Bern"
+      "quote": "Die Zusammenarbeit mit Pascale unterstützte mich dabei, mich mit weniger Angst meiner eigenen Wut anzunähern und daraus wertvolle weitere Schritte abzuleiten.\n\n",
+      "cite": "B.U. Theologin/Pädagogin, Beratungsklientin"
     }
   ],
   "beratung_p2": "In meiner Arbeit als prozessorientierte psychosoziale Beraterin SGFB begleite ich dich dabei, dich selbst besser verstehen zu lernen und - wenn Du es wünscht - deinen inneren Kompass neu zu kalibrieren.",
@@ -538,7 +534,7 @@
     },
     {
       "type": "text",
-      "text": "<strong>Prozessorientierte Psychosoziale Beraterin SGFB</strong>"
+      "text": "Als nach den Richtlinien der Schweizerischen Gesellschaft für Beratung ausgebildete <strong>Prozessorientierte Psychosoziale Beraterin SGFB</strong>halte ich mich an die Qualitätsstandards und Ethikrichtlinien der SGfB und des Instituts für Prozessarbeit IPA."
     },
     {
       "type": "text",

@@ -54,7 +54,7 @@
   "services_cards": [
     {
       "title": "Beratung & Coaching",
-      "desc": "Als <strong>Prozessorientierte psychosoziale Beraterin SGFB</strong> bin ich da für Menschen in Phasen der Unklarheit, Krise oder dem Wunsch nach Weiterentwicklung.",
+      "desc": "Als <strong>Prozessorientierte psychosoziale Beraterin SGfB</strong> bin ich da für Menschen in Phasen der Unklarheit, Krise oder dem Wunsch nach Weiterentwicklung.",
       "link_text": "Mehr erfahren →",
       "link": "beratung.html"
     },
@@ -170,7 +170,7 @@
     },
     {
       "type": "text",
-      "text": "<em>Du musst nichts mitbringen. Dein Wunsch, ein Thema vertieft anzusehen oder auch nur schon der Wunsch nach einem Gespräch sind völlig ausreichend.</em>"
+      "text": ""
     },
     {
       "type": "text",
@@ -339,7 +339,7 @@
       "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Das Unausgesprochene. Vielleicht das Unsagbare. Ich habe ein sehr feines Gespür für das, was unter der Oberfläche wirkt. Mit meiner Klarheit im Fühlen und im Ausdruck darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen."
     }
   ],
-  "beratung_subtitle": "Prozessorientierte Psychosoziale Beratung SGFB · Online Beratungspraxis",
+  "beratung_subtitle": "Prozessorientierte Psychosoziale Beratung SGfB · Online Beratungspraxis",
   "preise_unit": "/ pro Sitzung",
   "preise_discounts": [
     {
@@ -366,7 +366,7 @@
   "services_p": "Ob für deinen persönlichen Weg, deine fachliche Reflexion oder deine berufliche Entwicklung – ich begleite dich prozessorientiert und auf Augenhöhe.",
   "preise_eb3": "15 Minuten",
   "beratung_h2_1": "Raum für das, was sich zeigen möchte",
-  "footer_logo": "Komm · sprich · mit mir",
+  "footer_logo": "Komm · sprich · mit · mir",
   "supervision_bso2": "Als Mitglied des Berufsverbands für Supervision, Coaching und Organisationsberatung (BSO) arbeite ich nach anerkannten Qualitätsstandards.",
   "beratung_h2_2": "Auch im Nicht-Wissen sein",
   "preise_h1": "Preise",
@@ -466,8 +466,12 @@
   "about_p2": "Diese unterschiedlichen Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.",
   "testimonials": [
     {
-      "quote": "Die Zusammenarbeit mit Pascale unterstützte mich dabei, mich mit weniger Angst meiner eigenen Wut anzunähern und daraus wertvolle weitere Schritte abzuleiten.\n\n",
+      "quote": "Die Zusammenarbeit mit Pascale unterstützte mich dabei, mich mit weniger Angst meiner eigenen Wut anzunähern und die dadurch freigewordene Energie sinnvoll zu nutzen.\n\n",
       "cite": "B.U. Theologin/Pädagogin, Beratungsklientin"
+    },
+    {
+      "quote": "Die Zusammenarbeit mit Pascale war eine überaus wertvolle Erfahrung. Sie besitzt die seltene Fähigkeit, das Potenzial eines Menschen wirklich zu erkennen und es Schritt für Schritt in klare, praktische Realität zu führen. Mit ihrer Mischung aus scharfsinnigem, unternehmerischem Weitblick, strategischer Planung sowie natürlicher Freundlichkeit und Bescheidenheit hält sie einen Raum auf eine Weise, die zugleich inspirierend und wunderbar geerdet wirkt.",
+      "cite": "I.S. Coaching Client, Prozessarbeit Student, Uganda"
     }
   ],
   "beratung_p2": "In meiner Arbeit als prozessorientierte psychosoziale Beraterin SGFB begleite ich dich dabei, dich selbst besser verstehen zu lernen und - wenn Du es wünscht - deinen inneren Kompass neu zu kalibrieren.",
@@ -490,11 +494,11 @@
   "beratung_blocks": [
     {
       "type": "text",
-      "text": "Vielleicht befindest du dich an einem Punkt, an dem vieles unklar ist, trägst Fragen in dir, fühlst dich bewegt, angespannt oder suchend. Möglicherweise bist du traurig oder auch wütend. Und du wünschst dir dabei Begleitung."
+      "text": "Vielleicht befindest du dich an einem Punkt, an dem etwas unklar ist, trägst Fragen in dir, fühlst dich bewegt, angespannt oder suchend. Möglicherweise bist du traurig oder auch wütend. Und du wünschst dir dabei Begleitung."
     },
     {
       "type": "text",
-      "text": "In meiner Arbeit als prozessorientierte psychosoziale Beraterin SGFB begleite ich dich dabei, dich selbst besser verstehen zu lernen und - wenn Du es wünscht - deinen inneren Kompass neu zu kalibrieren."
+      "text": "In meiner Arbeit als prozessorientierte psychosoziale Beraterin SGFB begleite ich dich dabei, dich selbst besser verstehen zu lernen und deinen inneren Kompass neu zu kalibrieren."
     },
     {
       "type": "text",
@@ -534,7 +538,7 @@
     },
     {
       "type": "text",
-      "text": "Als nach den Richtlinien der Schweizerischen Gesellschaft für Beratung ausgebildete <strong>Prozessorientierte Psychosoziale Beraterin SGFB</strong>halte ich mich an die Qualitätsstandards und Ethikrichtlinien der SGfB und des Instituts für Prozessarbeit IPA."
+      "text": "Als nach den Richtlinien der Schweizerischen Gesellschaft für Beratung ausgebildete Prozessorientierte Psychosoziale Beraterin SGBhalte ich mich an die Qualitätsstandards und Ethikrichtlinien der SGfB und des Instituts für Prozessarbeit IPA."
     },
     {
       "type": "text",
@@ -550,7 +554,7 @@
   "cta_h2": "Bereit für ein erstes Gespräch?",
   "supervision_h2_2": "Meine Erfahrung",
   "beratung_p6": "Ich bin offen für das, was sich zeigt. Für Erkenntnis, aber auch für Unklarheit.",
-  "aboutT_p1": "Prozessorientierte Psychosoziale Beraterin SGFB, Supervisorin & Coach BSO. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.",
+  "aboutT_p1": "Prozessorientierte Psychosoziale Beraterin SGfB, Supervisorin & Coach BSO. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.",
   "kontakt_book_p": "Wähle eine Sitzungsart und einen passenden Zeitpunkt – die Bestätigung kommt automatisch per E-Mail.",
   "about_page_title": "Über mich",
   "kontakt_note_h": "Erstanfragen bitte ausschliesslich schriftlich.",

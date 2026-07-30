@@ -244,8 +244,8 @@
     }
   ],
   "cta_btn2": "Preise ansehen",
-  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min",
-  "preise_intro": "Damit du dich orientieren kannst, hier meine Preise für 90 Minuten Sitzungen. <br><br>Auf Wunsch biete ich auch kürzere Sitzungen an. ",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-60-min",
+  "preise_intro": "Damit du dich orientieren kannst, hier meine Preise. ",
   "about_insp_p": "Wichtige Impulse für meine Arbeit erhielt ich unter anderem durch das Wirken von Arnold Mindell, Charlotte Perry, Daan van Kampenhout, Richard Schwartz, Bessel van der Kolk, Deb Dana. Ausserdem von allen Dozierenden des Instituts für Prozessarbeit, insbesondere Martin Boss.",
   "kontakt_tel_h": "Telefon",
   "supervision_h1": "Supervision",
@@ -537,20 +537,20 @@
   "beratung_cta_link": "https://calendly.com/kommsprichmitmir/coaching90min",
   "preise_cards": [
     {
-      "eyebrow": "Supervision 90 Min.",
+      "eyebrow": "Supervision 60 Min.",
       "currency": "CHF",
-      "price": "180",
+      "price": "140",
       "unit": "/ pro Sitzung",
-      "desc": "Für dich als beratende Fachperson, wenn Du deine Arbeit reflektieren und weiterentwickeln möchtest.",
+      "desc": "",
       "link_text": "Mehr zu Supervision →",
       "link": "supervision.html"
     },
     {
-      "eyebrow": "Beratung & Coaching 90 Min.",
+      "eyebrow": "Beratung & Coaching 60 Min.",
       "currency": "CHF",
-      "price": "160",
+      "price": "120",
       "unit": "/ pro Sitzung",
-      "desc": "Persönliche Sitzungen in meinem Praxisraum in Bern.",
+      "desc": "",
       "link_text": "Mehr zu Beratung →",
       "link": "beratung.html",
       "featured": true

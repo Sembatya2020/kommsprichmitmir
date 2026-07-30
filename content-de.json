@@ -68,7 +68,7 @@
       "title": "Erstgespräch",
       "desc": "Du bist unsicher, ob mein Angebot zu Dir passt? Melde dich gerne unverbindlich – ich freue mich, von Dir zu hören.",
       "link_text": "Erstgespräch buchen →",
-      "link": "kontakt.html#kontaktBooking"
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
     }
   ],
   "supervision_p6": "Ich arbeite strukturiert und gleichzeitig offen für das, was sich zeigt.",
@@ -537,13 +537,13 @@
   "beratung_cta_link": "https://calendly.com/kommsprichmitmir/coaching90min",
   "preise_cards": [
     {
-      "eyebrow": "Supervision 60 Min.",
-      "currency": "CHF",
-      "price": "140",
-      "unit": "/ pro Sitzung",
-      "desc": "Als Supervisorin stehe ich Dir zur Verfügung zur Reflektion deiner persönlichen Beratungstätigkeit im kollegialen Fachgespräch.",
-      "link_text": "Mehr zu Supervision →",
-      "link": "supervision.html"
+      "eyebrow": "15 Minuten",
+      "currency": "",
+      "price": "0",
+      "unit": "kostenlose Sitzung",
+      "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
+      "link_text": "Termin anfragen →",
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
     },
     {
       "eyebrow": "Beratung & Coaching 60 Min.",
@@ -556,13 +556,13 @@
       "featured": true
     },
     {
-      "eyebrow": "15 Minuten",
-      "currency": "",
-      "price": "0",
-      "unit": "kostenlose Sitzung",
-      "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
-      "link_text": "Termin anfragen →",
-      "link": "kontakt.html#kontaktBooking"
+      "eyebrow": "Supervision 60 Min.",
+      "currency": "CHF",
+      "price": "140",
+      "unit": "/ pro Sitzung",
+      "desc": "Als Supervisorin stehe ich Dir zur Verfügung zur Reflektion deiner persönlichen Beratungstätigkeit im kollegialen Fachgespräch.",
+      "link_text": "Mehr zu Supervision →",
+      "link": "supervision.html"
     }
   ],
   "gallery_eyebrow": "",

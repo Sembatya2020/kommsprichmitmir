@@ -187,7 +187,7 @@
       "title": "First conversation",
       "desc": "Unsure whether my offering suits you? Get in touch without obligation — I look forward to hearing from you.",
       "link_text": "Book initial consultation →",
-      "link": "kontakt.html#kontaktBooking"
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
     }
   ],
   "testimonials": [
@@ -448,16 +448,16 @@
   ],
   "preise_cards": [
     {
-      "eyebrow": "90 minutes",
+      "eyebrow": "15 minutes",
       "currency": "CHF",
-      "price": "160",
-      "unit": "/ hour",
-      "desc": "For professionals who wish to reflect on and develop their work.",
-      "link_text": "More on supervision →",
-      "link": "supervision.html"
+      "price": "0",
+      "unit": "",
+      "desc": "Sessions via Zoom – location-independent, from home or on the go.",
+      "link_text": "Request appointment →",
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
     },
     {
-      "eyebrow": "Sessions in Bern",
+      "eyebrow": "Beratung & Coaching 60 Min.",
       "currency": "CHF",
       "price": "120",
       "unit": "/ hour",
@@ -467,13 +467,13 @@
       "featured": true
     },
     {
-      "eyebrow": "15 minutes",
+      "eyebrow": "Supervision 60 Min.",
       "currency": "CHF",
-      "price": "0",
-      "unit": "",
-      "desc": "Sessions via Zoom – location-independent, from home or on the go.",
-      "link_text": "Request appointment →",
-      "link": "kontakt.html#kontaktBooking"
+      "price": "140",
+      "unit": "/ hour",
+      "desc": "For professionals who wish to reflect on and develop their work.",
+      "link_text": "More on supervision →",
+      "link": "supervision.html"
     }
   ],
   "preise_discounts": [

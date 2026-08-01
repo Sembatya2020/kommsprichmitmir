@@ -78,51 +78,51 @@
   "supervision_blocks": [
     {
       "type": "text",
-      "text": "Wenn du selbst mit Menschen arbeitest, kennst du die Komplexität, die diese Arbeit mit sich bringt."
+      "text": "Als Supervisorin bso begleite ich Fachpersonen und Führungskräfte dabei, auf ihre eigene Arbeit zu schauen — mit Abstand, aber ohne Kälte.\n\nWas im Alltag zu nah dran ist, um es klar zu sehen, bekommt im Supervisionsraum wieder Kontur. Konflikte, Erschöpfung, schwierige Fälle, Führungsfragen — all das sind meist Signale, keine Fehler. Prozessorientiert heisst für mich: Ich schaue mit dir hin, ohne starren Regeln oder festen Zielen zu folgen, sondern wir orientieren uns achtsam am aktuellen, lebendigen Geschehen im Moment. \n"
     },
     {
       "type": "text",
-      "text": "Möchtest du deine Fälle reflektieren, mehr Klarheit gewinnen oder dich in deiner Rolle als Fachperson weiterentwickeln? Oder gibt es Situationen, die dich herausfordern, berühren oder auch verunsichern?"
+      "text": ""
     },
     {
       "type": "text",
-      "text": "Ich biete dir einen Raum, in dem du deine Arbeit in Ruhe betrachten und gemeinsam mit mir reflektieren kannst."
+      "text": ""
     },
     {
       "type": "text",
-      "text": "Als Supervisorin begleite ich dich dabei, deine Wahrnehmungen zu differenzieren, Zusammenhänge klarer zu sehen und neue Perspektiven zu entwickeln."
+      "text": ""
     },
     {
       "type": "heading",
-      "text": "Meine Haltung"
+      "text": "Für dich, wenn Du..."
     },
     {
       "type": "text",
-      "text": "Meine Haltung ist prozessorientiert. Das bedeutet, wir wenden uns nicht nur dem Inhalt deiner Arbeit zu, sondern auch dem, was zwischen den Zeilen geschieht — in der Beziehung zu deinen Klientinnen und Klienten, in deinem eigenen Erleben und im grösseren Kontext deiner Tätigkeit."
+      "text": "...als Fachperson oder Führungskraft merkst, dass eine Situation, ein Fall oder eine Entscheidung mehr Reflexion braucht, als der Alltag zulässt."
     },
     {
       "type": "text",
-      "text": "Ich arbeite strukturiert und gleichzeitig offen für das, was sich zeigt."
+      "text": ""
     },
     {
       "type": "heading",
-      "text": "Meine Erfahrung"
+      "text": ""
     },
     {
       "type": "text",
-      "text": "Meine Erfahrung umfasst mehrere Jahre Tätigkeit im psychiatrischen und psychotherapeutischen Umfeld, in denen ich eng mit Fachpersonen zusammengearbeitet habe. Ich habe Verlaufs- und Behandlungsberichte sowie Gutachten mitverfasst und dabei Einblick in unterschiedlichste Fallkonstellationen und therapeutische Prozesse erhalten. Auch habe ich viele Prüfungsabsolventen am Institut für Prozessarbeit als Beisitzerin begleitet."
+      "text": ""
     },
     {
       "type": "text",
-      "text": "Diese Erfahrung ermöglicht es mir, komplexe Situationen differenziert zu erfassen und dich fundiert in deiner Arbeit zu begleiten."
+      "text": ""
     },
     {
       "type": "heading",
-      "text": "Raum für Unsicherheit"
+      "text": "Wie wir arbeiten..."
     },
     {
       "type": "text",
-      "text": "Gleichzeitig verstehe ich Supervision auch als einen Raum, in dem Unsicherheiten Platz haben dürfen. Nicht alles muss sogleich durchschaut oder gelöst werden. "
+      "text": "...online, im Einzelsetting, in einem Rhythmus, den wir gemeinsam festlegen — beginnend mit einem Erstgespräch, in dem wir klären, worum es geht und was du brauchst."
     },
     {
       "type": "text",
@@ -497,7 +497,7 @@
     },
     {
       "type": "text",
-      "text": "Als nach den Richtlinien der Schweizerischen Gesellschaft für Beratung ausgebildete Prozessorientierte Psychosoziale Beraterin SGBhalte ich mich an die Qualitätsstandards und Ethikrichtlinien der SGfB und des Instituts für Prozessarbeit IPA."
+      "text": "\n\nAls nach den Richtlinien der Schweizerischen Gesellschaft für Beratung ausgebildete Prozessorientierte Psychosoziale Beraterin SGBhalte ich mich an die Qualitätsstandards und Ethikrichtlinien der SGfB und des Instituts für Prozessarbeit IPA."
     },
     {
       "type": "text",
@@ -506,7 +506,7 @@
     {
       "type": "button",
       "text": "Beratung buchen",
-      "link": "https://calendly.com/kommsprichmitmir/coaching90min"
+      "link": "https://calendly.com/kommsprichmitmir/beratung"
     }
   ],
   "kontakt_book_fallback": "Zur Agenda...",

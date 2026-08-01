@@ -143,7 +143,7 @@
     {
       "type": "button",
       "text": "Supervisionsanfrage stellen",
-      "link": "https://calendly.com/kommsprichmitmir/supervision-90-min"
+      "link": "https://calendly.com/kommsprichmitmir/supervision"
     }
   ],
   "footer_link_datenschutz": "Datenschutzrichtlinie",
@@ -244,7 +244,7 @@
     }
   ],
   "cta_btn2": "Preise ansehen",
-  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-60-min",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision",
   "preise_intro": "Damit du dich orientieren kannst, hier meine Preise. ",
   "about_insp_p": "Wichtige Impulse für meine Arbeit erhielt ich unter anderem durch das Wirken von Arnold Mindell, Charlotte Perry, Daan van Kampenhout, Richard Schwartz, Bessel van der Kolk, Deb Dana. Ausserdem von allen Dozierenden des Instituts für Prozessarbeit, insbesondere Martin Boss.",
   "kontakt_tel_h": "Telefon",

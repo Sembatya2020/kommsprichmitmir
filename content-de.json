@@ -54,13 +54,13 @@
   "services_cards": [
     {
       "title": "Beratung & Coaching",
-      "desc": "Als <strong>Prozessorientierte psychosoziale Beraterin SGfB</strong> bin ich da für Menschen in Phasen der Unklarheit, Krise oder dem Wunsch nach Weiterentwicklung.",
+      "desc": "Als (nach den SGfB Richtlininen ausgebildete) Prozessorientierte psychosoziale Beraterin  bin ich da für Menschen in Phasen der Unklarheit, Krise oder dem Wunsch nach Weiterentwicklung.",
       "link_text": "Mehr erfahren →",
       "link": "beratung.html"
     },
     {
       "title": "Supervision",
-      "desc": "Als <strong>BSO anerkannte Supervisorin</strong> begleite ich Fachpersonen beim Reflektieren ihrer eigenen Beratungsarbeit – auf Augenhöhe.",
+      "desc": "Als (nach BSO Richtlinien ausgebildete) Supervisorin begleite ich Fachpersonen beim Reflektieren ihrer eigenen Beratungsarbeit – auf Augenhöhe.",
       "link_text": "Mehr erfahren →",
       "link": "supervision.html"
     },
@@ -78,7 +78,7 @@
   "supervision_blocks": [
     {
       "type": "text",
-      "text": "Als Supervisorin bso begleite ich Fachpersonen und Führungskräfte dabei, auf ihre eigene Arbeit zu schauen — mit Abstand und dem Bestreben, eine stimmige Metaperspektive zu erlangen.\n\nWas im Alltag zu nah dran ist, um es klar zu sehen, bekommt im Supervisionsraum wieder Kontur. Wir öffnen den Raum für Konflikte, Erschöpfung, schwierige Fälle, Führungsfragen. \n\nProzessorientiert heisst für mich: Ich schaue mit dir hin, ohne starren Regeln oder festen Zielen zu folgen, sondern wir orientieren uns achtsam am aktuellen, lebendigen Geschehen im Moment. \n"
+      "text": "Als nach den Richtlinien der bso ausgebildete Supervisorin begleite ich Fachpersonen und Führungskräfte dabei, auf ihre eigene Arbeit zu schauen — mit Abstand und dem Bestreben, eine stimmige Metaperspektive zu erlangen.\n\nWas im Alltag zu nah dran ist, um es klar zu sehen, bekommt im Supervisionsraum wieder Kontur. Wir öffnen den Raum für Konflikte, Erschöpfung, schwierige Fälle, Führungsfragen. \n\nProzessorientiert heisst für mich: Ich schaue mit dir hin, ohne starren Regeln oder festen Zielen zu folgen, sondern wir orientieren uns achtsam am aktuellen, lebendigen Geschehen im Moment. \n"
     },
     {
       "type": "text",
@@ -174,7 +174,7 @@
     },
     {
       "type": "text",
-      "text": "Wenn du selbst mit Klienten arbeitest, stehe ich dir als BSO anerkannte Supervisorin zur Verfügung, um deine fachliche Arbeit gemeinsam zu reflektieren und weiterzuentwickeln."
+      "text": "Wenn du selbst mit Klienten arbeitest, stehe ich dir als (nach den Richtlinien der BSO ausgebildete) Supervisorin zur Verfügung, um deine fachliche Arbeit gemeinsam zu reflektieren und weiterzuentwickeln."
     }
   ],
   "nutzung_resp_label": "Verantwortlich für sämtliche Inhalte dieser Seite, ausser externer links:",
@@ -211,7 +211,7 @@
     },
     {
       "type": "text",
-      "text": "Ich habe am Institut für Prozessarbeit in Zürich studiert und bin diplomierte psychosoziale Beraterin (SGfB), Supervisorin/Coach (BSO), sowie Kauffrau und Lehrlingsausbildnerin. Ich habe viele Jahre in der forensischen Psychiatrie und in der Psychotherapie Behandlungsberichte und Gutachten für verschiedene Fachpersonen und Fachstellen geschrieben und als auch Personalverantwortliche Menschen begleitet."
+      "text": "Ich habe am Institut für Prozessarbeit in Zürich studiert und bin diplomierte psychosoziale Beraterin und Supervisorin (nach den Richtlinien der SGfB und bso), , sowie Kauffrau und Lehrlingsausbildnerin. Ich habe viele Jahre in der forensischen Psychiatrie und in der Psychotherapie Behandlungsberichte und Gutachten für verschiedene Fachpersonen und Fachstellen geschrieben und als auch Personalverantwortliche Menschen begleitet."
     },
     {
       "type": "subheading",
@@ -356,7 +356,7 @@
   "agb_h1": "Allgemeine Geschäftsbedingungen",
   "preise_l1": "Mehr zu Supervision →",
   "preise_eb1": "90 Minuten",
-  "kontakt_cred": "Prozessorientierte Psychosoziale Beraterin SGfB<br>Supervisorin &amp; Coach BSO<br>",
+  "kontakt_cred": "Prozessorientierte Psychosoziale Beraterin <br>Supervisorin &amp; Coach <br>",
   "preise_l2": "Mehr zu Beratung →",
   "preise_eb2": "Sitzungen in Bern",
   "about_wb_p": "Ergänzend habe ich mich in verschiedenen Bereichen weitergebildet, unter anderem in:",
@@ -513,7 +513,7 @@
   "cta_h2": "Bereit für ein erstes Gespräch?",
   "supervision_h2_2": "Meine Erfahrung",
   "beratung_p6": "Ich bin offen für das, was sich zeigt. Für Erkenntnis, aber auch für Unklarheit.",
-  "aboutT_p1": "Prozessorientierte Psychosoziale Beraterin SGfB, Supervisorin & Coach BSO. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.",
+  "aboutT_p1": "Prozessorientierte Psychosoziale Beraterin, Supervisorin & Coach. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.",
   "kontakt_book_p": "Buche jetzt dein kostenloses Kennenlerngespräch direkt in meinem Kalender.",
   "about_page_title": "Über mich",
   "kontakt_note_h": "Erstanfragen bitte ausschliesslich schriftlich.",

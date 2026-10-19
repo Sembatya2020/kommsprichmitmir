@@ -364,6 +364,12 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
 .mobile-lang .lang-btn.active { color: var(--white); }
 .mobile-lang .lang-sep { color: rgba(255,255,255,0.25); font-size: 0.9rem; }
 
+/* Hide the language control until there is an actual language choice. */
+.lang-toggle:has(> .lang-btn:only-child),
+.mobile-lang:has(> .lang-btn:only-child) {
+  display: none;
+}
+
 /* ─── NAVIGATION ─────────────────────────────────────────────── */
 #navbar {
   position: fixed;
@@ -3270,5 +3276,3 @@ body.legal-page { background: var(--surface); }
   color: var(--white);
   border-color: var(--purple-main);
 }
-
-

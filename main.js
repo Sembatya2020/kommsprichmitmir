@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    KOMM SPRICH MIT MIR — main.js
-   - i18n (DE / EN)
+   - German site content
    - navbar scroll state
    - mobile menu (with hamburger ↔ X animation)
    - fade-up reveal on scroll
@@ -16,7 +16,7 @@
   const t = {
     de: {
       /* Nav */
-      'nav.home':        'Home',
+      'nav.home':        'Startseite',
       'nav.supervision': 'Supervision',
       'nav.beratung':    'Beratung',
       'nav.about':       'Über mich',
@@ -260,8 +260,7 @@
   };
 
   /* ─── i18n ───────────────────────────────────────────────────── */
-  const STORAGE_LANG = 'kspmm.lang';
-  let currentLang = localStorage.getItem(STORAGE_LANG) || 'de';
+  let currentLang = 'de';
   const langCallbacks = window._langCallbacks || [];
 
   /* Flatten nested {hero:{h1:"..."}} → {"hero.h1":"..."} */
@@ -279,7 +278,7 @@
 
   /* Raw CMS content per language — used by the list/block renderers below.
      Scalars get merged into `t`; arrays/objects stay here. */
-  var cmsRaw = { de: {}, en: {} };
+  var cmsRaw = { de: {} };
 
   /* Merge the simple text fields of a CMS file into the translation table.
      Each key is stored under BOTH its original underscore form (hero_h1 —
@@ -297,16 +296,13 @@
     });
   }
 
-  /* Load content-de.json and content-en.json from CMS and merge into t */
+  /* Load the German CMS content */
   function loadCMSContent(callback) {
     var ts = Date.now();
-    Promise.all([
-      fetch('content-de.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; }),
-      fetch('content-en.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; })
-    ]).then(function(results) {
-      if (results[0]) { cmsRaw.de = results[0]; mergeScalars(t.de, results[0]); }
-      if (results[1]) { cmsRaw.en = results[1]; mergeScalars(t.en, results[1]); }
-    }).catch(function() {}).finally(callback);
+    fetch('content-de.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; })
+      .then(function(content) {
+        if (content) { cmsRaw.de = content; mergeScalars(t.de, content); }
+      }).catch(function() {}).finally(callback);
   }
 
   /* ─── DYNAMIC CONTENT (add / remove / reorder from the CMS) ─────────
@@ -444,17 +440,15 @@
     renderBlocks(data);
   }
 
-  function applyLang(lang) {
-    if (!t[lang]) lang = 'de';
-    currentLang = lang;
-    localStorage.setItem(STORAGE_LANG, lang);
-    document.documentElement.lang = lang;
+  function applyLang() {
+    currentLang = 'de';
+    document.documentElement.lang = 'de';
 
-    const dict = t[lang];
+    const dict = t[currentLang];
 
     // Dynamic (add/remove/reorder) content from the CMS, rendered before the
     // scalar pass so any data-i18n fallbacks inside still get localized.
-    renderDynamic(lang);
+    renderDynamic(currentLang);
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const v = dict[el.dataset.i18n];
@@ -478,11 +472,11 @@
       a.rel = 'noopener noreferrer';
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-      btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+      btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      btn.setAttribute('aria-pressed', btn.dataset.lang === currentLang ? 'true' : 'false');
     });
 
-    langCallbacks.forEach(cb => { try { cb(lang); } catch (e) { /* noop */ } });
+    langCallbacks.forEach(cb => { try { cb(currentLang); } catch (e) { /* noop */ } });
   }
 
   // expose for external scripts (legacy)
@@ -669,8 +663,8 @@
         e.preventDefault();
         if (!form.checkValidity()) { form.reportValidity(); return; }
 
-        const labelSending = currentLang === 'de' ? 'Wird gesendet…' : 'Sending…';
-        const labelSent    = currentLang === 'de' ? 'Gesendet ✓'     : 'Sent ✓';
+        const labelSending = 'Wird gesendet…';
+        const labelSent    = 'Gesendet ✓';
 
         formBtn.textContent = labelSending;
         formBtn.disabled = true;

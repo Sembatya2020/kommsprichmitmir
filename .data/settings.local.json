@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls package.json)",
+      "Bash(cat package.json)",
+      "Bash(npx --version)",
+      "Bash(python --version)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"root:%{http_code} beratung:%{http_code}\\\\n\" http://localhost:53630/)",
+      "Bash(curl -s -o /dev/null -w \"beratung:%{http_code}\\\\n\" http://localhost:53630/beratung.html)",
+      "Bash(openssl s_client -connect kommsprichmitmir.ch:443 -servername kommsprichmitmir.ch)",
+      "Bash(openssl x509 *)",
+      "Bash(openssl s_client -connect www.kommsprichmitmir.ch:443 -servername www.kommsprichmitmir.ch)",
+      "Bash(node -e \"const fs=require\\('fs'\\);const h=fs.readFileSync\\('index.html','utf8'\\);const m=h.match\\(/<script type=\\\\\"application\\\\/ld\\\\+json\\\\\">\\([\\\\s\\\\S]*?\\)<\\\\/script>/\\);JSON.parse\\(m[1]\\);console.log\\('index JSON-LD: VALID'\\);const b=fs.readFileSync\\('beratung.html','utf8'\\).match\\(/<script type=\\\\\"application\\\\/ld\\\\+json\\\\\">\\([\\\\s\\\\S]*?\\)<\\\\/script>/\\);JSON.parse\\(b[1]\\);console.log\\('beratung JSON-LD: VALID'\\);\")",
+      "Bash(grep -rlc \"WhatsApp Image\" content-de.json content-en.json content.json)",
+      "Bash(grep -roc \"WhatsApp Image\" content-de.json content-en.json)",
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(timeout 15 openssl s_client -quiet -connect kommsprichmitmir.ch:443 -servername kommsprichmitmir.ch)"
+    ]
+  }
+}

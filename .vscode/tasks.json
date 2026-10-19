@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Authenticate GitHub with GCM",
+			"type": "shell",
+			"command": "C:\\Users\\Ivan\\AppData\\Local\\Programs\\Git Credential Manager\\git-credential-manager.exe",
+			"args": [
+				"github",
+				"login",
+				"--device"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"env": {
+					"PATH": "C:\\Program Files\\Git\\cmd;C:\\Users\\Ivan\\AppData\\Local\\Programs\\Git Credential Manager;${env:PATH}"
+				}
+			}
+		}
+	]
+}

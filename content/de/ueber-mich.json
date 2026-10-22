@@ -1,0 +1,78 @@
+{
+  "about_page_title": "Über mich",
+  "about_h1": "Persönlich",
+  "about_subtitle": "Pascale Myriam Kohli",
+  "about_intro_blocks": [
+    {
+      "type": "text",
+      "text": "Meine Lebensgeschichte ist bunt und vielfältig – wie ein Ackerblumenstrauss. Ich kenne aus eigener Erfahrung Themen wie Verlust, Angst, Einsamkeit und Neuanfänge – und zugleich auch Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche schwierige Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.\n\nGrossgeworden im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
+    },
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "text",
+      "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Das Unsagbare. Ich habe ein sehr feines Gespür für das, was unter der Oberfläche wirkt. Mit meiner Klarheit im Fühlen und im Ausdruck darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen."
+    }
+  ],
+  "about_quote": "\"Nicht alles muss vollständig heilen. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist.\"",
+  "about_personal_blocks": [
+    {
+      "type": "text",
+      "text": "In den letzten Jahren habe ich mich intensiv mit Themen wie Trauma, Dissoziation und Resilienz auseinandergesetzt – dies auch, um meine eigenen Themen zu erkennen und besser zu verstehen. Eine wichtige Erkenntnis für mich daraus ist: Nicht alles muss vollständig „heilen“. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist."
+    },
+    {
+      "type": "text",
+      "text": "Ich lebe und arbeite zwischen der Schweiz und Südafrika. Diese Erfahrung hat meinen Blick auf Themen wie Zugehörigkeit, Privilegien und soziale Gerechtigkeit erweitert und geschärft."
+    },
+    {
+      "type": "text",
+      "text": "Ich bin Mutter einer bald erwachsenen Tochter und lebe in einer Partnerschaft."
+    }
+  ],
+  "about_background_blocks": [
+    {
+      "type": "heading",
+      "text": "Mein fachlicher Hintergrund"
+    },
+    {
+      "type": "text",
+      "text": "Meine Arbeit ist geprägt durch eine kontinuierliche Auseinandersetzung mit prozessorientierter Psychologie, Trauma, Beziehung und menschlicher Entwicklung."
+    },
+    {
+      "type": "text",
+      "text": "Ich habe am Institut für Prozessarbeit in Zürich studiert und bin diplomierte psychosoziale Beraterin und Supervisorin (nach den Richtlinien der SGfB und bso), , sowie Kauffrau und Lehrlingsausbildnerin. Ich habe viele Jahre in der forensischen Psychiatrie und in der Psychotherapie Behandlungsberichte und Gutachten für verschiedene Fachpersonen und Fachstellen geschrieben und als auch Personalverantwortliche Menschen begleitet."
+    },
+    {
+      "type": "subheading",
+      "text": "Weiterbildungen"
+    },
+    {
+      "type": "text",
+      "text": "Ergänzend habe ich mich in verschiedenen Bereichen weitergebildet, unter anderem in:"
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "Arbeit mit inneren Teilen",
+        "Trauma- und Bindungsarbeit",
+        "Körper- und bewusstseinsorientierte Methoden",
+        "systemische und rituelle Ansätze"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Inspirationen"
+    },
+    {
+      "type": "text",
+      "text": "Wichtige Impulse für meine Arbeit erhielt ich unter anderem durch das Wirken von Arnold Mindell, Charlotte Perry, Daan van Kampenhout, Richard Schwartz, Bessel van der Kolk, Deb Dana. Ausserdem von allen Dozierenden des Instituts für Prozessarbeit, insbesondere von Martin Boss."
+    },
+    {
+      "type": "text",
+      "text": "Meine Arbeit entwickelt sich kontinuierlich weiter – durch Erfahrung, Weiterbildung und den lebendigen Austausch mit Menschen."
+    }
+  ],
+  "about_cta": "Kontakt aufnehmen"
+}

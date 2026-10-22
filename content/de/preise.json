@@ -1,0 +1,53 @@
+{
+  "preise_page_title": "Kosten",
+  "preise_h1": "Preise",
+  "preise_subtitle": "Was kostet meine Zeit?",
+  "preise_intro": "Damit du dich orientieren kannst, hier meine Preise. ",
+  "preise_cards": [
+    {
+      "eyebrow": "Supervision 60 Min.",
+      "currency": "CHF",
+      "price": "140",
+      "unit": "/ pro Sitzung",
+      "desc": "Als Supervisorin stehe ich Dir zur Verfügung zur Reflektion deiner persönlichen Beratungstätigkeit im kollegialen Fachgespräch.",
+      "link_text": "Mehr zu Supervision →",
+      "link": "supervision.html"
+    },
+    {
+      "eyebrow": "Beratung & Coaching 60 Min.",
+      "currency": "CHF",
+      "price": "120",
+      "unit": "/ pro Sitzung",
+      "desc": "",
+      "link_text": "Mehr zu Beratung →",
+      "link": "beratung.html",
+      "featured": true
+    },
+    {
+      "eyebrow": "15 Minuten",
+      "currency": "",
+      "price": "0",
+      "unit": "kostenlose Sitzung",
+      "desc": "Ein kostenloses Kennenlerngespräch. 15 Minuten, damit wir beide die Möglichkeiten einer Zusammenarbeit erforschen können.",
+      "link_text": "Termin anfragen →",
+      "link": "kontakt.html#kontaktBooking"
+    }
+  ],
+  "preise_disc_h": "Mehrfach-Buchungen",
+  "preise_disc_intro": "Bei der Buchung von mehreren Sitzungen biete ich dir sehr gerne einen Rabatt an.",
+  "preise_discounts": [
+    {
+      "amount": "10 %",
+      "label": "Rabatt bei 5 Sitzungen"
+    },
+    {
+      "amount": "15 %",
+      "label": "Rabatt bei 10 Sitzungen"
+    }
+  ],
+  "preise_pay_h": "Bezahlung",
+  "preise_pay_p": "Die Bezahlung erfolgt direkt nach der Sitzung – in bar, per Twint oder PayPal.",
+  "preise_uns_h": "Unsicher, ob es passt?",
+  "preise_uns_p": "Wenn du unsicher bist, ob mein Angebot zu dir passt, melde dich gerne unverbindlich.",
+  "preise_uns_cta": "Unverbindlich anfragen"
+}

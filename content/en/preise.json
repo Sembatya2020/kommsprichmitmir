@@ -1,0 +1,53 @@
+{
+  "preise_page_title": "Pricing",
+  "preise_h1": "Pricing",
+  "preise_subtitle": "So you can find your bearings",
+  "preise_intro": "So you can find your bearings, here are my rates.",
+  "preise_cards": [
+    {
+      "eyebrow": "15 minutes",
+      "currency": "CHF",
+      "price": "0",
+      "unit": "",
+      "desc": "Sessions via Zoom – location-independent, from home or on the go.",
+      "link_text": "Request appointment →",
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
+    },
+    {
+      "eyebrow": "Beratung & Coaching 60 Min.",
+      "currency": "CHF",
+      "price": "120",
+      "unit": "/ hour",
+      "desc": "In-person sessions in my practice room in Bern.",
+      "link_text": "More on counselling →",
+      "link": "beratung.html",
+      "featured": true
+    },
+    {
+      "eyebrow": "Supervision 60 Min.",
+      "currency": "CHF",
+      "price": "140",
+      "unit": "/ hour",
+      "desc": "For professionals who wish to reflect on and develop their work.",
+      "link_text": "More on supervision →",
+      "link": "supervision.html"
+    }
+  ],
+  "preise_disc_h": "Multi-session bookings",
+  "preise_disc_intro": "When booking multiple sessions, I offer the following reductions:",
+  "preise_discounts": [
+    {
+      "amount": "10 %",
+      "label": "discount on 5 sessions"
+    },
+    {
+      "amount": "15 %",
+      "label": "discount on 10 sessions"
+    }
+  ],
+  "preise_pay_h": "Payment",
+  "preise_pay_p": "Payment is made directly after the session – in cash, by Twint or PayPal.",
+  "preise_uns_h": "Unsure if it fits?",
+  "preise_uns_p": "If you're unsure whether my offer is right for you, feel free to get in touch.",
+  "preise_uns_cta": "Get in touch"
+}

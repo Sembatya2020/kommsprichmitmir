@@ -1,0 +1,54 @@
+{
+  "agb_page_title": "T & C",
+  "agb_h1": "General Terms & Conditions",
+  "agb_blocks": [
+    {
+      "type": "heading",
+      "text": "1. Scope"
+    },
+    {
+      "type": "text",
+      "text": "These General Terms and Conditions apply to all therapeutic accompaniment and counselling services provided by Pascale Myriam Kohli, Rathausgasse 48, 3011 Bern."
+    },
+    {
+      "type": "heading",
+      "text": "2. Appointments and Cancellations"
+    },
+    {
+      "type": "text",
+      "text": "Scheduled appointments may be cancelled or rescheduled free of charge up to 24 hours in advance. For cancellations at shorter notice without a valid reason (e.g. illness, emergency), the full session fee will be charged."
+    },
+    {
+      "type": "heading",
+      "text": "3. Confidentiality"
+    },
+    {
+      "type": "text",
+      "text": "All content discussed in sessions is treated with strict confidentiality. Professional confidentiality applies without restriction. Exceptions exist solely where there is a legal obligation to disclose (e.g. acute risk of harm to self or others)."
+    },
+    {
+      "type": "heading",
+      "text": "4. Fees"
+    },
+    {
+      "type": "text",
+      "text": "Fees are agreed individually and confirmed in writing before the first session. Invoices are due within 30 days of receipt."
+    },
+    {
+      "type": "heading",
+      "text": "5. Liability"
+    },
+    {
+      "type": "text",
+      "text": "Therapeutic counselling does not replace medical or psychiatric treatment. In the case of acute mental illness, a qualified medical professional should be consulted. The counsellor accepts no liability for decisions made by the client on the basis of the sessions."
+    },
+    {
+      "type": "heading",
+      "text": "6. Data Protection"
+    },
+    {
+      "type": "text",
+      "text": "Personal data is used exclusively for the purpose of appointment scheduling and invoicing and is not passed on to third parties. The provisions of the Privacy Policy apply."
+    }
+  ]
+}

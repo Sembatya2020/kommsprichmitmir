@@ -1,0 +1,48 @@
+{
+  "datenschutz_page_title": "Datenschutzrichtlinie",
+  "datenschutz_h1": "Datenschutzrichtlinie",
+  "datenschutz_blocks": [
+    {
+      "type": "text",
+      "text": "Die Betreiberin dieser Site nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Sie behandelt Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
+    },
+    {
+      "type": "text",
+      "text": "Insbesondere ist die auf der Website unter Kontakt angegebene Emailadresse HIN-gesichert und garantiert somit maximalen Schutz ihrer Daten bei persönlichen Anfragen."
+    },
+    {
+      "type": "text",
+      "text": "Diese Internetsite sammelt und speichert nur die nötigsten Daten über ihre Besucher. Der Eigentümer und Betreiber der Site setzt keine Cookies ein und verwendet auch keine Analyse- oder Auswertungswerkzeuge von Drittanbietern. Bei Anfragen über das Kontaktformular oder über die dort angegebene Mailadresse werden die hinterlassenen Angaben nur gerade für die Beantwortung der Anfrage verwendet und nicht weiter gespeichert."
+    },
+    {
+      "type": "heading",
+      "text": "Logfiles des Providers"
+    },
+    {
+      "type": "text",
+      "text": "Der Provider, bei dem die Site gehostet wird (hostinger.com), legt so genannte Logfiles an, um seine Dienstleistungen «zuverlässig, technisch einwandfrei und auch gesetzeskonform erbringen zu können.» Diese enthalten laut seinen Angaben Informationen wie:"
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "IP-Adressen",
+        "Datum und Uhrzeit",
+        "Protokollinformationen wie Protokolltyp und -version, die gewünschte Aktion, Statuscodes oder Angaben zu den transferierten Daten (z.B. die Grösse einer Frage oder einer Antwort)",
+        "Fehlermeldungen",
+        "Je nachdem anwendungsspezifische Informationen wie zum Beispiel Message-IDs bei E-Mails, oder bei Webzugriffen Angaben zum verwendeten Browser (User-Agent String) oder gegebenenfalls der Seite, von welcher der Besucher auf die Webseite gelangt ist."
+      ]
+    },
+    {
+      "type": "text",
+      "text": "Der Provider verwendet diese Informationen unter anderem zum Nachvollziehen und Lösen von technischen Problemen, zum Finden von Fehlern, zum Abwehren von Angriffen auf seine Infrastruktur, zur Unterstützung von nachträglichen Analysen bei gehackten Kundenwebseiten oder auch zum Erstellen der Besucherstatistiken für die gehosteten Webseiten."
+    },
+    {
+      "type": "text",
+      "text": "Die Daten verbleiben gespeichert, solange es entweder betrieblich notwendig oder gesetzlich beziehungsweise vertraglich vorgeschrieben ist und werden danach automatisch gelöscht. Für die meisten Daten ist dies maximal ein halbes Jahr."
+    },
+    {
+      "type": "text",
+      "text": "(c) by Pascale M. Kohli, 2026"
+    }
+  ]
+}

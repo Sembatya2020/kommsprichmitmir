@@ -29,7 +29,7 @@
 
       /* Hero */
       'hero.eyebrow': 'Psychosoziale Beratung · Coaching',
-      'hero.h1':      '<em>Komm, sprich mit mir…</em>',
+      'hero.h1':      'Komm, sprich mit mir…',
       'hero.p':       'Psychosoziale Beratung und Coaching. Ein prozessorientierter Raum, in dem das, was dich beschäftigt, sichtbar und verstehbar werden darf.',
       'hero.btn1':    'Termin anfragen',
       'hero.btn2':    'Mehr über mich',
@@ -151,7 +151,7 @@
 
       /* Hero */
       'hero.eyebrow': 'Psychosocial Counselling · Coaching',
-      'hero.h1':      '<em>Come, talk to me…</em>',
+      'hero.h1':      'Come, talk to me…',
       'hero.p':       'Psychosocial counselling and coaching. A process-oriented space where what occupies you can become visible and understood.',
       'hero.btn1':    'Request appointment',
       'hero.btn2':    'More about me',
@@ -296,13 +296,33 @@
     });
   }
 
-  /* Load the German CMS content */
+  /* Load the page-specific German CMS content */
   function loadCMSContent(callback) {
     var ts = Date.now();
-    fetch('content-de.json?v=' + ts).then(function(r) { return r.json(); }).catch(function() { return null; })
-      .then(function(content) {
-        if (content) { cmsRaw.de = content; mergeScalars(t.de, content); }
-      }).catch(function() {}).finally(callback);
+    var pages = [
+      'startseite',
+      'beratung',
+      'supervision',
+      'preise',
+      'ueber-mich',
+      'kontakt',
+      'agb',
+      'datenschutz',
+      'nutzung-impressum',
+      'allgemein-footer'
+    ];
+    Promise.all(pages.map(function(page) {
+      return fetch('./content/de/' + page + '.json?v=' + ts).then(function(response) {
+        if (!response.ok) throw new Error('Could not load ' + page + ' content: HTTP ' + response.status);
+        return response.json();
+      });
+    })).then(function(pageContent) {
+      var content = Object.assign({}, ...pageContent);
+      cmsRaw.de = content;
+      mergeScalars(t.de, content);
+    }).catch(function(error) {
+      console.error('Website content could not be loaded from the CMS files.', error);
+    }).finally(callback);
   }
 
   /* ─── DYNAMIC CONTENT (add / remove / reorder from the CMS) ─────────
@@ -455,8 +475,15 @@
       if (v !== undefined) el.textContent = v;
     });
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const v = dict[el.dataset.i18nHtml || el.dataset.i18n_html];
-      if (v !== undefined) el.innerHTML = v;
+      const key = el.dataset.i18nHtml || el.dataset.i18n_html;
+      const v = dict[key];
+      if (v === undefined) return;
+      if (key === 'hero.h1' || key === 'kontakt_cred') {
+        el.textContent = v;
+        if (key === 'kontakt_cred') el.style.whiteSpace = 'pre-line';
+      } else {
+        el.innerHTML = v;
+      }
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const v = dict[el.dataset.i18nPlaceholder];

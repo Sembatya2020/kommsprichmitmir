@@ -1,0 +1,32 @@
+{
+  "kontakt_page_title": "Contact",
+  "kontakt_h1": "Come, talk to me…",
+  "kontakt_subtitle": "Online or in Bern",
+  "kontakt_eb": "Contact",
+  "kontakt_cred": "Process-oriented Psychosocial Counsellor SGFB\nSupervisor & Coach BSO",
+  "kontakt_methods": [
+    {
+      "title": "Email",
+      "value": "pascale.kohli@hin.ch",
+      "value_href": "mailto:pascale.kohli@hin.ch"
+    },
+    {
+      "title": "Threema",
+      "note": "ID: C8HF3JS5",
+      "value": "Send message →",
+      "value_href": "https://threema.id/C8HF3JS5"
+    },
+    {
+      "title": "WhatsApp",
+      "value": "Send message →",
+      "value_href": "https://wa.me/41795551222"
+    }
+  ],
+  "kontakt_note_h": "Please send inquiries via email only.",
+  "kontakt_note_p": "I will then be happy to contact you by telephone.",
+  "kontakt_book_eb": "Online booking",
+  "kontakt_book_h": "Book a session directly",
+  "kontakt_book_p": "Choose a session type and a time that suits you — you'll receive a confirmation by email automatically.",
+  "kontakt_book_soon": "The booking system will be live soon.",
+  "kontakt_book_fallback": "Go to booking page"
+}

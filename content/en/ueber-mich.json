@@ -1,0 +1,78 @@
+{
+  "about_page_title": "About me",
+  "about_h1": "Personal",
+  "about_subtitle": "Pascale Myriam Kohli",
+  "about_intro_blocks": [
+    {
+      "type": "text",
+      "text": "My life story is colourful and varied – like a bouquet of wildflowers. I know difficult experiences like loss, fear, loneliness and new beginnings – as well as love, joy, connection and aliveness."
+    },
+    {
+      "type": "text",
+      "text": "These different experiences have awakened in me an openness to the most varied realities of life and allowed resilience to grow."
+    },
+    {
+      "type": "text",
+      "text": "I am interested in the unspoken – what is there but often gets no space. The unspoken. Perhaps the unsayable. I have a very fine sense for what works beneath the surface. With my clarity in feeling and expression, I am able to support people in understanding inner processes and taking new steps."
+    }
+  ],
+  "about_quote": "\"Not everything has to fully heal. Often, it is more about finding a way of carrying what is there.\"",
+  "about_personal_blocks": [
+    {
+      "type": "text",
+      "text": "In recent years I have engaged intensively with topics such as trauma, dissociation and resilience – also to recognise and understand my own themes. An important insight for me from this is: not everything has to fully \"heal\". Often, it is more about finding a way of carrying what is there."
+    },
+    {
+      "type": "text",
+      "text": "I live and work between Switzerland and South Africa. This experience has broadened and sharpened my view on topics such as belonging, privilege and social justice."
+    },
+    {
+      "type": "text",
+      "text": "I am the mother of a soon-to-be-adult daughter and live in a partnership."
+    }
+  ],
+  "about_background_blocks": [
+    {
+      "type": "heading",
+      "text": "My Professional Background"
+    },
+    {
+      "type": "text",
+      "text": "My work is shaped by a continuous engagement with process-oriented psychology, trauma, relationship and human development."
+    },
+    {
+      "type": "text",
+      "text": "I studied at the Institute for Process Work in Zurich and am a certified psychosocial counsellor (SGfB) as well as a supervisor/coach (BSO), and also a commercial professional and vocational trainer. I spent many years in forensic psychiatry and psychotherapy writing treatment reports and assessments for various professionals and specialist agencies."
+    },
+    {
+      "type": "subheading",
+      "text": "Continuing Education"
+    },
+    {
+      "type": "text",
+      "text": "In addition I have trained in various areas, among others in:"
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "Work with inner parts",
+        "Trauma and attachment work",
+        "Body- and awareness-oriented methods",
+        "Systemic and ritual approaches"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Inspirations"
+    },
+    {
+      "type": "text",
+      "text": "Important impulses for my work came from the work of Arnold Mindell, Richard Schwartz, Bessel van der Kolk, Daan van Kampenhout, Colin Tipping and Godfrey O'Flaherty, as well as from all the lecturers at the Institute for Process Work, especially Martin Boss."
+    },
+    {
+      "type": "text",
+      "text": "My work develops continuously – through experience, further training and the living exchange with people."
+    }
+  ],
+  "about_cta": "Get in touch"
+}

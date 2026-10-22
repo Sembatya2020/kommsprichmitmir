@@ -1,21 +1,25 @@
 # Website bearbeiten – Kurzanleitung / Editing guide
 
 Du bearbeitest die Website unter **/admin/** (mit deinem Netlify-Login).
-Alle Änderungen werden automatisch gespeichert und erscheinen nach 1–2
-Minuten live – ganz ohne Entwickler.
+Nach dem Klick auf **„Publish" / „Veröffentlichen"** werden deine Änderungen
+veröffentlicht. Netlify braucht danach normalerweise ein paar Minuten.
 
-You edit the site at **/admin/** (with your Netlify login). Every change is
-saved automatically and goes live after 1–2 minutes – no developer needed.
+You edit the site at **/admin/** (with your Netlify login). After clicking
+**Publish**, your changes are published. Netlify usually needs a few minutes.
 
 ---
 
 ## 🇩🇪 Das Wichtigste
 
-- **Zwei Sprachen:** Links gibt es „🇩🇪 Deutsch" und „🇬🇧 English". Beide werden
-  getrennt bearbeitet. Ändere einen Text in beiden, wenn er in beiden Sprachen
-  stimmen soll.
-- **Nichts ist Pflicht.** Du kannst jedes Feld leeren und speichern. Ein leeres
-  Feld verschwindet einfach von der Seite.
+- **Seiten finden:** Wähle links **Deutsch** oder **English** und dann die
+  gewünschte Seite, z.B. **Startseite**, **Beratung** oder **Preise**. So
+  bearbeitest du immer nur eine Seite auf einmal.
+- **Texte ändern:** Schreibe einfach den gewünschten Text in das passende Feld.
+  Du brauchst keine HTML-Zeichen oder Formatierungscodes einzugeben.
+- **Vorschau:** Mit dem Augensymbol oben rechts kannst du die Vorschau ein- oder
+  ausblenden, wenn du mehr Platz zum Bearbeiten brauchst.
+- **Felder sind nicht Pflicht.** Leere ein Feld nur, wenn der entsprechende
+  Text wirklich von der Website verschwinden soll.
 - **Listen (z.B. Absätze, Karten, Preise, Bewertungen, Galerie):**
   - **Hinzufügen:** unten auf **„Add …"** klicken.
   - **Entfernen:** beim Eintrag auf das **Papierkorb-/×-Symbol** klicken.
@@ -29,8 +33,12 @@ saved automatically and goes live after 1–2 minutes – no developer needed.
 
 ## 🇬🇧 In short
 
-- **Two languages** are edited separately (DE / EN).
-- **Nothing is required** – clear any field and save; empty fields disappear.
+- Choose **Deutsch** or **English** on the left, then select the page you want
+  to edit.
+- Enter normal text in the fields; no HTML or formatting codes are needed.
+- Use the eye icon at the top right to show or hide the preview.
+- **Fields are optional.** Clear a field only if you want that text removed
+  from the website.
 - **Lists** (paragraphs, cards, prices, testimonials, gallery): use **Add** to
   add, the **trash/×** icon to remove, and **drag** to reorder.
 - **Content blocks** let you add/remove/reorder headings, paragraphs, quotes,
@@ -42,8 +50,9 @@ saved automatically and goes live after 1–2 minutes – no developer needed.
 
 ### Für Entwickler / For developers
 
-Inhalte liegen in `content-de.json` / `content-en.json`. Einfache Felder werden
-über `data-i18n` eingesetzt; wiederholbare Inhalte rendert `main.js` aus Arrays:
+Inhalte liegen pro Sprache und Seite unter `content/de/` und `content/en/`.
+Einfache Felder werden über `data-i18n` eingesetzt; wiederholbare Inhalte
+rendert `main.js` aus Arrays:
 
 - `data-list="KEY"` – wiederholt das enthaltene `<template>` pro Array-Eintrag
   (Felder via `data-field` / `data-field-html` / `data-href-field` / `data-src-field`).

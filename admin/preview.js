@@ -60,11 +60,145 @@
       });
   }
 
+  var pagePreviews = {
+    beratung: {
+      label: 'Beratung',
+      labelEn: 'Counselling',
+      title: 'beratung_page_title',
+      heading: 'beratung_h1',
+      subtitle: 'beratung_subtitle',
+      blocks: ['beratung_blocks']
+    },
+    supervision: {
+      label: 'Supervision',
+      labelEn: 'Supervision',
+      title: 'supervision_page_title',
+      heading: 'supervision_h1',
+      subtitle: 'supervision_subtitle',
+      blocks: ['supervision_blocks']
+    },
+    preise: {
+      label: 'Preise',
+      labelEn: 'Pricing',
+      title: 'preise_page_title',
+      heading: 'preise_h1',
+      subtitle: 'preise_subtitle',
+      intro: 'preise_intro'
+    },
+    'ueber-mich': {
+      label: 'Über mich',
+      labelEn: 'About me',
+      title: 'about_page_title',
+      heading: 'about_h1',
+      subtitle: 'about_subtitle',
+      blocks: ['about_intro_blocks', 'about_personal_blocks', 'about_background_blocks']
+    },
+    kontakt: {
+      label: 'Kontakt',
+      labelEn: 'Contact',
+      title: 'kontakt_page_title',
+      heading: 'kontakt_h1',
+      subtitle: 'kontakt_subtitle'
+    },
+    agb: {
+      label: 'AGB',
+      labelEn: 'Terms and conditions',
+      title: 'agb_page_title',
+      heading: 'agb_h1',
+      blocks: ['agb_blocks']
+    },
+    datenschutz: {
+      label: 'Datenschutz',
+      labelEn: 'Privacy policy',
+      title: 'datenschutz_page_title',
+      heading: 'datenschutz_h1',
+      blocks: ['datenschutz_blocks']
+    },
+    'nutzung-impressum': {
+      label: 'Nutzung & Impressum',
+      labelEn: 'Usage & Imprint',
+      title: 'nutzung_page_title',
+      heading: 'nutzung_h1',
+      blocks: ['nutzung_blocks']
+    },
+    'allgemein-footer': {
+      label: 'Allgemein & Footer',
+      labelEn: 'General & Footer'
+    }
+  };
+
+  function PagePreview(props, data, lang) {
+    var slug = props.entry && props.entry.get && props.entry.get('slug');
+    var page = pagePreviews[slug] || pagePreviews['allgemein-footer'];
+    var blockContent = (page.blocks || []).reduce(function (all, key) {
+      return all.concat(renderTextBlocks(data[key]));
+    }, []);
+    var title = data[page.title] || (lang === 'EN' ? page.labelEn : page.label);
+    var heading = data[page.heading] || title;
+    var subtitle = data[page.subtitle] || data[page.intro] || '';
+    var sections = [];
+
+    if (blockContent.length) {
+      sections.push(h('section', { className: 'cms-preview-section', key: 'content' }, [
+        h('div', { className: 'cms-preview-copy', key: 'copy' }, blockContent)
+      ]));
+    }
+
+    if (slug === 'preise') {
+      sections.push(h('section', { className: 'cms-preview-section', key: 'prices' }, [
+        h('h2', { className: 'cms-preview-section-title', key: 'title' }, data.preise_h1 || 'Preise'),
+        htmlTag('p', 'cms-preview-section-intro', data.preise_intro),
+        h('div', { className: 'cms-preview-grid cms-preview-grid--pricing', key: 'grid' }, renderCards(data.preise_cards, true))
+      ]));
+    } else if (slug === 'kontakt' && asArray(data.kontakt_methods).length) {
+      sections.push(h('section', { className: 'cms-preview-section', key: 'contact' }, [
+        h('div', { className: 'cms-preview-grid cms-preview-grid--services', key: 'methods' },
+          asArray(data.kontakt_methods).map(function (method, index) {
+            return h('article', { className: 'cms-preview-service-card', key: 'method-' + index }, [
+              h('h3', { className: 'cms-preview-card-title', key: 'title' }, method.title || ''),
+              h('p', { className: 'cms-preview-card-desc', key: 'value' }, method.value || ''),
+              h('p', { className: 'cms-preview-card-desc', key: 'note' }, method.note || '')
+            ]);
+          })
+        )
+      ]));
+    } else if (slug === 'allgemein-footer' && data.footer_brand) {
+      sections.push(h('section', { className: 'cms-preview-section', key: 'footer' }, [
+        h('p', { className: 'cms-preview-footer-brand', key: 'brand' }, data.footer_brand)
+      ]));
+    }
+
+    if (data.about_quote) {
+      sections.push(h('section', { className: 'cms-preview-section', key: 'quote' }, [
+        h('blockquote', { className: 'cms-preview-quote', key: 'text' }, data.about_quote)
+      ]));
+    }
+
+    return h('div', { className: 'cms-preview-page' }, [
+      h('header', { className: 'cms-preview-header', key: 'header' }, [
+        h('div', { className: 'cms-preview-brand', key: 'brand' }, data.footer_logo || 'Komm · sprich · mit mir'),
+        h('div', { className: 'cms-preview-lang', key: 'lang' }, lang)
+      ]),
+      h('section', { className: 'cms-preview-hero', key: 'hero' }, [
+        h('div', { className: 'cms-preview-eyebrow', key: 'eyebrow' }, title),
+        h('h1', { className: 'cms-preview-title', key: 'title' }, heading),
+        h('p', { className: 'cms-preview-lead', key: 'subtitle' }, subtitle)
+      ])
+    ].concat(sections));
+  }
+
   function ContentPreview(props) {
     var data = toData(props.entry);
+    var collectionName = props.collection && props.collection.get && props.collection.get('name');
+    var slug = props.entry && props.entry.get && props.entry.get('slug');
+    var lang = collectionName === 'english' ? 'EN' : 'DE';
+
+    if (slug !== 'startseite') {
+      return PagePreview(props, data, lang);
+    }
+
     var services = renderCards(data.services_cards, false);
     var prices = renderCards(data.preise_cards, true);
-    var lang = props.collection && props.collection.get && props.collection.get('name') === 'content' && props.entry && props.entry.get('slug') === 'english' ? 'EN' : 'DE';
 
     return h('div', { className: 'cms-preview-page' }, [
       h('header', { className: 'cms-preview-header', key: 'header' }, [

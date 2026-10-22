@@ -1,0 +1,32 @@
+{
+  "kontakt_page_title": "Kontakt",
+  "kontakt_h1": "Komm, sprich mit mir…",
+  "kontakt_subtitle": "Online Beratungspraxis",
+  "kontakt_eb": "Kontakt",
+  "kontakt_cred": "Prozessorientierte Psychosoziale Beraterin \nSupervisorin & Coach \n",
+  "kontakt_methods": [
+    {
+      "title": "E-Mail",
+      "value": "pascale.kohli@hin.ch",
+      "value_href": "mailto:pascale.kohli@hin.ch"
+    },
+    {
+      "title": "Threema",
+      "note": "ID: C8HF3JS5",
+      "value": "Nachricht senden →",
+      "value_href": "https://threema.id/C8HF3JS5"
+    },
+    {
+      "title": "WhatsApp",
+      "value": "Nachricht senden →",
+      "value_href": "https://wa.me/41795551222"
+    }
+  ],
+  "kontakt_note_h": "Erstanfragen bitte ausschliesslich schriftlich.",
+  "kontakt_note_p": "Ich antworte auf Wunsch dann gerne telefonisch.",
+  "kontakt_book_eb": "Online-Buchung",
+  "kontakt_book_h": "15 Minuten gratis Termin buchen",
+  "kontakt_book_p": "Buche jetzt dein kostenloses Kennenlerngespräch direkt in meinem Kalender.",
+  "kontakt_book_soon": "",
+  "kontakt_book_fallback": "Zur Agenda..."
+}

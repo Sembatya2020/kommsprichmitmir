@@ -1,0 +1,134 @@
+{
+  "hero_eyebrow": "Psychosocial Counselling · Coaching",
+  "hero_h1": "Come, talk to me…",
+  "hero_p": "Psychosocial counselling and coaching. A process-oriented space where what occupies you can become visible and understood.",
+  "hero_btn1": "Request appointment",
+  "hero_btn2": "More about me",
+  "welcome_eyebrow": "Welcome",
+  "welcome_h2": "A space where what occupies you can become visible.",
+  "welcome_blocks": [
+    {
+      "type": "text",
+      "text": "Are you in a phase of uncertainty, perhaps unsure how to move forward? Are you burdened by a crisis, feeling fear or grief — or would you like to grow and discover new paths?"
+    },
+    {
+      "type": "text",
+      "text": "Then welcome to a space where what occupies you can become visible and understood."
+    },
+    {
+      "type": "text",
+      "text": "I accompany you as an attentive conversation partner, fellow researcher and source of inspiration. My approach is process-oriented."
+    },
+    {
+      "type": "text",
+      "text": "Body sensations, inner images, movement and stillness, sounds and words — everything is welcome."
+    },
+    {
+      "type": "text",
+      "text": "You don't need to bring anything. It is enough to sense that you want to take a closer look."
+    },
+    {
+      "type": "text",
+      "text": "If you work with clients yourself, I am available as a BSO-certified supervisor to reflect on and develop your professional practice together."
+    }
+  ],
+  "services_eyebrow": "What I offer",
+  "services_h2": "Three ways to work together",
+  "services_p": "Whether for your personal path, your professional reflection or your career development — I accompany you process-oriented and at eye level.",
+  "services_cards": [
+    {
+      "title": "Counselling & Coaching",
+      "desc": "Process-oriented psychosocial counselling SGFB for people in phases of uncertainty, crisis or development.",
+      "link_text": "Learn more →",
+      "link": "beratung.html"
+    },
+    {
+      "title": "Supervision",
+      "desc": "As a BSO-certified supervisor I support professionals in reflecting on their work — at eye level.",
+      "link_text": "Learn more →",
+      "link": "supervision.html"
+    },
+    {
+      "title": "First conversation",
+      "desc": "Unsure whether my offering suits you? Get in touch without obligation — I look forward to hearing from you.",
+      "link_text": "Book initial consultation →",
+      "link": "https://calendly.com/kommsprichmitmir/15minfuerdich"
+    }
+  ],
+  "phil_quote": "\"Forever curious, widely travelled, always discovering something new…\"",
+  "phil_cite": "Pascale Myriam Kohli",
+  "aboutT_eyebrow": "About me",
+  "aboutT_h2": "Pascale Myriam Kohli",
+  "aboutT_p1": "Process-oriented psychosocial counsellor SGFB, supervisor & coach BSO. I work between Switzerland and South Africa and bring several years of experience in psychiatric and psychotherapeutic environments.",
+  "aboutT_p2": "I am interested in the unspoken — what is there but rarely gets a space. With sensitivity and clarity, I support people in understanding inner processes and taking new steps.",
+  "aboutT_btn": "More about me",
+  "gallery_eyebrow": "Inspiration",
+  "gallery_h2": "Every path has its own rhythm",
+  "gallery_p": "Nature is a daily mirror of life for me — full of wisdom, beauty and change.",
+  "gallery": [
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.27 (1).jpeg",
+      "caption": "Alpine peaks · Switzerland"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.29.jpeg",
+      "caption": "Open roads · South Africa"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.30.jpeg",
+      "caption": "Wide open spaces · Karoo"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.31.jpeg",
+      "caption": "Wild coast · Garden Route"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.32.jpeg",
+      "caption": "Power of the ocean"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.33.jpeg",
+      "caption": "The journey is the destination"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.13.34.jpeg",
+      "caption": "New horizons"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.16.27.jpeg",
+      "caption": "Flowing gently"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.16.29.jpeg",
+      "caption": "Step by step"
+    },
+    {
+      "image": "images/WhatsApp Image 2026-05-07 at 23.16.35.jpeg",
+      "caption": "Far-sighted"
+    }
+  ],
+  "testi_eb": "KIND WORDS",
+  "testi_h2": "What clients say",
+  "testimonials": [
+    {
+      "quote": "I've known Pascale Kohli since our training together and value her as someone with great life experience and openness. She meets people authentically and with genuine interest. I'm convinced that people feel seen and taken seriously with her. With her calm manner, attentive listening, and well-aimed questions, she creates a space where growth becomes possible.",
+      "cite": "Y.S., Psychotherapist, Fellow student at the IPA"
+    },
+    {
+      "quote": "Working with Pascale gave me the clarity I had been searching for years. She listens deeply and holds space beautifully.",
+      "cite": "S.M., Psychosocial Counselling client"
+    },
+    {
+      "quote": "The supervision sessions helped me grow both professionally and personally. I always left feeling more grounded.",
+      "cite": "T.B., Supervision client, Bern"
+    },
+    {
+      "quote": "Working with Pascale has been a deeply valuable experience. She has a rare ability to truly see someone’s potential and guide it step-by-step into clear, practical reality. With her blend of sharp, business-minded vision, strategic planning, and natural kindness and humility, she holds space in a way that feels both inspiring and beautifully grounded.",
+      "cite": "Ivan Sembatya founder at Nija Print & Graphics Studio Uganda Ltd"
+    }
+  ],
+  "cta_h2": "Ready for a first conversation?",
+  "cta_p": "If you're unsure whether my offering fits you — get in touch without obligation.",
+  "cta_btn1": "Get in touch",
+  "cta_btn2": "View pricing"
+}

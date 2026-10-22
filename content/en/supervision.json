@@ -1,0 +1,78 @@
+{
+  "supervision_page_title": "Supervision",
+  "supervision_h1": "Supervision",
+  "supervision_subtitle": "BSO-certified Supervisor · Bern",
+  "supervision_blocks": [
+    {
+      "type": "text",
+      "text": "If you work with people yourself, you know the complexity that this work brings with it."
+    },
+    {
+      "type": "text",
+      "text": "Would you like to reflect on your cases, gain more clarity or develop further in your role as a professional? Or are there situations that challenge, move or even unsettle you?"
+    },
+    {
+      "type": "text",
+      "text": "I offer you a space in which you can look at your work calmly and reflect on it together with me."
+    },
+    {
+      "type": "text",
+      "text": "As a supervisor, I accompany you in differentiating your perceptions, seeing connections more clearly and developing new perspectives."
+    },
+    {
+      "type": "heading",
+      "text": "My Attitude"
+    },
+    {
+      "type": "text",
+      "text": "My attitude is process-oriented. This means we attend not only to the content of your work, but also to what happens between the lines — in the relationship with your clients, in your own experience and in the broader context of your practice."
+    },
+    {
+      "type": "text",
+      "text": "I work in a structured way while remaining open to whatever shows itself."
+    },
+    {
+      "type": "heading",
+      "text": "My Experience"
+    },
+    {
+      "type": "text",
+      "text": "My experience spans several years in psychiatric and psychotherapeutic environments, where I worked closely with professionals. I co-authored progress reports, treatment reports and assessments, gaining insight into a wide range of case constellations and therapeutic processes. I also accompanied many examination candidates at the Institute for Process Work as an assessor."
+    },
+    {
+      "type": "text",
+      "text": "This experience enables me to grasp complex situations with nuance and to accompany you in your work with a solid foundation."
+    },
+    {
+      "type": "heading",
+      "text": "Space for Uncertainty"
+    },
+    {
+      "type": "text",
+      "text": "At the same time, I understand supervision as a space where uncertainty is allowed to have its place. Not everything needs to be immediately known or resolved."
+    },
+    {
+      "type": "text",
+      "text": "Sometimes a new clarity emerges precisely through pausing and reflecting together."
+    },
+    {
+      "type": "text",
+      "text": "I meet you at eye level, with respect for your work and with genuine interest in supporting you in your professional and personal development."
+    },
+    {
+      "type": "text",
+      "text": "BSO-certified Supervisor"
+    },
+    {
+      "type": "text",
+      "text": "As a member of the professional association for supervision, coaching and organisational consulting (BSO), I work to recognised quality standards."
+    },
+    {
+      "type": "button",
+      "text": "Request supervision",
+      "link": "kontakt.html"
+    }
+  ],
+  "supervision_cta": "Book supervision",
+  "supervision_cta_link": "https://calendly.com/kommsprichmitmir/supervision-90-min"
+}

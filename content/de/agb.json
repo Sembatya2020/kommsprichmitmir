@@ -1,0 +1,54 @@
+{
+  "agb_page_title": "AGB",
+  "agb_h1": "Allgemeine Geschäftsbedingungen",
+  "agb_blocks": [
+    {
+      "type": "heading",
+      "text": "1. Geltungsbereich"
+    },
+    {
+      "type": "text",
+      "text": "Diese Allgemeinen Geschäftsbedingungen gelten für alle beraterischen und supervisorischen Begleitungen von Pascale Myriam Kohli, wohnhaft in Bern und Kapstadt."
+    },
+    {
+      "type": "heading",
+      "text": "2. Termine und Absagen"
+    },
+    {
+      "type": "text",
+      "text": "Vereinbarte Termine können bis zu 24 Stunden im Voraus kostenlos abgesagt oder verschoben werden. Bei kurzfristigeren Absagen wird der volle Sitzungsbetrag in Rechnung gestellt."
+    },
+    {
+      "type": "heading",
+      "text": "3. Vertraulichkeit"
+    },
+    {
+      "type": "text",
+      "text": "Alle Inhalte der Gespräche werden streng vertraulich behandelt. Die therapeutische Schweigepflicht gilt unbeschränkt. Ausnahmen bestehen ausschliesslich bei gesetzlicher Pflicht zur Offenlegung (z.B. akute Selbst- oder Fremdgefährdung)."
+    },
+    {
+      "type": "heading",
+      "text": "4. Honorar"
+    },
+    {
+      "type": "text",
+      "text": "Mein Beratungs-Honorar beträgt CHF 120.- pro Stunde respektive CHF 160.- für 1 1/2 Stunden. Mein Supervisions-Honorar beträgt CHF 180.- für 1 1/2 Stunden.  Das Honorar ist direkt vor oder nach der der Sitzung per Twint, PayPal oder Sofortüberweisung zu begleichen. Ich stelle keine Rechnung, jedoch jederzeit Belege für getätigte Zahlungen."
+    },
+    {
+      "type": "heading",
+      "text": "5. Haftung"
+    },
+    {
+      "type": "text",
+      "text": "Die beraterische Begleitung ersetzt keine psychotherapeutische, medizinische oder psychiatrische Behandlung. Bei akuten psychischen Erkrankungen ist eine ärztliche Fachkraft beizuziehen. Die Beraterin haftet nicht für Entscheidungen, die der Klient auf Grundlage der Gespräche trifft."
+    },
+    {
+      "type": "heading",
+      "text": "6. Datenschutz"
+    },
+    {
+      "type": "text",
+      "text": "Personenbezogene Daten werden ausschliesslich zum Zweck der Terminvereinbarung und Rechnungsstellung verwendet und nicht an Dritte weitergegeben. Es gelten die Bestimmungen der Datenschutzrichtlinie."
+    }
+  ]
+}

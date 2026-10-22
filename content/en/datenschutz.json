@@ -1,0 +1,48 @@
+{
+  "datenschutz_page_title": "Privacy Policy",
+  "datenschutz_h1": "Privacy Policy",
+  "datenschutz_blocks": [
+    {
+      "type": "text",
+      "text": "The operator of this site takes the protection of your personal data very seriously. Your personal data is treated confidentially and in accordance with the statutory data protection regulations as well as this privacy policy."
+    },
+    {
+      "type": "text",
+      "text": "In particular, the email address provided on the website under Contact is HIN-secured, thus guaranteeing maximum protection of your data for personal enquiries."
+    },
+    {
+      "type": "text",
+      "text": "This website collects and stores only the minimum necessary data about its visitors. The owner and operator of the site does not use cookies and does not use any analysis or evaluation tools from third parties. For enquiries via the contact form or the email address provided there, the information submitted will only be used to respond to the enquiry and will not be stored further."
+    },
+    {
+      "type": "heading",
+      "text": "Provider Log Files"
+    },
+    {
+      "type": "text",
+      "text": "The provider hosting the site (green.ch) creates so-called log files in order to provide its services \"reliably, technically flawlessly and also in compliance with the law.\" According to their information, these contain information such as:"
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "IP addresses",
+        "Date and time",
+        "Protocol information such as protocol type and version, the requested action, status codes or information about the data transferred (e.g. the size of a request or response)",
+        "Error messages",
+        "Depending on the context, application-specific information such as message IDs for emails, or for web access, information about the browser used (user agent string) or the page from which the visitor accessed the website."
+      ]
+    },
+    {
+      "type": "text",
+      "text": "The provider uses this information, among other things, to trace and resolve technical problems, to find errors, to defend against attacks on its infrastructure, to support subsequent analyses of hacked customer websites, and to create visitor statistics for the hosted websites."
+    },
+    {
+      "type": "text",
+      "text": "The data remains stored for as long as it is operationally necessary or required by law or contract, and is then automatically deleted. For most data, this is a maximum of six months."
+    },
+    {
+      "type": "text",
+      "text": "(c) by Pascale Y. Kohli, 2020"
+    }
+  ]
+}

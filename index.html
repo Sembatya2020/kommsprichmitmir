@@ -27,6 +27,13 @@
   <meta property="twitter:description" content="Prozessorientierte Psychosoziale Beratung, Supervision und Coaching in Bern & Online.">
   <meta property="twitter:image" content="https://kommsprichmitmir.ch/images/Home-hero.jpeg">
   <script>(function(){try{var t=localStorage.getItem("kspmm.theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <script>
+    (function() {
+      if (/(invite|recovery|confirmation|email_change)_token=/.test(window.location.hash)) {
+        window.location.replace('/admin/' + window.location.hash);
+      }
+    })();
+  </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script type="application/ld+json">
   {

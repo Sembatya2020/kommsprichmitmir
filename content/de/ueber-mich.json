@@ -4,23 +4,23 @@
   "about_subtitle": "Pascale Myriam Kohli",
   "about_intro_blocks": [
     {
+      "type": "heading",
+      "text": "Zu meiner Person"
+    },
+    {
       "type": "text",
       "text": "Meine Lebensgeschichte ist bunt und vielfältig – wie ein Ackerblumenstrauss. Ich kenne aus eigener Erfahrung Themen wie Verlust, Angst, Einsamkeit und Neuanfänge – und zugleich auch Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche schwierige Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.\n\nGrossgeworden im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
     },
     {
       "type": "text",
-      "text": ""
-    },
-    {
-      "type": "text",
-      "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Das Unsagbare. Ich habe ein sehr feines Gespür für das, was unter der Oberfläche wirkt. Mit meiner Klarheit im Fühlen und im Ausdruck darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen."
+      "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Das Unsagbare. Ich habe ein gutes Gespür für das, was unter der Oberfläche wirkt. Mit Klarheit im Fühlen und im Ausdruck darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen."
     }
   ],
   "about_quote": "\"Nicht alles muss vollständig heilen. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist.\"",
   "about_personal_blocks": [
     {
       "type": "text",
-      "text": "In den letzten Jahren habe ich mich intensiv mit Themen wie Trauma, Dissoziation und Resilienz auseinandergesetzt – dies auch, um meine eigenen Themen zu erkennen und besser zu verstehen. Eine wichtige Erkenntnis für mich daraus ist: Nicht alles muss vollständig „heilen“. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist."
+      "text": "Mich bewegen die Themen Trauma, Dissoziation und Resilienz. Viele Jahre befinde ich mich als Lernende in diesem Feld. Eine wichtige Erkenntnis für mich daraus ist: Nicht alles muss vollständig „heilen“. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist."
     },
     {
       "type": "text",
@@ -28,7 +28,7 @@
     },
     {
       "type": "text",
-      "text": "Ich bin Mutter einer bald erwachsenen Tochter und lebe in einer Partnerschaft."
+      "text": "Ich bin 1981 geboren, bin Mutter einer bald erwachsenen Tochter und lebe in einer Partnerschaft."
     }
   ],
   "about_background_blocks": [

@@ -1,5 +1,5 @@
 {
-  "kontakt_note_p": "",
+  "kontakt_note_p": "Anschliessend melde ich mich gerne telefonisch zurueck. Herzlichen Dank.",
   "kontakt_page_title": "Kontakt",
   "kontakt_h1": "Komm, sprich mit mir…",
   "kontakt_cred": "Prozessorientierte Psychosoziale Beraterin \nSupervisorin & Coach \n",
@@ -21,13 +21,13 @@
       "title": "WhatsApp",
       "value": "Nachricht senden →",
       "value_href": "https://wa.me/41795551222",
-      "note": "+41 79 555 1 222"
+      "note": ""
     }
   ],
   "kontakt_book_eb": "Online-Buchung",
   "kontakt_subtitle": "Online Beratungspraxis",
   "kontakt_book_fallback": "Zur Agenda...",
   "kontakt_book_p": "Buche jetzt dein kostenloses Kennenlerngespräch direkt in meinem Kalender.",
-  "kontakt_note_h": "",
+  "kontakt_note_h": "Ich bitte um schriftliche Kontaktaufnahme via Mail oder WhatsApp/Threema. ",
   "kontakt_eb": "Kontakt"
 }

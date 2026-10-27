@@ -4,6 +4,10 @@
   "supervision_subtitle": "BSO anerkannte Supervisorin · Online Supervisionspraxis",
   "supervision_blocks": [
     {
+      "type": "heading",
+      "text": "Raum zum Reflektieren"
+    },
+    {
       "type": "text",
       "text": "Als nach den Richtlinien der bso ausgebildete Supervisorin begleite ich Fachpersonen und Führungskräfte dabei, auf ihre eigene Arbeit zu schauen — mit Abstand und dem Bestreben, eine stimmige Metaperspektive zu erlangen.\n\nWas im Alltag zu nah dran ist, um es klar zu sehen, bekommt im Supervisionsraum wieder Kontur. Wir öffnen den Raum für Konflikte, Erschöpfung, herausfordernde Fälle, Führungsfragen. Stets mit dem Fokus auf persönliches Wachstum und fachliche Weiterentwicklung.\n\nMein Ansatz ist Prozess orientiert, analytisch und zugleich intuitiv."
     },
@@ -29,10 +33,6 @@
     },
     {
       "type": "text",
-      "text": ""
-    },
-    {
-      "type": "heading",
       "text": ""
     },
     {

@@ -98,7 +98,6 @@
       'testi.c1': 'S.M., Klientin für Psychosoziale Beratung',
       'testi.q2': 'Die Supervisionssitzungen haben mir geholfen, sowohl beruflich als auch persönlich zu wachsen. Ich ging jedes Mal geerdeter nach Hause.',
       'testi.c2': 'T.B., Supervisions-Klient, Bern',
-      'testi.placeholder': 'Deine Rückmeldung erscheint hier, sobald sie eintrifft.',
 
       /* CTA */
       'cta.h2':   'Bereit für ein erstes Gespräch?',
@@ -220,7 +219,6 @@
       'testi.c1': 'S.M., Psychosocial Counselling client',
       'testi.q2': 'The supervision sessions helped me grow both professionally and personally. I always left feeling more grounded.',
       'testi.c2': 'T.B., Supervision client, Bern',
-      'testi.placeholder': 'Your testimonial will appear here once received from a client',
 
       /* CTA */
       'cta.h2':   'Ready for a first conversation?',

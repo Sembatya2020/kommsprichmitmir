@@ -5,7 +5,11 @@
   "about_intro_blocks": [
     {
       "type": "text",
-      "text": "Mein Lebensweg ist bunt und vielfältig – wie ein Ackerblumenstrauss. Ich kenne aus eigener Erfahrung Themen wie Verlust, Einsamkeit und Neuanfänge – und zugleich auch Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche und teils fordernde Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen.\n\nGrossgeworden im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
+      "text": "Mein Lebensweg ist bunt und vielfältig – wie ein Ackerblumenstrauss. Ich kenne aus eigener Erfahrung Themen wie Verlust, Einsamkeit und Neuanfänge – und zugleich auch Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche und teils fordernde Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen."
+    },
+    {
+      "type": "text",
+      "text": "Grossgeworden im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
     },
     {
       "type": "text",
@@ -41,7 +45,7 @@
       "text": "Ich habe am Institut für Prozessarbeit in Zürich studiert und bin diplomierte psychosoziale Beraterin und Supervisorin (nach den Richtlinien der SGfB und bso), sowie Kauffrau und Lehrlingsausbildnerin. Ich habe viele Jahre in der forensischen Psychiatrie und in der Psychotherapie Behandlungsberichte und Gutachten für verschiedene Fachpersonen und Fachstellen geschrieben und als auch Personalverantwortliche Menschen begleitet."
     },
     {
-      "type": "subheading",
+      "type": "heading",
       "text": "Weiterbildungen"
     },
     {

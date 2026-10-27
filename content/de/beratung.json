@@ -4,6 +4,10 @@
   "beratung_subtitle": "Prozessorientierte Psychosoziale Beratung SGfB · Online Beratungspraxis",
   "beratung_blocks": [
     {
+      "type": "heading",
+      "text": "Beratung"
+    },
+    {
       "type": "text",
       "text": "Meine Beratungspraxis ist ein prozessorientierter sicherer Raum, in welchem ich dich herzlich willkommen heisse mit deinen aktuellen Themen. Analytische Arbeit ist mir dabei ebenso wichtig, wie Raum für Intuition und Emotion.\n\nWir setzen uns gemeinsam hin und lauschen dem, was sich zeigt – in deinen Worten, deinen Bewegungen, deinem Erleben.\n\nWir schaffen Raum für Fragen. Manchmal mit Worten, manchmal mit Bewegung. Und Manchmal ist es stimmig, einfach still zu werden. Wie die Oberfläche eines Sees, die sich langsam glättet. \n\nGeht es darum, bei einem schwierigen Thema vorsichtig hinzuschauen – oder darum, mutig einzutauchen? Ich bin offen für das, was sich zeigt. Für Erkenntnis, aber auch für Unklarheit.\n\nWenn dich das anspricht, komm sehr gerne auf mich zu. Ich freue mich."
     },
@@ -59,14 +63,6 @@
       "type": "button",
       "text": "Beratung buchen",
       "link": "https://calendly.com/kommsprichmitmir/beratung"
-    },
-    {
-      "type": "heading",
-      "text": "ihjkhjk"
-    },
-    {
-      "type": "subheading",
-      "text": "kjhkjhkjkjhklhk"
     }
   ]
 }

@@ -17,13 +17,13 @@
   ],
   "preise_page_title": "Kosten",
   "preise_h1": "Preise",
-  "preise_pay_p": "Die Bezahlung erfolgt direkt nach der Sitzung – in bar, per Twint oder PayPal.",
+  "preise_pay_p": "Die Bezahlung erfolgt direkt bei der Sitzung – in bar, per Twint oder PayPal.",
   "preise_uns_h": "Unsicher, ob es passt?",
   "preise_cards": [
     {
       "eyebrow": "Supervision 90 Min.",
       "currency": "CHF",
-      "price": "180",
+      "price": "150",
       "unit": "/ pro Sitzung",
       "desc": "Als Supervisorin stehe ich Dir zur Verfügung zur Reflektion deiner persönlichen Beratungstätigkeit im kollegialen Fachgespräch.",
       "link_text": "Mehr zu Supervision →",

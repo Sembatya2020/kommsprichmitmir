@@ -133,6 +133,9 @@
     var blockContent = (page.blocks || []).reduce(function (all, key) {
       return all.concat(renderTextBlocks(data[key]));
     }, []);
+    if (slug === 'ueber-mich' && data.about_intro_heading) {
+      blockContent.unshift(h('h2', { className: 'cms-preview-subheading', key: 'about-intro-heading' }, data.about_intro_heading));
+    }
     var title = data[page.title] || (lang === 'EN' ? page.labelEn : page.label);
     var heading = data[page.heading] || title;
     var subtitle = data[page.subtitle] || data[page.intro] || '';

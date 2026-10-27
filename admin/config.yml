@@ -147,6 +147,7 @@ collections:
           - { name: about_page_title, label: "Über mich – Seitentitel", widget: string, required: false }
           - { name: about_h1,         label: "Über mich – Hauptüberschrift", widget: string, required: false }
           - { name: about_subtitle,   label: "Über mich – Untertitel", widget: string, required: false }
+          - { name: about_intro_heading, label: "Über mich – Überschrift über dem Einleitungstext", widget: string, required: false }
           - { name: about_intro_blocks, label: "Über mich – Einleitung", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
           - { name: about_quote, label: "Über mich – Zitat (hervorgehoben)", widget: text, required: false }
           - { name: about_personal_blocks, label: "Über mich – Persönlich", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
@@ -360,6 +361,7 @@ collections:
           - { name: about_page_title, label: "About – Page title", widget: string, required: false }
           - { name: about_h1,         label: "About – Main heading", widget: string, required: false }
           - { name: about_subtitle,   label: "About – Subtitle", widget: string, required: false }
+          - { name: about_intro_heading, label: "About – Heading above the introduction", widget: string, required: false }
           - { name: about_intro_blocks, label: "About – Intro", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
           - { name: about_quote, label: "About – Highlighted quote", widget: text, required: false }
           - { name: about_personal_blocks, label: "About – Personal", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }

@@ -65,6 +65,7 @@
       /* About teaser (home) */
       'aboutT.eyebrow': 'Über mich',
       'aboutT.h2':      'Pascale Myriam Kohli',
+      'about_intro_heading': 'Über mich',
       'aboutT.p1':      'Prozessorientierte Psychosoziale Beraterin SGFB, Supervisorin & Coach BSO. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.',
       'aboutT.p2':      'Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Mit feinem Gespür und Klarheit darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen.',
       'aboutT.btn':     'Mehr über mich',
@@ -186,6 +187,7 @@
       /* About teaser (home) */
       'aboutT.eyebrow': 'About me',
       'aboutT.h2':      'Pascale Myriam Kohli',
+      'about_intro_heading': 'About me',
       'aboutT.p1':      'Process-oriented psychosocial counsellor SGFB, supervisor & coach BSO. I work between Switzerland and South Africa and bring several years of experience in psychiatric and psychotherapeutic environments.',
       'aboutT.p2':      'I am interested in the unspoken — what is there but rarely gets a space. With sensitivity and clarity, I support people in understanding inner processes and taking new steps.',
       'aboutT.btn':     'More about me',
@@ -815,7 +817,7 @@
       
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        if (link.href === location.href || (location.pathname === '/' && link.getAttribute('href') === 'index.html')) {
+        if (link.href === location.href && link.getAttribute('href') !== 'index.html') {
           link.classList.add('active');
         }
       });

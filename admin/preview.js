@@ -136,6 +136,10 @@
     if (slug === 'ueber-mich' && data.about_intro_heading) {
       blockContent.unshift(h('h2', { className: 'cms-preview-subheading', key: 'about-intro-heading' }, data.about_intro_heading));
     }
+    if (slug === 'ueber-mich' && data.about_values_text) {
+      blockContent.push(h('h2', { className: 'cms-preview-subheading', key: 'about-values-heading' }, data.about_values_heading || 'Werte'));
+      blockContent.push(h('p', { className: 'cms-preview-paragraph', key: 'about-values-text' }, data.about_values_text));
+    }
     var title = data[page.title] || (lang === 'EN' ? page.labelEn : page.label);
     var heading = data[page.heading] || title;
     var subtitle = data[page.subtitle] || data[page.intro] || '';
@@ -151,6 +155,7 @@
       sections.push(h('section', { className: 'cms-preview-section', key: 'prices' }, [
         h('h2', { className: 'cms-preview-section-title', key: 'title' }, data.preise_h1 || 'Preise'),
         htmlTag('p', 'cms-preview-section-intro', data.preise_intro),
+        h('p', { className: 'cms-preview-section-intro', key: 'pricing-text' }, data.preise_intro_text || ''),
         h('div', { className: 'cms-preview-grid cms-preview-grid--pricing', key: 'grid' }, renderCards(data.preise_cards, true))
       ]));
     } else if (slug === 'kontakt' && asArray(data.kontakt_methods).length) {
@@ -177,7 +182,10 @@
       ]));
     }
 
-    return h('div', { className: 'cms-preview-page' }, [
+    return h('div', {
+      className: 'cms-preview-page',
+      'data-heading-style': data.heading_style === 'playfair' ? 'playfair' : 'cormorant'
+    }, [
       h('header', { className: 'cms-preview-header', key: 'header' }, [
         h('div', { className: 'cms-preview-brand', key: 'brand' }, data.footer_logo || 'Komm · sprich · mit mir'),
         h('div', { className: 'cms-preview-lang', key: 'lang' }, lang)

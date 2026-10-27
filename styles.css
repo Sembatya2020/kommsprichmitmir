@@ -121,13 +121,22 @@ a { color: inherit; }
 }
 
 /* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
   color: var(--purple-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+}
+
+:root[data-heading-style="playfair"] h1,
+:root[data-heading-style="playfair"] h2,
+:root[data-heading-style="playfair"] h3,
+:root[data-heading-style="playfair"] h4,
+:root[data-heading-style="playfair"] h5,
+:root[data-heading-style="playfair"] h6 {
+  font-family: 'Playfair Display', serif !important;
 }
 
 h1, h2, h3 {
@@ -1180,7 +1189,6 @@ p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
 }
 
 .step-body h4 {
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text);
@@ -1492,7 +1500,6 @@ footer {
 .footer-brand p { font-size: 0.9rem; line-height: 1.85; color: #ffffff; }
 
 .footer-col h4 {
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1557,7 +1564,6 @@ footer {
 }
 
 .home-testimonials h2 {
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--white);
@@ -1704,7 +1710,6 @@ body.legal-page { background: var(--surface); }
 .legal-breadcrumb a:hover { color: var(--gold-light); }
 
 .legal-hero h1 {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(36px, 6vw, 60px);
   font-weight: 400;
   font-style: italic;
@@ -2022,6 +2027,16 @@ body.legal-page { background: var(--surface); }
   font-style: italic;
   color: var(--purple-dark);
   line-height: 1.5;
+}
+
+.pricing-intro .pricing-intro-text {
+  margin-top: 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  font-style: normal;
+  color: var(--text-mid);
+  line-height: 1.7;
+  white-space: pre-line;
 }
 
 .pricing-grid {
@@ -2342,7 +2357,6 @@ body.legal-page { background: var(--surface); }
 }
 
 .kontakt-block h4 {
-  font-family: 'DM Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -2499,7 +2513,6 @@ body.legal-page { background: var(--surface); }
 }
 
 .kontakt-booking-head h2 {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 400;
   font-style: italic;
@@ -2614,6 +2627,18 @@ body.legal-page { background: var(--surface); }
   max-width: 760px;
   margin: 0 auto;
   padding: 0 var(--gutter);
+}
+
+.about-values {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.about-values[hidden] {
+  display: none;
+}
+
+.about-values p {
+  white-space: pre-line;
 }
 
 .about-narrow h2 {

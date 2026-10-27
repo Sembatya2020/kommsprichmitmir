@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
   --preview-bg: #f8f5ef;
@@ -19,12 +19,17 @@ body {
 }
 
 .cms-preview-page {
+  --preview-heading-font: 'Cormorant Garamond', serif;
   min-height: 100vh;
   background:
     radial-gradient(circle at top left, rgba(223, 191, 116, 0.18), transparent 28%),
     linear-gradient(180deg, #fbf8f2 0%, #f6f1e8 100%);
   padding: 28px;
   box-sizing: border-box;
+}
+
+.cms-preview-page[data-heading-style="playfair"] {
+  --preview-heading-font: 'Playfair Display', serif;
 }
 
 .cms-preview-header,
@@ -81,12 +86,15 @@ body {
 }
 
 .cms-preview-title,
-.cms-preview-section-title,
-.cms-preview-price-number {
-  font-family: 'Cormorant Garamond', serif;
+.cms-preview-section-title {
+  font-family: var(--preview-heading-font);
   font-weight: 500;
   color: var(--preview-heading);
   margin: 0;
+}
+
+.cms-preview-price-number {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .cms-preview-title {
@@ -182,7 +190,7 @@ body {
   font-size: 24px;
   margin: 0 0 10px;
   color: var(--preview-heading);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--preview-heading-font);
 }
 
 .cms-preview-card-link,

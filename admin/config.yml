@@ -110,6 +110,7 @@ collections:
           - { name: preise_h1,         label: "Preise – Hauptüberschrift", widget: string, required: false }
           - { name: preise_subtitle,   label: "Preise – Untertitel", widget: string, required: false }
           - { name: preise_intro,      label: "Preise – Einleitung", widget: text, required: false }
+          - { name: preise_intro_text, label: "Preise – Normaler Text zwischen Titel und Preiskarten", widget: text, required: false, hint: "Dieser Text erscheint direkt unter der Einleitung und über den Preiskarten." }
           - name: preise_cards
             label: "Preise – Preiskarten"
             label_singular: "Preiskarte"
@@ -149,6 +150,8 @@ collections:
           - { name: about_subtitle,   label: "Über mich – Untertitel", widget: string, required: false }
           - { name: about_intro_heading, label: "Über mich – Überschrift über dem Einleitungstext", widget: string, required: false }
           - { name: about_intro_blocks, label: "Über mich – Einleitung", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
+          - { name: about_values_heading, label: "Werte – Überschrift", widget: string, required: false }
+          - { name: about_values_text, label: "Werte – Text", widget: text, required: false, hint: "Hier den Text zu den Werten einfügen. Der Abschnitt erscheint auf der Website, sobald Text eingetragen ist." }
           - { name: about_quote, label: "Über mich – Zitat (hervorgehoben)", widget: text, required: false }
           - { name: about_personal_blocks, label: "Über mich – Persönlich", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
           - { name: about_background_blocks, label: "Über mich – Fachlicher Hintergrund", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
@@ -211,6 +214,15 @@ collections:
         label: "Allgemein & Footer"
         file: "content/de/allgemein-footer.json"
         fields:
+          - name: heading_style
+            label: "Website – Überschriften-Schrift"
+            widget: select
+            options:
+              - { label: "Stil 1 – Cormorant Garamond (aktuell)", value: cormorant }
+              - { label: "Stil 2 – Playfair Display", value: playfair }
+            default: cormorant
+            required: false
+            hint: "Legt die Schrift aller Überschriften auf der gesamten Website fest."
           - { name: brand_name,       label: "Allgemein – Markenname (Breadcrumb)", widget: string, required: false }
           - { name: footer_logo,      label: "Footer – Markenzeile (z.B. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Kurzbeschreibung", widget: text, required: false }
@@ -324,6 +336,7 @@ collections:
           - { name: preise_h1,         label: "Pricing – Main heading", widget: string, required: false }
           - { name: preise_subtitle,   label: "Pricing – Subtitle", widget: string, required: false }
           - { name: preise_intro,      label: "Pricing – Intro", widget: text, required: false }
+          - { name: preise_intro_text, label: "Pricing – Normal text between title and price cards", widget: text, required: false, hint: "This text appears below the introduction and above the price cards." }
           - name: preise_cards
             label: "Pricing – Price cards"
             label_singular: "Price card"
@@ -363,6 +376,8 @@ collections:
           - { name: about_subtitle,   label: "About – Subtitle", widget: string, required: false }
           - { name: about_intro_heading, label: "About – Heading above the introduction", widget: string, required: false }
           - { name: about_intro_blocks, label: "About – Intro", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
+          - { name: about_values_heading, label: "Values – Heading", widget: string, required: false }
+          - { name: about_values_text, label: "Values – Text", widget: text, required: false, hint: "Enter the text about the values. The section appears on the website once text is added." }
           - { name: about_quote, label: "About – Highlighted quote", widget: text, required: false }
           - { name: about_personal_blocks, label: "About – Personal", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
           - { name: about_background_blocks, label: "About – Professional background", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
@@ -425,6 +440,15 @@ collections:
         label: "General & footer"
         file: "content/en/allgemein-footer.json"
         fields:
+          - name: heading_style
+            label: "Website – Heading font"
+            widget: select
+            options:
+              - { label: "Style 1 – Cormorant Garamond (current)", value: cormorant }
+              - { label: "Style 2 – Playfair Display", value: playfair }
+            default: cormorant
+            required: false
+            hint: "Sets the heading font across the entire website."
           - { name: brand_name,       label: "General – Brand name (breadcrumb)", widget: string, required: false }
           - { name: footer_logo,      label: "Footer – Brand line (e.g. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Description", widget: text, required: false }

@@ -66,6 +66,8 @@
       'aboutT.eyebrow': 'Über mich',
       'aboutT.h2':      'Pascale Myriam Kohli',
       'about_intro_heading': 'Über mich',
+      'about_values_heading': 'Werte',
+      'about_values_text': '',
       'aboutT.p1':      'Prozessorientierte Psychosoziale Beraterin SGFB, Supervisorin & Coach BSO. Ich arbeite zwischen der Schweiz und Südafrika und bringe Erfahrung aus mehreren Jahren im psychiatrischen und psychotherapeutischen Umfeld mit.',
       'aboutT.p2':      'Mich interessiert das Unausgesprochene – das, was da ist, aber oft keinen Raum bekommt. Mit feinem Gespür und Klarheit darf ich Menschen unterstützen, innere Prozesse zu verstehen und neue Schritte zu gehen.',
       'aboutT.btn':     'Mehr über mich',
@@ -188,6 +190,8 @@
       'aboutT.eyebrow': 'About me',
       'aboutT.h2':      'Pascale Myriam Kohli',
       'about_intro_heading': 'About me',
+      'about_values_heading': 'Values',
+      'about_values_text': '',
       'aboutT.p1':      'Process-oriented psychosocial counsellor SGFB, supervisor & coach BSO. I work between Switzerland and South Africa and bring several years of experience in psychiatric and psychotherapeutic environments.',
       'aboutT.p2':      'I am interested in the unspoken — what is there but rarely gets a space. With sensitivity and clarity, I support people in understanding inner processes and taking new steps.',
       'aboutT.btn':     'More about me',
@@ -463,6 +467,8 @@
   function applyLang() {
     currentLang = 'de';
     document.documentElement.lang = 'de';
+    var headingStyle = cmsRaw.de.heading_style;
+    document.documentElement.dataset.headingStyle = headingStyle === 'playfair' ? 'playfair' : 'cormorant';
 
     const dict = t[currentLang];
 
@@ -474,6 +480,11 @@
       const v = dict[el.dataset.i18n];
       if (v !== undefined) el.textContent = v;
     });
+    const aboutValues = document.getElementById('aboutValues');
+    if (aboutValues) {
+      const valuesText = cmsRaw.de.about_values_text;
+      aboutValues.hidden = typeof valuesText !== 'string' || valuesText.trim() === '';
+    }
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.dataset.i18nHtml || el.dataset.i18n_html;
       const v = dict[key];

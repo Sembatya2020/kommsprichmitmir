@@ -1,39 +1,4 @@
 {
-  "about_page_title": "Über mich",
-  "about_h1": "Persönlich",
-  "about_subtitle": "Pascale Myriam Kohli ",
-  "about_intro_heading": "Über mich",
-  "about_values_heading": "Werte",
-  "about_values_text": "",
-  "about_intro_blocks": [
-    {
-      "type": "text",
-      "text": "Mein Lebensweg ist bunt und vielfältig. Ich bin vertraut mit Themen wie Verlust, Konflikt, Einsamkeit und Neuanfang – ebenso Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche, teils fordernde Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen."
-    },
-    {
-      "type": "text",
-      "text": "Aufgewachsen im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
-    },
-    {
-      "type": "text",
-      "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber noch keinen Raum bekommt. Ich habe ein gutes Gespür für das, was unter der Oberfläche wirkt. Mit Klarheit im Fühlen und im Ausdruck möchte ich Menschen unterstützen, innere Prozesse zu verstehen und im Aussen in eine sinnvolle Form zu bringen."
-    }
-  ],
-  "about_quote": "\"Nicht alles muss vollständig heilen. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist.\"",
-  "about_personal_blocks": [
-    {
-      "type": "text",
-      "text": "Mich bewegen die Themen Trauma und Resilienz. Viele Jahre bereits forsche ich damit. Eine wichtige Erkenntnis für mich ist: Nicht alles muss vollständig „heilen“. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist."
-    },
-    {
-      "type": "text",
-      "text": "Ich lebe und arbeite zwischen der Schweiz und Südafrika. Diese Erfahrung hat meinen Blick auf Themen wie Zugehörigkeit, Privilegien und soziale Gerechtigkeit erweitert und geschärft."
-    },
-    {
-      "type": "text",
-      "text": "Ich bin 1981 geboren, bin Mutter einer bald erwachsenen Tochter und lebe in einer Partnerschaft."
-    }
-  ],
   "about_background_blocks": [
     {
       "type": "heading",
@@ -70,5 +35,40 @@
       "text": "Meine Dankbarkeit für wertvolle Inspiration geht an Arnold Mindell, Charlotte Perry, Daan van Kampenhout, Richard Schwartz, Bessel van der Kolk, Deb Dana, Esther Perel und Martin Boss."
     }
   ],
+  "about_subtitle": "Pascale Myriam Kohli ",
+  "about_quote": "\"Nicht alles muss vollständig heilen. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist.\"",
+  "about_intro_blocks": [
+    {
+      "type": "text",
+      "text": "Mein Lebensweg ist bunt und vielfältig. Ich bin vertraut mit Themen wie Verlust, Konflikt, Einsamkeit und Neuanfang – ebenso Liebe, Freude, Verbundenheit und Lebendigkeit. Unterschiedliche, teils fordernde Erfahrungen haben in mir Offenheit gegenüber den unterschiedlichsten Realitäten des Lebens geweckt und Resilienz wachsen lassen."
+    },
+    {
+      "type": "text",
+      "text": "Aufgewachsen im Kreis verschiedener Kulturen und Religionen berührt mich als Mensch eine Spiritualität jenseits von Konzepten. Der innere Raum in jedem von uns. Die Kunst zu Träumen und gleichzeitig meine Füsse auf dem Boden zu haben, zeichnet mich aus. Auch dann, wenn es um die Begleitung von Menschen geht."
+    },
+    {
+      "type": "text",
+      "text": "Mich interessiert das Unausgesprochene – das, was da ist, aber noch keinen Raum bekommt. Ich habe ein gutes Gespür für das, was unter der Oberfläche wirkt. Mit Klarheit im Fühlen und im Ausdruck unterstütze ich Menschen, innere Prozesse zu verstehen und im Aussen in eine sinnvolle Form zu bringen."
+    }
+  ],
+  "about_personal_blocks": [
+    {
+      "type": "text",
+      "text": "Mich bewegen die Themen Trauma und Resilienz. Viele Jahre bereits forsche ich damit. Eine wichtige Erkenntnis für mich ist: Nicht alles muss vollständig „heilen“. Oft geht es vielmehr darum, einen tragenden Umgang mit dem zu finden, was da ist."
+    },
+    {
+      "type": "text",
+      "text": "Ich lebe und arbeite zwischen der Schweiz und Südafrika. Diese Erfahrung hat meinen Blick auf Themen wie Zugehörigkeit, Privilegien und soziale Gerechtigkeit erweitert und geschärft."
+    },
+    {
+      "type": "text",
+      "text": "Ich bin 1981 geboren, bin Mutter einer bald erwachsenen Tochter und lebe in einer Partnerschaft."
+    }
+  ],
+  "about_values_heading": "Werte",
+  "about_values_text": "",
+  "about_page_title": "Über mich",
+  "about_h1": "Persönlich",
+  "about_intro_heading": "Über mich",
   "about_cta": "Kontakt aufnehmen"
 }

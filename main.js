@@ -624,6 +624,7 @@
   /* ─── INIT ───────────────────────────────────────────────────── */
   function init() {
     setupTestimonialDialog();
+    updateActiveNav();
     /* Theme: re-apply (in case localStorage has a different value than the
        inline pre-render script saw) and wire up all toggle buttons. */
     let savedTheme = 'light';
@@ -892,20 +893,27 @@
         }
       });
 
+      document.body.className = newDoc.body.className;
+      Array.from(document.body.attributes).forEach(attribute => {
+        if (attribute.name.startsWith('data-')) document.body.removeAttribute(attribute.name);
+      });
+      Array.from(newDoc.body.attributes).forEach(attribute => {
+        if (attribute.name.startsWith('data-')) document.body.setAttribute(attribute.name, attribute.value);
+      });
+
       document.title = newDoc.title;
       
       if (push) {
         history.pushState({ url }, newDoc.title, url);
       }
       
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.href === location.href && link.getAttribute('href') !== 'index.html') {
-          link.classList.add('active');
-        }
-      });
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        navbar.classList.toggle('scrolled', document.body.classList.contains('legal-page') || window.scrollY > 60);
+      }
+      updateActiveNav();
 
       if (typeof applyLang === 'function') {
         applyLang(currentLang);
@@ -945,6 +953,18 @@
     }
   }
 
+  function normalizePagePath(url) {
+    const path = url.pathname.replace(/\/+$/, '') || '/';
+    return path === '/index.html' ? '/' : path;
+  }
+
+  function updateActiveNav() {
+    const currentPath = normalizePagePath(new URL(location.href));
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.toggle('active', normalizePagePath(new URL(link.href)) === currentPath);
+    });
+  }
+
   function handleNavigation(url, push = true) {
     if (routerCache.has(url)) {
       const parser = new DOMParser();
@@ -982,7 +1002,10 @@
         const path = urlObj.pathname;
         if (path.endsWith('.html') || path === '/' || path === '') {
           e.preventDefault();
-          if (urlObj.href !== location.href) {
+          const currentUrl = new URL(location.href);
+          if (normalizePagePath(urlObj) === normalizePagePath(currentUrl) && urlObj.search === currentUrl.search) {
+            if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
             handleNavigation(urlObj.href);
           }
         }
@@ -1002,7 +1025,10 @@
           !link.hash && 
           link.target !== '_blank' &&
           (urlObj.pathname.endsWith('.html') || urlObj.pathname === '/' || urlObj.pathname === '')) {
-        prefetchPage(urlObj.href);
+        const currentUrl = new URL(location.href);
+        if (normalizePagePath(urlObj) !== normalizePagePath(currentUrl) || urlObj.search !== currentUrl.search) {
+          prefetchPage(urlObj.href);
+        }
       }
     } catch(e) {}
   });

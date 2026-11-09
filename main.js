@@ -886,6 +886,7 @@
       
       const footer = document.querySelector('footer');
       newContent.forEach(el => {
+        el.classList.add('page-content-enter');
         if (footer) {
           document.body.insertBefore(el, footer);
         } else {
@@ -946,16 +947,18 @@
       }
     };
 
-    if (document.startViewTransition) {
-      document.startViewTransition(doSwap);
-    } else {
-      doSwap();
-    }
+    doSwap();
   }
 
   function normalizePagePath(url) {
     const path = url.pathname.replace(/\/+$/, '') || '/';
     return path === '/index.html' ? '/' : path;
+  }
+
+  function isPagePath(pathname) {
+    return /^\/(?:index|beratung|supervision|ueber-mich|preise|kontakt|agb|datenschutz|nutzung|404|success)\.html$/.test(pathname) ||
+      /^\/(?:beratung|supervision|ueber-mich|preise|kontakt|agb|datenschutz|nutzung|404|success)\/?$/.test(pathname) ||
+      pathname === '/';
   }
 
   function updateActiveNav() {
@@ -999,8 +1002,7 @@
           link.target !== '_blank' &&
           !link.hasAttribute('download')) {
         
-        const path = urlObj.pathname;
-        if (path.endsWith('.html') || path === '/' || path === '') {
+        if (isPagePath(urlObj.pathname)) {
           e.preventDefault();
           const currentUrl = new URL(location.href);
           if (normalizePagePath(urlObj) === normalizePagePath(currentUrl) && urlObj.search === currentUrl.search) {
@@ -1024,7 +1026,7 @@
       if (urlObj.origin === location.origin && 
           !link.hash && 
           link.target !== '_blank' &&
-          (urlObj.pathname.endsWith('.html') || urlObj.pathname === '/' || urlObj.pathname === '')) {
+          isPagePath(urlObj.pathname)) {
         const currentUrl = new URL(location.href);
         if (normalizePagePath(urlObj) !== normalizePagePath(currentUrl) || urlObj.search !== currentUrl.search) {
           prefetchPage(urlObj.href);

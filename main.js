@@ -97,6 +97,7 @@
       /* Testimonials Home */
       'testi.eb': 'KUNDENSTIMMEN',
       'testi.h2': 'Was Klient:innen sagen',
+      'testi.readMore': 'Vollständige Kundenstimme lesen',
       'testi.q1': 'Die Zusammenarbeit mit Pascale gab mir die Klarheit, nach der ich jahrelang gesucht hatte. Sie hört tief zu und hält den Raum auf wunderbare Weise.',
       'testi.c1': 'S.M., Klientin für Psychosoziale Beratung',
       'testi.q2': 'Die Supervisionssitzungen haben mir geholfen, sowohl beruflich als auch persönlich zu wachsen. Ich ging jedes Mal geerdeter nach Hause.',
@@ -430,6 +431,10 @@
         applyFields(node, item, isString);
         node.querySelectorAll('[data-field],[data-field-html],[data-href-field],[data-src-field],[data-class-field]')
           .forEach(function(el) { applyFields(el, item, isString); });
+        if (container.getAttribute('data-list') === 'testimonials') {
+          var citation = node.querySelector('.testi-client');
+          node.setAttribute('aria-label', (citation && citation.textContent.trim() ? citation.textContent.trim() : 'Kundenstimme') + ': Vollständige Kundenstimme lesen');
+        }
         container.insertBefore(node, tpl);
       });
     });
@@ -574,8 +579,51 @@
     applyTheme(getTheme() === 'dark' ? 'light' : 'dark', true);
   }
 
+  function setupTestimonialDialog() {
+    function openFromCard(card) {
+      var dialog = document.getElementById('testimonialDialog');
+      var quote = card.querySelector('.testi-quote');
+      var citation = card.querySelector('.testi-client');
+      var dialogTitle = dialog && dialog.querySelector('.testi-dialog-title');
+      var dialogQuote = dialog && dialog.querySelector('.testi-dialog-quote');
+      if (!dialog || !quote || !dialogTitle || !dialogQuote) {
+        console.error('The testimonial dialog could not be opened because its content is missing.');
+        return;
+      }
+      dialogTitle.textContent = citation ? citation.textContent.trim() : '';
+      dialogQuote.textContent = quote.textContent.trim();
+      dialog.showModal();
+    }
+
+    document.addEventListener('click', function(event) {
+      var card = event.target.closest && event.target.closest('.testi-card[role="button"]');
+      if (card) {
+        openFromCard(card);
+        return;
+      }
+      var closeButton = event.target.closest && event.target.closest('.testi-dialog-close');
+      if (closeButton) {
+        var dialog = closeButton.closest('dialog');
+        if (dialog && dialog.open) dialog.close();
+        return;
+      }
+      if (event.target.matches && event.target.matches('.testi-dialog[open]')) {
+        event.target.close();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      var card = event.target.closest && event.target.closest('.testi-card[role="button"]');
+      if (card && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault();
+        openFromCard(card);
+      }
+    });
+  }
+
   /* ─── INIT ───────────────────────────────────────────────────── */
   function init() {
+    setupTestimonialDialog();
     /* Theme: re-apply (in case localStorage has a different value than the
        inline pre-render script saw) and wire up all toggle buttons. */
     let savedTheme = 'light';

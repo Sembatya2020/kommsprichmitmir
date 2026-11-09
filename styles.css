@@ -1575,15 +1575,34 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: clamp(2.5rem, 5vw, 4rem);
+  grid-auto-rows: 1fr;
 }
 
 .testi-card {
   background: var(--surface);
-  border: 0.5px solid rgba(255,255,255,0.1);
-  padding: 2.5rem;
+  border: 1px solid rgba(14,120,114,0.2);
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
   border-radius: 0 !important; /* Sharp corners */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 340px;
+  height: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+.testi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+}
+
+.testi-card:focus-visible,
+.testi-dialog-close:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .testi-stars {
@@ -1599,6 +1618,11 @@ footer {
   line-height: 1.7;
   color: var(--purple-dark);
   margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 .testi-client {
@@ -1606,15 +1630,85 @@ footer {
   font-size: 12px;
   color: #888;
   margin-top: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.testi-read-more {
+  margin-top: 1rem;
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.testi-dialog {
+  width: min(1000px, calc(100% - 2rem));
+  max-width: none;
+  max-height: min(85vh, 760px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid rgba(14,120,114,0.25);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.testi-dialog::backdrop {
+  background: rgba(5,30,28,0.72);
+  backdrop-filter: blur(4px);
+}
+
+.testi-dialog-content {
+  position: relative;
+  padding: clamp(2rem, 6vw, 5rem);
+  overflow-y: auto;
+  max-height: min(85vh, 760px);
+}
+
+.testi-dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--cream-dark);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.testi-dialog-title {
+  margin: 0 3rem 1.5rem 0;
+  color: var(--text-mid);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.testi-dialog-quote {
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  font-style: italic;
+  line-height: 1.8;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1024px) {
   .offers-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 }
 
 @media (max-width: 600px) {
   .offers-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testi-card { min-height: 320px; }
 }
 
 /* Legal links row (AGB | Nutzung & Impressum | Datenschutzrichtlinie | Kontakt) */

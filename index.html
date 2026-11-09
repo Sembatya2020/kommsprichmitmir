@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <link rel="canonical" href="https://kommsprichmitmir.ch/">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
@@ -373,26 +373,38 @@
     <span class="eyebrow" data-i18n="testi.eb">KIND WORDS</span>
     <h2 data-i18n="testi.h2">What clients say</h2>
     <div class="testimonials-grid" data-list="testimonials">
-      <div class="testi-card" data-default>
+      <div class="testi-card" data-default role="button" tabindex="0" aria-haspopup="dialog" aria-controls="testimonialDialog" aria-label="Kundenstimme vollständig lesen">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote" data-i18n="testi.q1">"I've known Pascale Kohli since our training together and value her as someone with great life experience and openness. She meets people authentically and with genuine interest. I'm convinced that people feel seen and taken seriously with her. With her calm manner, attentive listening, and well-aimed questions, she creates a space where growth becomes possible."</p>
         <p class="testi-client" data-i18n="testi.c1">Y.S., Psychotherapist, Fellow student at the IPA</p>
+        <span class="testi-read-more" data-i18n="testi.readMore">Vollständige Kundenstimme lesen</span>
       </div>
-      <div class="testi-card" data-default>
+      <div class="testi-card" data-default role="button" tabindex="0" aria-haspopup="dialog" aria-controls="testimonialDialog" aria-label="Kundenstimme vollständig lesen">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-quote" data-i18n="testi.q2">"Working with Pascale gave me the clarity I had been searching for years. She listens deeply and holds space beautifully."</p>
         <p class="testi-client" data-i18n="testi.c2">S.M., Psychosocial Counselling client</p>
+        <span class="testi-read-more" data-i18n="testi.readMore">Vollständige Kundenstimme lesen</span>
       </div>
       <template>
-        <div class="testi-card">
+        <div class="testi-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="testimonialDialog" aria-label="Kundenstimme vollständig lesen">
           <div class="testi-stars">★★★★★</div>
           <p class="testi-quote" data-field-html="quote"></p>
           <p class="testi-client" data-field="cite"></p>
+          <span class="testi-read-more" data-i18n="testi.readMore">Vollständige Kundenstimme lesen</span>
         </div>
       </template>
     </div>
   </div>
 </section>
+
+<dialog class="testi-dialog" id="testimonialDialog" aria-labelledby="testimonialDialogTitle">
+  <div class="testi-dialog-content">
+    <button class="testi-dialog-close" type="button" aria-label="Schliessen">×</button>
+    <div class="testi-stars" aria-hidden="true">★★★★★</div>
+    <h2 class="testi-dialog-title" id="testimonialDialogTitle"></h2>
+    <p class="testi-dialog-quote"></p>
+  </div>
+</dialog>
 
 <!-- ─── CTA ────────────────────────────────────────────────────── -->
 <section id="cta">
@@ -447,6 +459,6 @@
   </div>
 </footer>
 
-<script type="module" src="./main.js?v=3"></script>
+<script type="module" src="./main.js?v=4"></script>
 </body>
 </html>

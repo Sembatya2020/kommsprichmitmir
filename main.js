@@ -268,14 +268,14 @@
   let currentLang = 'de';
   const langCallbacks = window._langCallbacks || [];
 
-  /* Flatten nested {hero:{h1:"..."}} → {"hero.h1":"..."} */
-  function flattenContent(obj, prefix) {
+  /* Unwrap editor-only section groups while keeping repeatable lists intact. */
+  function flattenContent(obj) {
     return Object.keys(obj).reduce(function(acc, key) {
-      var full = prefix ? prefix + '.' + key : key;
-      if (obj[key] !== null && typeof obj[key] === 'object') {
-        Object.assign(acc, flattenContent(obj[key], full));
+      var value = obj[key];
+      if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+        Object.assign(acc, value);
       } else {
-        acc[full] = obj[key];
+        acc[key] = value;
       }
       return acc;
     }, {});
@@ -345,7 +345,7 @@
         return response.json();
       });
     })).then(function(pageContent) {
-      var content = Object.assign({}, ...pageContent);
+      var content = Object.assign({}, ...pageContent.map(flattenContent));
       cmsRaw.de = content;
       mergeScalars(t.de, content);
     }).catch(function(error) {

@@ -5,7 +5,16 @@
 
   function toData(entry) {
     var data = entry && entry.get && entry.get('data');
-    return data && data.toJS ? data.toJS() : {};
+    var raw = data && data.toJS ? data.toJS() : {};
+    return Object.keys(raw).reduce(function (result, key) {
+      var value = raw[key];
+      if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+        Object.assign(result, value);
+      } else {
+        result[key] = value;
+      }
+      return result;
+    }, {});
   }
 
   function asArray(value) {

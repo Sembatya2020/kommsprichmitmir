@@ -15,6 +15,10 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
   gewünschte Seite, z.B. **Startseite**, **Beratung**, **Preise**, **Fehlerseite
   (404)** oder **Nachricht gesendet**. So bearbeitest du immer nur eine Seite
   auf einmal.
+- **Startseite:** Die Felder sind in nummerierte, einklappbare Bereiche
+  aufgeteilt. Öffne nur den Bereich, den du bearbeiten möchtest, z.B.
+  **„1. Titelbild und Begrüssung“**, **„3. Angebote und Angebotskarten“**
+  oder **„7. Kundenstimmen“**.
 - **Texte ändern:** Schreibe einfach den gewünschten Text in das passende Feld.
   Du brauchst keine HTML-Zeichen oder Formatierungscodes einzugeben.
 - **Seitentitel ändern:** Bearbeite das Feld **„Browser-/SEO-Titel“**. Es setzt
@@ -38,6 +42,8 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 
 - Choose **Deutsch** or **English** on the left, then select the page you want
   to edit, including **Not found (404)** and **Message sent**.
+- Home page fields are separated into numbered, collapsible sections. Open only
+  the section you want to edit.
 - Enter normal text in the fields; no HTML or formatting codes are needed.
 - **Change a page title:** Edit **“Browser/SEO title”** to set the complete
   title shown in the browser tab and when sharing the page.

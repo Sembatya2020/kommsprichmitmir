@@ -40,12 +40,13 @@
   </style>
   <script>(function(){try{var t=localStorage.getItem("kspmm.theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 </head>
-<body>
+<body data-content-file="success" data-page-title-key="success_page_title">
   <div class="success-card">
-    <span class="eyebrow" style="color:var(--gold); margin-bottom: 1rem;">Nachricht gesendet</span>
-    <h1>Danke für deine Nachricht!</h1>
-    <p>Ich habe deine Anfrage erhalten und werde mich so schnell wie möglich bei dir melden. In der Zwischenzeit lade ich dich ein, weiter auf meiner Website zu verweilen.</p>
-    <a href="index.html" class="btn-primary">Zurück zur Startseite</a>
+    <span class="eyebrow" style="color:var(--gold); margin-bottom: 1rem;" data-i18n="success_eyebrow">Nachricht gesendet</span>
+    <h1 data-i18n="success_h1">Danke für deine Nachricht!</h1>
+    <p data-i18n="success_text">Ich habe deine Anfrage erhalten und werde mich so schnell wie möglich bei dir melden. In der Zwischenzeit lade ich dich ein, weiter auf meiner Website zu verweilen.</p>
+    <a href="index.html" class="btn-primary" data-i18n="success_cta">Zurück zur Startseite</a>
   </div>
+  <script src="/system-page.js" defer></script>
 </body>
 </html>

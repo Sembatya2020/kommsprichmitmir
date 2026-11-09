@@ -121,6 +121,23 @@
       heading: 'nutzung_h1',
       blocks: ['nutzung_blocks']
     },
+    '404': {
+      label: 'Fehlerseite (404)',
+      labelEn: 'Not found (404)',
+      title: 'notfound_page_title',
+      eyebrow: 'notfound_eyebrow',
+      heading: 'notfound_h1',
+      heading2: 'notfound_h2',
+      subtitle: 'notfound_text'
+    },
+    success: {
+      label: 'Nachricht gesendet',
+      labelEn: 'Message sent',
+      title: 'success_page_title',
+      eyebrow: 'success_eyebrow',
+      heading: 'success_h1',
+      subtitle: 'success_text'
+    },
     'allgemein-footer': {
       label: 'Allgemein & Footer',
       labelEn: 'General & Footer'
@@ -191,8 +208,9 @@
         h('div', { className: 'cms-preview-lang', key: 'lang' }, lang)
       ]),
       h('section', { className: 'cms-preview-hero', key: 'hero' }, [
-        h('div', { className: 'cms-preview-eyebrow', key: 'eyebrow' }, title),
+        h('div', { className: 'cms-preview-eyebrow', key: 'eyebrow' }, page.eyebrow ? data[page.eyebrow] || '' : title),
         h('h1', { className: 'cms-preview-title', key: 'title' }, heading),
+        page.heading2 ? h('h2', { className: 'cms-preview-section-title', key: 'heading2' }, data[page.heading2] || '') : null,
         h('p', { className: 'cms-preview-lead', key: 'subtitle' }, subtitle)
       ])
     ].concat(sections));

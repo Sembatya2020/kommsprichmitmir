@@ -11,7 +11,9 @@ const pageTitles = {
   'kontakt.html': ['content/de/kontakt.json', 'kontakt_page_title'],
   'agb.html': ['content/de/agb.json', 'agb_page_title'],
   'datenschutz.html': ['content/de/datenschutz.json', 'datenschutz_page_title'],
-  'nutzung.html': ['content/de/nutzung-impressum.json', 'nutzung_page_title']
+  'nutzung.html': ['content/de/nutzung-impressum.json', 'nutzung_page_title'],
+  '404.html': ['content/de/404.json', 'notfound_page_title'],
+  'success.html': ['content/de/success.json', 'success_page_title']
 };
 
 function escapeHtml(value) {

@@ -314,7 +314,8 @@
 
   function applyPageTitle() {
     var fileName = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
-    var title = cmsRaw.de[pageTitleKeys[fileName.toLowerCase()]];
+    var titleKey = document.body.dataset.pageTitleKey || pageTitleKeys[fileName.toLowerCase()];
+    var title = cmsRaw.de[titleKey];
     if (typeof title !== 'string' || !title.trim()) return;
 
     document.title = title.trim();

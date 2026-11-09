@@ -164,9 +164,13 @@ collections:
         fields:
           - { name: kontakt_page_title, label: "Kontakt – Browser-/SEO-Titel", widget: string, required: false, hint: "Der vollständige Titel im Browser-Tab und beim Teilen der Seite." }
           - { name: kontakt_h1,         label: "Kontakt – Hauptüberschrift", widget: string, required: false }
+          - { name: kontakt_name,        label: "Kontakt – Name", widget: string, required: false }
           - { name: kontakt_subtitle,   label: "Kontakt – Untertitel", widget: string, required: false }
           - { name: kontakt_eb,         label: "Kontakt – Kleiner Text", widget: string, required: false }
           - { name: kontakt_cred,       label: "Kontakt – Berufsbezeichnung", widget: text, required: false }
+          - { name: kontakt_mail_h, label: "Kontakt – Überschrift E-Mail", widget: string, required: false }
+          - { name: kontakt_threema_h, label: "Kontakt – Überschrift Threema", widget: string, required: false }
+          - { name: kontakt_whatsapp_h, label: "Kontakt – Überschrift WhatsApp", widget: string, required: false }
           - name: kontakt_methods
             label: "Kontakt – Kontaktmöglichkeiten"
             label_singular: "Kontaktmöglichkeit"
@@ -225,6 +229,9 @@ collections:
             required: false
             hint: "Legt die Schrift aller Überschriften auf der gesamten Website fest."
           - { name: brand_name,       label: "Allgemein – Markenname (Breadcrumb)", widget: string, required: false }
+          - { name: footer_contact_name, label: "Footer – Kontaktname", widget: string, required: false }
+          - { name: footer_nav_header, label: "Footer – Überschrift Navigation", widget: string, required: false }
+          - { name: footer_contact_header, label: "Footer – Überschrift Kontakt", widget: string, required: false }
           - { name: footer_logo,      label: "Footer – Markenzeile (z.B. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Kurzbeschreibung", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
@@ -234,6 +241,27 @@ collections:
           - { name: footer_link_datenschutz, label: "Footer-Link – Datenschutz (lang)", widget: string, required: false }
           - { name: footer_link_privacy,     label: "Footer-Link – Datenschutz (kurz)", widget: string, required: false }
           - { name: footer_link_imprint,     label: "Footer-Link – Impressum", widget: string, required: false }
+
+      - name: "404"
+        label: "Fehlerseite (404)"
+        file: "content/de/404.json"
+        fields:
+          - { name: notfound_page_title, label: "404 – Browser-/SEO-Titel", widget: string, required: false }
+          - { name: notfound_eyebrow, label: "404 – Kleiner Text", widget: string, required: false }
+          - { name: notfound_h1, label: "404 – Hauptüberschrift", widget: string, required: false }
+          - { name: notfound_h2, label: "404 – Unterüberschrift", widget: string, required: false }
+          - { name: notfound_text, label: "404 – Beschreibung", widget: text, required: false }
+          - { name: notfound_cta, label: "404 – Button", widget: string, required: false }
+
+      - name: "success"
+        label: "Nachricht gesendet"
+        file: "content/de/success.json"
+        fields:
+          - { name: success_page_title, label: "Bestätigung – Browser-/SEO-Titel", widget: string, required: false }
+          - { name: success_eyebrow, label: "Bestätigung – Kleiner Text", widget: string, required: false }
+          - { name: success_h1, label: "Bestätigung – Hauptüberschrift", widget: string, required: false }
+          - { name: success_text, label: "Bestätigung – Beschreibung", widget: text, required: false }
+          - { name: success_cta, label: "Bestätigung – Button", widget: string, required: false }
 
   - name: "english"
     label: "English"
@@ -391,9 +419,13 @@ collections:
         fields:
           - { name: kontakt_page_title, label: "Contact – Browser/SEO title", widget: string, required: false, hint: "The complete title shown in the browser tab and when sharing the page." }
           - { name: kontakt_h1,         label: "Contact – Main heading", widget: string, required: false }
+          - { name: kontakt_name,        label: "Contact – Name", widget: string, required: false }
           - { name: kontakt_subtitle,   label: "Contact – Subtitle", widget: string, required: false }
           - { name: kontakt_eb,         label: "Contact – Small text", widget: string, required: false }
           - { name: kontakt_cred,       label: "Contact – Job title", widget: text, required: false }
+          - { name: kontakt_mail_h, label: "Contact – Email heading", widget: string, required: false }
+          - { name: kontakt_threema_h, label: "Contact – Threema heading", widget: string, required: false }
+          - { name: kontakt_whatsapp_h, label: "Contact – WhatsApp heading", widget: string, required: false }
           - name: kontakt_methods
             label: "Contact – Contact options"
             label_singular: "Contact option"
@@ -452,6 +484,9 @@ collections:
             required: false
             hint: "Sets the heading font across the entire website."
           - { name: brand_name,       label: "General – Brand name (breadcrumb)", widget: string, required: false }
+          - { name: footer_contact_name, label: "Footer – Contact name", widget: string, required: false }
+          - { name: footer_nav_header, label: "Footer – Navigation heading", widget: string, required: false }
+          - { name: footer_contact_header, label: "Footer – Contact heading", widget: string, required: false }
           - { name: footer_logo,      label: "Footer – Brand line (e.g. Komm · sprich · mit mir)", widget: string, required: false }
           - { name: footer_brand,     label: "Footer – Description", widget: text, required: false }
           - { name: footer_copyright, label: "Footer – Copyright", widget: string, required: false }
@@ -461,3 +496,24 @@ collections:
           - { name: footer_link_datenschutz, label: "Footer link – Privacy Policy (long)", widget: string, required: false }
           - { name: footer_link_privacy,     label: "Footer link – Privacy (short)", widget: string, required: false }
           - { name: footer_link_imprint,     label: "Footer link – Imprint", widget: string, required: false }
+
+      - name: "404"
+        label: "Not found (404)"
+        file: "content/en/404.json"
+        fields:
+          - { name: notfound_page_title, label: "404 – Browser/SEO title", widget: string, required: false }
+          - { name: notfound_eyebrow, label: "404 – Small text", widget: string, required: false }
+          - { name: notfound_h1, label: "404 – Main heading", widget: string, required: false }
+          - { name: notfound_h2, label: "404 – Secondary heading", widget: string, required: false }
+          - { name: notfound_text, label: "404 – Description", widget: text, required: false }
+          - { name: notfound_cta, label: "404 – Button", widget: string, required: false }
+
+      - name: "success"
+        label: "Message sent"
+        file: "content/en/success.json"
+        fields:
+          - { name: success_page_title, label: "Confirmation – Browser/SEO title", widget: string, required: false }
+          - { name: success_eyebrow, label: "Confirmation – Small text", widget: string, required: false }
+          - { name: success_h1, label: "Confirmation – Main heading", widget: string, required: false }
+          - { name: success_text, label: "Confirmation – Description", widget: text, required: false }
+          - { name: success_cta, label: "Confirmation – Button", widget: string, required: false }

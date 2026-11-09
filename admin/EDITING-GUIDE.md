@@ -12,8 +12,9 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 ## 🇩🇪 Das Wichtigste
 
 - **Seiten finden:** Wähle links **Deutsch** oder **English** und dann die
-  gewünschte Seite, z.B. **Startseite**, **Beratung** oder **Preise**. So
-  bearbeitest du immer nur eine Seite auf einmal.
+  gewünschte Seite, z.B. **Startseite**, **Beratung**, **Preise**, **Fehlerseite
+  (404)** oder **Nachricht gesendet**. So bearbeitest du immer nur eine Seite
+  auf einmal.
 - **Texte ändern:** Schreibe einfach den gewünschten Text in das passende Feld.
   Du brauchst keine HTML-Zeichen oder Formatierungscodes einzugeben.
 - **Seitentitel ändern:** Bearbeite das Feld **„Browser-/SEO-Titel“**. Es setzt
@@ -36,7 +37,7 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 ## 🇬🇧 In short
 
 - Choose **Deutsch** or **English** on the left, then select the page you want
-  to edit.
+  to edit, including **Not found (404)** and **Message sent**.
 - Enter normal text in the fields; no HTML or formatting codes are needed.
 - **Change a page title:** Edit **“Browser/SEO title”** to set the complete
   title shown in the browser tab and when sharing the page.

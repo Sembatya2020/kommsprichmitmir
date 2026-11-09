@@ -45,13 +45,14 @@
   </style>
   <script>(function(){try{var t=localStorage.getItem("kspmm.theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 </head>
-<body>
+<body data-content-file="404" data-page-title-key="notfound_page_title">
   <div class="notfound-card">
-    <span class="eyebrow" style="color:var(--gold); margin-bottom: 1rem;">Fehler 404</span>
-    <h1>Ups!</h1>
-    <h2>Seite nicht gefunden</h2>
-    <p>Es scheint, als hätte diese Seite ihren eigenen Weg gewählt. Lass uns dich wieder zurück auf den richtigen Pfad führen.</p>
-    <a href="/index.html" class="btn-primary">Zurück zur Startseite</a>
+    <span class="eyebrow" style="color:var(--gold); margin-bottom: 1rem;" data-i18n="notfound_eyebrow">Fehler 404</span>
+    <h1 data-i18n="notfound_h1">Ups!</h1>
+    <h2 data-i18n="notfound_h2">Seite nicht gefunden</h2>
+    <p data-i18n="notfound_text">Es scheint, als hätte diese Seite ihren eigenen Weg gewählt. Lass uns dich wieder zurück auf den richtigen Pfad führen.</p>
+    <a href="/index.html" class="btn-primary" data-i18n="notfound_cta">Zurück zur Startseite</a>
   </div>
+  <script src="/system-page.js" defer></script>
 </body>
 </html>

@@ -16,6 +16,8 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
   bearbeitest du immer nur eine Seite auf einmal.
 - **Texte ändern:** Schreibe einfach den gewünschten Text in das passende Feld.
   Du brauchst keine HTML-Zeichen oder Formatierungscodes einzugeben.
+- **Seitentitel ändern:** Bearbeite das Feld **„Browser-/SEO-Titel“**. Es setzt
+  den vollständigen Titel im Browser-Tab und beim Teilen der Seite.
 - **Vorschau:** Mit dem Augensymbol oben rechts kannst du die Vorschau ein- oder
   ausblenden, wenn du mehr Platz zum Bearbeiten brauchst.
 - **Felder sind nicht Pflicht.** Leere ein Feld nur, wenn der entsprechende
@@ -36,6 +38,8 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 - Choose **Deutsch** or **English** on the left, then select the page you want
   to edit.
 - Enter normal text in the fields; no HTML or formatting codes are needed.
+- **Change a page title:** Edit **“Browser/SEO title”** to set the complete
+  title shown in the browser tab and when sharing the page.
 - Use the eye icon at the top right to show or hide the preview.
 - **Fields are optional.** Clear a field only if you want that text removed
   from the website.

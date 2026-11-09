@@ -300,6 +300,28 @@
     });
   }
 
+  var pageTitleKeys = {
+    'index.html': 'startseite_page_title',
+    'beratung.html': 'beratung_page_title',
+    'supervision.html': 'supervision_page_title',
+    'preise.html': 'preise_page_title',
+    'ueber-mich.html': 'about_page_title',
+    'kontakt.html': 'kontakt_page_title',
+    'agb.html': 'agb_page_title',
+    'datenschutz.html': 'datenschutz_page_title',
+    'nutzung.html': 'nutzung_page_title'
+  };
+
+  function applyPageTitle() {
+    var fileName = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+    var title = cmsRaw.de[pageTitleKeys[fileName.toLowerCase()]];
+    if (typeof title !== 'string' || !title.trim()) return;
+
+    document.title = title.trim();
+    document.querySelectorAll('meta[property="og:title"], meta[property="twitter:title"], meta[name="twitter:title"]')
+      .forEach(function(meta) { meta.content = document.title; });
+  }
+
   /* Load the page-specific German CMS content */
   function loadCMSContent(callback) {
     var ts = Date.now();
@@ -395,6 +417,8 @@
       var items = data[container.getAttribute('data-list')];
       var tpl = container.querySelector('template');
       if (!tpl || !Array.isArray(items)) return;
+      var section = container.closest('#gallery');
+      if (section) section.hidden = items.length === 0;
       clearDynamic(container);
       items.forEach(function(item) {
         var node = tpl.content.firstElementChild.cloneNode(true);
@@ -469,6 +493,7 @@
     document.documentElement.lang = 'de';
     var headingStyle = cmsRaw.de.heading_style;
     document.documentElement.dataset.headingStyle = headingStyle === 'playfair' ? 'playfair' : 'cormorant';
+    applyPageTitle();
 
     const dict = t[currentLang];
 

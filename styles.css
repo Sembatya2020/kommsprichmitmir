@@ -168,6 +168,75 @@ h2 { font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -0.005em; }
 h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); letter-spacing: 0; }
 h4 { font-size: 1rem; }
 
+/* ─── TITLE STYLES (chosen per heading in the CMS) ───────────────
+   Three styles — title / medium / subtitle — each in four sizes.
+   Only headings where the editor picked a size carry these attributes;
+   every other heading keeps its normal look. */
+[data-title-style="title"]    { --ts-s: 1.55rem; --ts-m: 2.05rem; --ts-l: 2.65rem; --ts-xl: 3.3rem; }
+[data-title-style="medium"]   { --ts-s: 1.3rem;  --ts-m: 1.6rem;  --ts-l: 1.95rem; --ts-xl: 2.35rem; }
+[data-title-style="subtitle"] { --ts-s: 1.05rem; --ts-m: 1.25rem; --ts-l: 1.5rem;  --ts-xl: 1.8rem; }
+
+[data-title-size="s"]  { --ts: var(--ts-s); }
+[data-title-size="m"]  { --ts: var(--ts-m); }
+[data-title-size="l"]  { --ts: var(--ts-l); }
+[data-title-size="xl"] { --ts: var(--ts-xl); }
+
+[data-title-style][data-title-size] {
+  /* scales down gently on small screens, never above the chosen size */
+  font-size: clamp(calc(var(--ts) * 0.74), calc(var(--ts) * 0.62 + 1.4vw), var(--ts)) !important;
+  line-height: 1.25;
+}
+
+[data-title-style="subtitle"][data-title-size] { letter-spacing: 0; }
+
+.title-italic  { font-style: italic !important; }
+.title-upright { font-style: normal !important; }
+
+/* ─── CONTENT BLOCKS: images + section divider ───────────────── */
+.block-image {
+  display: block;
+  width: 100%;
+  margin: 1.8rem auto;
+}
+
+img.block-image,
+.block-image img {
+  width: 100%;
+  height: auto;
+}
+
+.block-image--small  { max-width: 45%; }
+.block-image--medium { max-width: 72%; }
+.block-image--full   { max-width: 100%; }
+
+.block-image figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-light);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .block-image--small  { max-width: 70%; }
+  .block-image--medium { max-width: 100%; }
+}
+
+.block-divider {
+  border: 0;
+  height: 1px;
+  background: var(--gold);
+  width: 52px;
+  margin: clamp(2.4rem, 5vw, 3.6rem) auto;
+}
+
+/* Free extra sections the editor can add near the bottom of a page */
+.extra-section {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+}
+
+.extra-section[hidden] { display: none; }
+
 /* Italic display text (blockquotes, hero text) gets gentle optical refinement */
 em, i, [class*="quote"] em,
 .hero-content h1,
@@ -2705,9 +2774,25 @@ body.legal-page { background: var(--surface); }
 
 .about-split-text { padding-top: 0.4rem; }
 
+/* Same look as the name heading on the Kontakt page, so the About titles
+   match the rest of the site. */
 .about-intro-heading {
   margin: 0 0 0.8rem;
-  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+}
+
+/* The name under the About hero title uses the heading font, not body text */
+.legal-hero-inner p.legal-subtitle--name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem) !important;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25;
+  color: rgba(255,255,255,0.92) !important;
+}
+
+:root[data-heading-style="playfair"] .legal-hero-inner p.legal-subtitle--name {
+  font-family: 'Playfair Display', serif;
 }
 
 .about-pullquote {

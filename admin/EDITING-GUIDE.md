@@ -34,6 +34,21 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 - **Inhalts-Bausteine** (Beratung, Supervision, Über mich, Preise, AGB,
   Datenschutz, Nutzung): Du kannst frei **Überschrift, Absatz, Zitat,
   Aufzählung, Button, Bild** oder **Abstand** hinzufügen, löschen und sortieren.
+- **Drei Titel-Stile:** Bei den Inhalts-Bausteinen gibt es **„Titel (gross)"**,
+  **„Mittlerer Titel"** und **„Untertitel"**. Bei jedem Titel kannst du die
+  **Schriftgrösse** (Klein / Mittel / Gross / Sehr gross) und den
+  **Schriftstil** (gerade / kursiv) einzeln wählen. „Standard" lässt den Titel
+  so, wie er bisher aussah.
+- **Feste Überschriften** (z.B. auf der Startseite „Willkommen", „Angebote",
+  „Galerie"): direkt unter dem Textfeld gibt es **„Darstellung (Stil,
+  Grösse)"**. Dort wählst du Stil und Grösse nur für diese eine Überschrift.
+- **Neue Abschnitte:** Unter **„Zusätzliche Abschnitte"** (Startseite Bereich 8,
+  Preise, Kontakt) kannst du frei neue Abschnitte mit Titeln, Text und Bildern
+  anlegen. Mit **„Trennlinie (neuer Abschnitt)"** trennst du Abschnitte.
+  Solange nichts eingetragen ist, erscheint nichts auf der Website.
+- **Bilder:** Baustein **„Bild"** hinzufügen, Bild hochladen, optional eine
+  **Bildunterschrift** und die **Bildbreite** (klein / mittel / volle Breite)
+  wählen.
 - **Preise ändern:** Seite „Preise" → „Preiskarten" → Feld **„Betrag"**
   (nur die Zahl, z.B. `120`).
 - **Speichern:** Oben auf **„Publish" / „Veröffentlichen"** klicken.
@@ -54,6 +69,18 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
   add, the **trash/×** icon to remove, and **drag** to reorder.
 - **Content blocks** let you add/remove/reorder headings, paragraphs, quotes,
   bullet lists, buttons, images and spacers freely.
+- **Three title styles:** content blocks offer **Title (large)**, **Medium
+  title** and **Subtitle**. Each title has its own **font size** (small /
+  medium / large / extra large) and **font style** (upright / italic).
+  "Standard" keeps the look it had before.
+- **Fixed headings** (e.g. the home page section headings) have an
+  **appearance (style, size)** group right below the text field, which applies
+  to that one heading only.
+- **New sections:** use **Additional sections** (home section 8, Pricing,
+  Contact) to add free sections with titles, text and images; the **Divider**
+  block separates sections. Nothing is shown while the list is empty.
+- **Images:** add an **Image** block, upload the image, and optionally set a
+  **caption** and the **image width**.
 - **Change a price:** Pricing page → Price cards → **Amount** field (number only).
 - Click **Publish** to go live.
 
@@ -67,8 +94,16 @@ rendert `main.js` aus Arrays:
 
 - `data-list="KEY"` – wiederholt das enthaltene `<template>` pro Array-Eintrag
   (Felder via `data-field` / `data-field-html` / `data-href-field` / `data-src-field`).
-- `data-blocks="KEY"` – typisierte Liste (heading, subheading, text, quote,
-  bullets, button, image, spacer).
+- `data-blocks="KEY"` – typisierte Liste (heading, mediumheading, subheading,
+  text, quote, bullets, button, image, spacer, divider). Titel-Bausteine
+  tragen optional `size` (s/m/l/xl) und `font_style`.
+- Feste Überschriften `<h2 data-i18n="welcome.h2">` lesen ihr Aussehen aus dem
+  Objekt `welcome_h2_look` (`title_style`, `size`, `font_style`).
+- `data-hide-empty` – umschliessender Abschnitt bleibt versteckt, solange die
+  Block-Liste leer ist.
+- Die Inhalte aus `content/de/` werden beim Build in jede Seite eingebettet
+  (`window.__CMS_CONTENT__`, siehe `vite.config.js`), damit beim Laden nie
+  alter Text aufblitzt.
 
 Statische Kinder mit `data-default` dienen als Fallback und werden nur ersetzt,
 wenn die CMS-Liste tatsächlich Inhalte hat. Neue bearbeitbare Felder: Feld in

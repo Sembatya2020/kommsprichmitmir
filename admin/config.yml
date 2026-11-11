@@ -33,20 +33,56 @@ collections:
             fields:
               - { name: welcome_eyebrow, label: "Kleiner Text", widget: string, required: false }
               - { name: welcome_h2, label: "Überschrift", widget: string, required: false }
+              - name: welcome_h2_look
+                label: "Überschrift – Darstellung (Stil, Grösse)"
+                widget: object
+                collapsed: true
+                required: false
+                fields: &look_fields_de
+                  - { name: title_style, label: "Titel-Stil", widget: select, required: false, default: "standard", options: [ { label: "Standard (wie bisher)", value: "standard" }, { label: "Titel (gross)", value: "title" }, { label: "Mittlerer Titel", value: "medium" }, { label: "Untertitel", value: "subtitle" } ] }
+                  - &size_de { name: size, label: "Schriftgrösse", widget: select, required: false, default: "standard", options: [ { label: "Standard (wie bisher)", value: "standard" }, { label: "Klein", value: "s" }, { label: "Mittel", value: "m" }, { label: "Gross", value: "l" }, { label: "Sehr gross", value: "xl" } ] }
+                  - &fontstyle_de { name: font_style, label: "Schriftstil", widget: select, required: false, default: "standard", options: [ { label: "Standard (wie bisher)", value: "standard" }, { label: "Gerade", value: "normal" }, { label: "Kursiv", value: "italic" } ] }
               - name: welcome_blocks
                 label: "Absätze und weitere Inhalte"
                 label_singular: "Inhaltselement"
                 widget: list
                 required: false
                 types: &blocktypes_de
-                  - { name: heading, label: "Überschrift", widget: object, fields: [ { name: text, label: "Text", widget: string, required: false } ] }
-                  - { name: subheading, label: "Zwischentitel", widget: object, fields: [ { name: text, label: "Text", widget: string, required: false } ] }
+                  - name: heading
+                    label: "Titel (gross)"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_de
+                      - *fontstyle_de
+                  - name: mediumheading
+                    label: "Mittlerer Titel"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_de
+                      - *fontstyle_de
+                  - name: subheading
+                    label: "Untertitel"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_de
+                      - *fontstyle_de
                   - { name: text, label: "Absatz", widget: object, fields: [ { name: text, label: "Text", widget: text, required: false } ] }
                   - { name: quote, label: "Zitat", widget: object, fields: [ { name: text, label: "Text", widget: text, required: false } ] }
                   - { name: bullets, label: "Aufzählung", widget: object, fields: [ { name: items, label: "Punkte", widget: list, required: false } ] }
                   - { name: button, label: "Button", widget: object, fields: [ { name: text, label: "Beschriftung", widget: string, required: false }, { name: link, label: "Link (z.B. kontakt.html)", widget: string, required: false } ] }
-                  - { name: image, label: "Bild", widget: object, fields: [ { name: image, label: "Bild", widget: image, required: false }, { name: alt, label: "Bildbeschreibung", widget: string, required: false } ] }
+                  - name: image
+                    label: "Bild"
+                    widget: object
+                    fields:
+                      - { name: image, label: "Bild", widget: image, required: false }
+                      - { name: alt, label: "Bildbeschreibung", widget: string, required: false }
+                      - { name: caption, label: "Bildunterschrift (optional)", widget: string, required: false }
+                      - { name: width, label: "Bildbreite", widget: select, required: false, default: "standard", options: [ { label: "Standard (wie bisher)", value: "standard" }, { label: "Klein", value: "small" }, { label: "Mittel", value: "medium" }, { label: "Volle Breite", value: "full" } ] }
                   - { name: spacer, label: "Abstand", widget: object, fields: [ { name: size, label: "Höhe (z.B. 2rem)", widget: string, required: false, default: "2rem" } ] }
+                  - { name: divider, label: "Trennlinie (neuer Abschnitt)", widget: object, fields: [ { name: line, widget: hidden, default: true } ] }
           - name: services_section
             label: "3. Angebote und Angebotskarten"
             widget: object
@@ -54,6 +90,7 @@ collections:
             fields:
               - { name: services_eyebrow, label: "Kleiner Text", widget: string, required: false }
               - { name: services_h2, label: "Überschrift", widget: string, required: false }
+              - { name: services_h2_look, label: "Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
               - { name: services_p, label: "Einleitung", widget: text, required: false }
               - name: services_cards
                 label: "Angebotskarten"
@@ -79,6 +116,7 @@ collections:
             fields:
               - { name: aboutT_eyebrow, label: "Kleiner Text", widget: string, required: false }
               - { name: aboutT_h2, label: "Name / Überschrift", widget: string, required: false }
+              - { name: aboutT_h2_look, label: "Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
               - { name: aboutT_p1, label: "Absatz 1", widget: text, required: false }
               - { name: aboutT_p2, label: "Absatz 2", widget: text, required: false }
               - { name: aboutT_btn, label: "Button", widget: string, required: false }
@@ -89,6 +127,7 @@ collections:
             fields:
               - { name: gallery_eyebrow, label: "Kleiner Text", widget: string, required: false }
               - { name: gallery_h2, label: "Überschrift", widget: string, required: false }
+              - { name: gallery_h2_look, label: "Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
               - { name: gallery_p, label: "Einleitung", widget: text, required: false }
               - name: gallery
                 label: "Galeriebilder"
@@ -105,6 +144,7 @@ collections:
             fields:
               - { name: testi_eb, label: "Kleiner Text", widget: string, required: false }
               - { name: testi_h2, label: "Überschrift", widget: string, required: false }
+              - { name: testi_h2_look, label: "Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
               - name: testimonials
                 label: "Kundenstimmen"
                 label_singular: "Kundenstimme"
@@ -113,12 +153,20 @@ collections:
                 fields:
                   - { name: quote, label: "Text", widget: text, required: false }
                   - { name: cite, label: "Name / Quelle", widget: string, required: false }
+          - name: extra_section
+            label: "8. Zusätzliche Abschnitte (frei gestaltbar)"
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { name: home_extra_blocks, label: "Zusätzliche Abschnitte", label_singular: "Element", widget: list, required: false, hint: "Hier kannst du frei neue Abschnitte anlegen: Titel, Mittlerer Titel, Untertitel, Absatz, Bild usw. Leer lassen = nichts wird angezeigt.", types: *blocktypes_de }
           - name: cta_section
-            label: "8. Kontakt am Seitenende"
+            label: "9. Kontakt am Seitenende"
             widget: object
             collapsed: true
             fields:
               - { name: cta_h2, label: "Überschrift", widget: string, required: false }
+              - { name: cta_h2_look, label: "Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
               - { name: cta_p, label: "Text", widget: text, required: false }
               - { name: cta_btn1, label: "Button 1", widget: string, required: false }
               - { name: cta_btn2, label: "Button 2", widget: string, required: false }
@@ -167,6 +215,7 @@ collections:
               - { name: link,      label: "Link-Ziel", widget: string, required: false }
               - { name: featured,  label: "Hervorheben (dunkelgrüne Karte)", widget: boolean, required: false, default: false }
           - { name: preise_disc_h,     label: "Preise – Rabatt Titel", widget: string, required: false }
+          - { name: preise_disc_h_look, label: "Preise – Rabatt Titel – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: preise_disc_intro, label: "Preise – Rabatt Einleitung", widget: text, required: false }
           - name: preise_discounts
             label: "Preise – Rabatte"
@@ -177,10 +226,13 @@ collections:
               - { name: amount, label: "Wert (z.B. 10 %)", widget: string, required: false }
               - { name: label,  label: "Beschreibung", widget: string, required: false }
           - { name: preise_pay_h,   label: "Preise – Bezahlung Titel", widget: string, required: false }
+          - { name: preise_pay_h_look, label: "Preise – Bezahlung Titel – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: preise_pay_p,   label: "Preise – Bezahlung Text", widget: text, required: false }
           - { name: preise_uns_h,   label: "Preise – Unsicher Titel", widget: string, required: false }
+          - { name: preise_uns_h_look, label: "Preise – Unsicher Titel – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: preise_uns_p,   label: "Preise – Unsicher Text", widget: text, required: false }
           - { name: preise_uns_cta, label: "Preise – Button", widget: string, required: false }
+          - { name: preise_extra_blocks, label: "Preise – Zusätzliche Abschnitte", label_singular: "Element", widget: list, required: false, hint: "Hier kannst du frei neue Abschnitte anlegen: Titel, Mittlerer Titel, Untertitel, Absatz, Bild usw. Leer lassen = nichts wird angezeigt.", types: *blocktypes_de }
 
       - name: "ueber-mich"
         label: "Über mich"
@@ -190,8 +242,10 @@ collections:
           - { name: about_h1,         label: "Über mich – Hauptüberschrift", widget: string, required: false }
           - { name: about_subtitle,   label: "Über mich – Untertitel", widget: string, required: false }
           - { name: about_intro_heading, label: "Über mich – Überschrift über dem Einleitungstext", widget: string, required: false }
+          - { name: about_intro_heading_look, label: "Über mich – Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: about_intro_blocks, label: "Über mich – Einleitung", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
           - { name: about_values_heading, label: "Werte – Überschrift", widget: string, required: false }
+          - { name: about_values_heading_look, label: "Werte – Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: about_values_text, label: "Werte – Text", widget: text, required: false, hint: "Hier den Text zu den Werten einfügen. Der Abschnitt erscheint auf der Website, sobald Text eingetragen ist." }
           - { name: about_quote, label: "Über mich – Zitat (hervorgehoben)", widget: text, required: false }
           - { name: about_personal_blocks, label: "Über mich – Persönlich", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }
@@ -205,6 +259,7 @@ collections:
           - { name: kontakt_page_title, label: "Kontakt – Browser-/SEO-Titel", widget: string, required: false, hint: "Der vollständige Titel im Browser-Tab und beim Teilen der Seite." }
           - { name: kontakt_h1,         label: "Kontakt – Hauptüberschrift", widget: string, required: false }
           - { name: kontakt_name,        label: "Kontakt – Name", widget: string, required: false }
+          - { name: kontakt_name_look, label: "Kontakt – Name – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: kontakt_subtitle,   label: "Kontakt – Untertitel", widget: string, required: false }
           - { name: kontakt_eb,         label: "Kontakt – Kleiner Text", widget: string, required: false }
           - { name: kontakt_cred,       label: "Kontakt – Berufsbezeichnung", widget: text, required: false }
@@ -225,9 +280,11 @@ collections:
           - { name: kontakt_note_p,    label: "Kontakt – Hinweis Text", widget: text, required: false }
           - { name: kontakt_book_eb,   label: "Kontakt – Buchung Kleiner Text", widget: string, required: false }
           - { name: kontakt_book_h,    label: "Kontakt – Buchung Titel", widget: string, required: false }
+          - { name: kontakt_book_h_look, label: "Kontakt – Buchung Titel – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: kontakt_book_p,    label: "Kontakt – Buchung Text", widget: text, required: false }
           - { name: kontakt_book_soon, label: "Kontakt – Buchung bald Text", widget: string, required: false }
           - { name: kontakt_book_fallback, label: "Kontakt – Buchung Fallback-Button", widget: string, required: false }
+          - { name: kontakt_extra_blocks, label: "Kontakt – Zusätzliche Abschnitte", label_singular: "Element", widget: list, required: false, hint: "Hier kannst du frei neue Abschnitte anlegen: Titel, Mittlerer Titel, Untertitel, Absatz, Bild usw. Leer lassen = nichts wird angezeigt.", types: *blocktypes_de }
 
       - name: "agb"
         label: "AGB"
@@ -328,20 +385,56 @@ collections:
             fields:
               - { name: welcome_eyebrow, label: "Small text", widget: string, required: false }
               - { name: welcome_h2, label: "Heading", widget: string, required: false }
+              - name: welcome_h2_look
+                label: "Heading – appearance (style, size)"
+                widget: object
+                collapsed: true
+                required: false
+                fields: &look_fields_en
+                  - { name: title_style, label: "Title style", widget: select, required: false, default: "standard", options: [ { label: "Standard (as before)", value: "standard" }, { label: "Title (large)", value: "title" }, { label: "Medium title", value: "medium" }, { label: "Subtitle", value: "subtitle" } ] }
+                  - &size_en { name: size, label: "Font size", widget: select, required: false, default: "standard", options: [ { label: "Standard (as before)", value: "standard" }, { label: "Small", value: "s" }, { label: "Medium", value: "m" }, { label: "Large", value: "l" }, { label: "Extra large", value: "xl" } ] }
+                  - &fontstyle_en { name: font_style, label: "Font style", widget: select, required: false, default: "standard", options: [ { label: "Standard (as before)", value: "standard" }, { label: "Upright", value: "normal" }, { label: "Italic", value: "italic" } ] }
               - name: welcome_blocks
                 label: "Paragraphs and content"
                 label_singular: "Content item"
                 widget: list
                 required: false
                 types: &blocktypes_en
-                  - { name: heading, label: "Heading", widget: object, fields: [ { name: text, label: "Text", widget: string, required: false } ] }
-                  - { name: subheading, label: "Subheading", widget: object, fields: [ { name: text, label: "Text", widget: string, required: false } ] }
+                  - name: heading
+                    label: "Title (large)"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_en
+                      - *fontstyle_en
+                  - name: mediumheading
+                    label: "Medium title"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_en
+                      - *fontstyle_en
+                  - name: subheading
+                    label: "Subtitle"
+                    widget: object
+                    fields:
+                      - { name: text, label: "Text", widget: string, required: false }
+                      - *size_en
+                      - *fontstyle_en
                   - { name: text, label: "Paragraph", widget: object, fields: [ { name: text, label: "Text", widget: text, required: false } ] }
                   - { name: quote, label: "Quote", widget: object, fields: [ { name: text, label: "Text", widget: text, required: false } ] }
                   - { name: bullets, label: "Bullet list", widget: object, fields: [ { name: items, label: "Items", widget: list, required: false } ] }
                   - { name: button, label: "Button", widget: object, fields: [ { name: text, label: "Label", widget: string, required: false }, { name: link, label: "Link (e.g. kontakt.html)", widget: string, required: false } ] }
-                  - { name: image, label: "Image", widget: object, fields: [ { name: image, label: "Image", widget: image, required: false }, { name: alt, label: "Image description", widget: string, required: false } ] }
+                  - name: image
+                    label: "Image"
+                    widget: object
+                    fields:
+                      - { name: image, label: "Image", widget: image, required: false }
+                      - { name: alt, label: "Image description", widget: string, required: false }
+                      - { name: caption, label: "Caption (optional)", widget: string, required: false }
+                      - { name: width, label: "Image width", widget: select, required: false, default: "standard", options: [ { label: "Standard (as before)", value: "standard" }, { label: "Small", value: "small" }, { label: "Medium", value: "medium" }, { label: "Full width", value: "full" } ] }
                   - { name: spacer, label: "Spacer", widget: object, fields: [ { name: size, label: "Height (e.g. 2rem)", widget: string, required: false, default: "2rem" } ] }
+                  - { name: divider, label: "Divider (new section)", widget: object, fields: [ { name: line, widget: hidden, default: true } ] }
           - name: services_section
             label: "3. Services and service cards"
             widget: object
@@ -349,6 +442,7 @@ collections:
             fields:
               - { name: services_eyebrow, label: "Small text", widget: string, required: false }
               - { name: services_h2, label: "Heading", widget: string, required: false }
+              - { name: services_h2_look, label: "Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
               - { name: services_p, label: "Introduction", widget: text, required: false }
               - name: services_cards
                 label: "Service cards"
@@ -374,6 +468,7 @@ collections:
             fields:
               - { name: aboutT_eyebrow, label: "Small text", widget: string, required: false }
               - { name: aboutT_h2, label: "Name / heading", widget: string, required: false }
+              - { name: aboutT_h2_look, label: "Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
               - { name: aboutT_p1, label: "Paragraph 1", widget: text, required: false }
               - { name: aboutT_p2, label: "Paragraph 2", widget: text, required: false }
               - { name: aboutT_btn, label: "Button", widget: string, required: false }
@@ -384,6 +479,7 @@ collections:
             fields:
               - { name: gallery_eyebrow, label: "Small text", widget: string, required: false }
               - { name: gallery_h2, label: "Heading", widget: string, required: false }
+              - { name: gallery_h2_look, label: "Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
               - { name: gallery_p, label: "Introduction", widget: text, required: false }
               - name: gallery
                 label: "Gallery images"
@@ -400,6 +496,7 @@ collections:
             fields:
               - { name: testi_eb, label: "Small text", widget: string, required: false }
               - { name: testi_h2, label: "Heading", widget: string, required: false }
+              - { name: testi_h2_look, label: "Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
               - name: testimonials
                 label: "Testimonials"
                 label_singular: "Testimonial"
@@ -408,12 +505,20 @@ collections:
                 fields:
                   - { name: quote, label: "Text", widget: text, required: false }
                   - { name: cite, label: "Name / source", widget: string, required: false }
+          - name: extra_section
+            label: "8. Additional sections (free layout)"
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { name: home_extra_blocks, label: "Additional sections", label_singular: "Element", widget: list, required: false, hint: "Freely add new sections here: title, medium title, subtitle, paragraph, image etc. Leave empty and nothing is shown.", types: *blocktypes_en }
           - name: cta_section
-            label: "8. Contact at the bottom"
+            label: "9. Contact at the bottom"
             widget: object
             collapsed: true
             fields:
               - { name: cta_h2, label: "Heading", widget: string, required: false }
+              - { name: cta_h2_look, label: "Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
               - { name: cta_p, label: "Text", widget: text, required: false }
               - { name: cta_btn1, label: "Button 1", widget: string, required: false }
               - { name: cta_btn2, label: "Button 2", widget: string, required: false }
@@ -462,6 +567,7 @@ collections:
               - { name: link,      label: "Link target", widget: string, required: false }
               - { name: featured,  label: "Highlight (dark green card)", widget: boolean, required: false, default: false }
           - { name: preise_disc_h,     label: "Pricing – Discount heading", widget: string, required: false }
+          - { name: preise_disc_h_look, label: "Pricing – Discount heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: preise_disc_intro, label: "Pricing – Discount intro", widget: text, required: false }
           - name: preise_discounts
             label: "Pricing – Discounts"
@@ -472,10 +578,13 @@ collections:
               - { name: amount, label: "Value (e.g. 10 %)", widget: string, required: false }
               - { name: label,  label: "Description", widget: string, required: false }
           - { name: preise_pay_h,   label: "Pricing – Payment heading", widget: string, required: false }
+          - { name: preise_pay_h_look, label: "Pricing – Payment heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: preise_pay_p,   label: "Pricing – Payment text", widget: text, required: false }
           - { name: preise_uns_h,   label: "Pricing – Unsure heading", widget: string, required: false }
+          - { name: preise_uns_h_look, label: "Pricing – Unsure heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: preise_uns_p,   label: "Pricing – Unsure text", widget: text, required: false }
           - { name: preise_uns_cta, label: "Pricing – Button", widget: string, required: false }
+          - { name: preise_extra_blocks, label: "Pricing – Additional sections", label_singular: "Element", widget: list, required: false, hint: "Freely add new sections here: title, medium title, subtitle, paragraph, image etc. Leave empty and nothing is shown.", types: *blocktypes_en }
 
       - name: "ueber-mich"
         label: "About me"
@@ -485,8 +594,10 @@ collections:
           - { name: about_h1,         label: "About – Main heading", widget: string, required: false }
           - { name: about_subtitle,   label: "About – Subtitle", widget: string, required: false }
           - { name: about_intro_heading, label: "About – Heading above the introduction", widget: string, required: false }
+          - { name: about_intro_heading_look, label: "About – Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: about_intro_blocks, label: "About – Intro", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
           - { name: about_values_heading, label: "Values – Heading", widget: string, required: false }
+          - { name: about_values_heading_look, label: "Values – Heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: about_values_text, label: "Values – Text", widget: text, required: false, hint: "Enter the text about the values. The section appears on the website once text is added." }
           - { name: about_quote, label: "About – Highlighted quote", widget: text, required: false }
           - { name: about_personal_blocks, label: "About – Personal", label_singular: "Element", widget: list, required: false, types: *blocktypes_en }
@@ -500,6 +611,7 @@ collections:
           - { name: kontakt_page_title, label: "Contact – Browser/SEO title", widget: string, required: false, hint: "The complete title shown in the browser tab and when sharing the page." }
           - { name: kontakt_h1,         label: "Contact – Main heading", widget: string, required: false }
           - { name: kontakt_name,        label: "Contact – Name", widget: string, required: false }
+          - { name: kontakt_name_look, label: "Contact – Name – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: kontakt_subtitle,   label: "Contact – Subtitle", widget: string, required: false }
           - { name: kontakt_eb,         label: "Contact – Small text", widget: string, required: false }
           - { name: kontakt_cred,       label: "Contact – Job title", widget: text, required: false }
@@ -520,9 +632,11 @@ collections:
           - { name: kontakt_note_p,    label: "Contact – Note text", widget: text, required: false }
           - { name: kontakt_book_eb,   label: "Contact – Booking small text", widget: string, required: false }
           - { name: kontakt_book_h,    label: "Contact – Booking heading", widget: string, required: false }
+          - { name: kontakt_book_h_look, label: "Contact – Booking heading – appearance (style, size)", widget: object, collapsed: true, required: false, fields: *look_fields_en }
           - { name: kontakt_book_p,    label: "Contact – Booking text", widget: text, required: false }
           - { name: kontakt_book_soon, label: "Contact – Booking soon text", widget: string, required: false }
           - { name: kontakt_book_fallback, label: "Contact – Booking fallback button", widget: string, required: false }
+          - { name: kontakt_extra_blocks, label: "Contact – Additional sections", label_singular: "Element", widget: list, required: false, hint: "Freely add new sections here: title, medium title, subtitle, paragraph, image etc. Leave empty and nothing is shown.", types: *blocktypes_en }
 
       - name: "agb"
         label: "Terms and conditions"

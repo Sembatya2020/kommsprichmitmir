@@ -35,6 +35,76 @@ function setMetaTitle(html, property, title) {
   return html.replace(/<\/head>/i, `  ${tag}\n</head>`);
 }
 
+/* Every German content file, keyed by file name. Baked into each page so the
+   current CMS text is there on the very first paint (no flash of old text). */
+const contentPages = [
+  'startseite',
+  'beratung',
+  'supervision',
+  'preise',
+  'ueber-mich',
+  'kontakt',
+  'agb',
+  'datenschutz',
+  'nutzung-impressum',
+  'allgemein-footer',
+  '404',
+  'success'
+];
+
+function readContent(root) {
+  const content = {};
+  contentPages.forEach((page) => {
+    const file = join(root, 'content', 'de', page + '.json');
+    if (!existsSync(file)) return;
+    try {
+      content[page] = JSON.parse(readFileSync(file, 'utf8'));
+    } catch (error) {
+      console.warn(`[inline-cms-content] ${page}.json could not be read: ${error.message}`);
+    }
+  });
+  return content;
+}
+
+function inlineCmsContent() {
+  return {
+    name: 'inline-cms-content',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(_html, ctx) {
+        // The CMS admin is its own app — leave it untouched.
+        if (/(^|[\\/])admin[\\/]/.test(ctx.filename || '') || /^\/admin\//.test(ctx.path || '')) return;
+
+        const content = readContent(__dirname);
+        const json = JSON.stringify(content)
+          .replace(/</g, '\\u003c')
+          .replace(new RegExp(String.fromCharCode(0x2028), 'g'), '\\u2028')
+          .replace(new RegExp(String.fromCharCode(0x2029), 'g'), '\\u2029');
+        const headingStyle = (content['allgemein-footer'] || {}).heading_style === 'playfair' ? 'playfair' : 'cormorant';
+
+        return [
+          {
+            tag: 'style',
+            children: 'html.cms-pending body{opacity:0}',
+            injectTo: 'head'
+          },
+          {
+            tag: 'script',
+            // Hide the page until main.js has applied the content, with a
+            // safety timeout so the page can never stay hidden.
+            children:
+              '(function(){var d=document.documentElement;d.classList.add("cms-pending");' +
+              `d.setAttribute("data-heading-style","${headingStyle}");` +
+              'setTimeout(function(){d.classList.remove("cms-pending")},3000);' +
+              `window.__CMS_CONTENT__=${json};})();`,
+            injectTo: 'head'
+          }
+        ];
+      }
+    }
+  };
+}
+
 function copyStaticRuntimeFiles() {
   return {
     name: 'copy-static-runtime-files',
@@ -76,7 +146,7 @@ function copyStaticRuntimeFiles() {
 
 export default defineConfig({
   base: './',
-  plugins: [copyStaticRuntimeFiles()],
+  plugins: [inlineCmsContent(), copyStaticRuntimeFiles()],
   build: {
     rollupOptions: {
       input: {

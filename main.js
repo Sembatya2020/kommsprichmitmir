@@ -272,7 +272,8 @@
   function flattenContent(obj) {
     return Object.keys(obj).reduce(function(acc, key) {
       var value = obj[key];
-      if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+      // "*_look" objects hold a heading's style/size settings — keep them whole.
+      if (value !== null && typeof value === 'object' && !Array.isArray(value) && !/_look$/.test(key)) {
         Object.assign(acc, value);
       } else {
         acc[key] = value;
@@ -324,31 +325,51 @@
       .forEach(function(meta) { meta.content = document.title; });
   }
 
+  var cmsPages = [
+    'startseite',
+    'beratung',
+    'supervision',
+    'preise',
+    'ueber-mich',
+    'kontakt',
+    'agb',
+    'datenschutz',
+    'nutzung-impressum',
+    'allgemein-footer'
+  ];
+
+  function useContent(pageContent) {
+    var content = Object.assign({}, ...pageContent.map(flattenContent));
+    cmsRaw.de = content;
+    mergeScalars(t.de, content);
+  }
+
+  /* Content baked into the page by the build (see vite.config.js). When it
+     is there, the very first render already shows the current CMS text. */
+  function useBakedContent() {
+    var baked = window.__CMS_CONTENT__;
+    if (!baked || typeof baked !== 'object') return false;
+    var pageContent = cmsPages
+      .map(function(page) { return baked[page]; })
+      .filter(function(c) { return c && typeof c === 'object'; });
+    if (!pageContent.length) return false;
+    useContent(pageContent);
+    return true;
+  }
+
+  function revealPage() {
+    document.documentElement.classList.remove('cms-pending');
+  }
+
   /* Load the page-specific German CMS content */
   function loadCMSContent(callback) {
     var ts = Date.now();
-    var pages = [
-      'startseite',
-      'beratung',
-      'supervision',
-      'preise',
-      'ueber-mich',
-      'kontakt',
-      'agb',
-      'datenschutz',
-      'nutzung-impressum',
-      'allgemein-footer'
-    ];
-    Promise.all(pages.map(function(page) {
+    Promise.all(cmsPages.map(function(page) {
       return fetch('./content/de/' + page + '.json?v=' + ts).then(function(response) {
         if (!response.ok) throw new Error('Could not load ' + page + ' content: HTTP ' + response.status);
         return response.json();
       });
-    })).then(function(pageContent) {
-      var content = Object.assign({}, ...pageContent.map(flattenContent));
-      cmsRaw.de = content;
-      mergeScalars(t.de, content);
-    }).catch(function(error) {
+    })).then(useContent).catch(function(error) {
       console.error('Website content could not be loaded from the CMS files.', error);
     }).finally(callback);
   }
@@ -440,13 +461,79 @@
     });
   }
 
+  /* ─── TITLE STYLES ───────────────────────────────────────────────
+     Three title styles (title / medium / subtitle), each in four sizes
+     (s / m / l / xl), chosen per heading in the CMS. The look is carried by
+     data-title-style + data-title-size and styled in styles.css. A heading
+     without a chosen size keeps the page's normal look. */
+  var TITLE_STYLES = ['title', 'medium', 'subtitle'];
+  var TITLE_SIZES = ['s', 'm', 'l', 'xl'];
+
+  function setTitleLook(el, look, fallbackStyle, defaultSize) {
+    look = (look && typeof look === 'object') ? look : {};
+    var style = TITLE_STYLES.indexOf(look.title_style) !== -1 ? look.title_style : '';
+    var size = TITLE_SIZES.indexOf(look.size) !== -1 ? look.size : (defaultSize || '');
+    if (style && !size) size = 'm';
+    if (size && !style) style = fallbackStyle;
+    if (style && size) {
+      el.setAttribute('data-title-style', style);
+      el.setAttribute('data-title-size', size);
+    } else {
+      el.removeAttribute('data-title-style');
+      el.removeAttribute('data-title-size');
+    }
+    el.classList.toggle('title-italic', look.font_style === 'italic');
+    el.classList.toggle('title-upright', look.font_style === 'normal');
+  }
+
+  /* Fixed section headings: <h2 data-i18n="welcome.h2"> reads its look from
+     the CMS object "welcome_h2_look". */
+  function applyTitleLooks() {
+    var tagStyle = { H1: 'title', H2: 'title', H3: 'medium', H4: 'subtitle' };
+    document.querySelectorAll('h1[data-i18n],h2[data-i18n],h3[data-i18n],h4[data-i18n]').forEach(function(el) {
+      var look = cmsRaw.de[el.dataset.i18n.replace(/\./g, '_') + '_look'];
+      if (look && typeof look === 'object') setTitleLook(el, look, tagStyle[el.tagName]);
+    });
+  }
+
+  function makeImageBlock(b) {
+    var img = document.createElement('img');
+    img.loading = 'lazy';
+    if (b.image) img.src = b.image;
+    img.alt = b.alt || '';
+    var el = img;
+    if (typeof b.caption === 'string' && b.caption.trim()) {
+      el = document.createElement('figure');
+      var caption = document.createElement('figcaption');
+      caption.textContent = b.caption.trim();
+      el.appendChild(img);
+      el.appendChild(caption);
+    }
+    el.classList.add('block-image');
+    if (['small', 'medium', 'full'].indexOf(b.width) !== -1) el.classList.add('block-image--' + b.width);
+    return el;
+  }
+
   function makeBlock(b, opts) {
     opts = opts || {};
     var type = (b && b.type) || 'text';
     var el;
     switch (type) {
-      case 'heading':    el = document.createElement('h2'); el.textContent = b.text || ''; break;
-      case 'subheading': el = document.createElement('h3'); el.textContent = b.text || ''; break;
+      case 'heading':
+        el = document.createElement('h2'); el.textContent = b.text || '';
+        setTitleLook(el, b, 'title');
+        break;
+      case 'mediumheading':
+        el = document.createElement('h3'); el.textContent = b.text || '';
+        setTitleLook(el, b, 'medium', 'm');
+        break;
+      case 'subheading':
+        el = document.createElement('h3'); el.textContent = b.text || '';
+        setTitleLook(el, b, 'subtitle');
+        break;
+      case 'divider':
+        el = document.createElement('hr'); el.className = 'block-divider';
+        break;
       case 'quote':      el = document.createElement('blockquote'); el.innerHTML = b.text || ''; break;
       case 'bullets':
         el = document.createElement('ul');
@@ -466,10 +553,7 @@
         el.style.height = b.size || '2rem'; el.setAttribute('aria-hidden', 'true');
         break;
       case 'image':
-        el = document.createElement('img');
-        el.loading = 'lazy';
-        if (b.image) el.src = b.image;
-        el.alt = b.alt || '';
+        el = makeImageBlock(b);
         break;
       default:
         el = document.createElement('p'); el.innerHTML = (b && b.text) || '';
@@ -481,6 +565,9 @@
   function renderBlocks(data) {
     document.querySelectorAll('[data-blocks]').forEach(function(container) {
       var blocks = data[container.getAttribute('data-blocks')];
+      // Optional free sections stay hidden until the editor adds content.
+      var optional = container.closest('[data-hide-empty]');
+      if (optional) optional.hidden = !Array.isArray(blocks) || blocks.length === 0;
       if (!Array.isArray(blocks)) return;
       var opts = { bulletClass: container.getAttribute('data-bullets-class') || '' };
       clearDynamic(container);
@@ -511,6 +598,7 @@
       const v = dict[el.dataset.i18n];
       if (v !== undefined) el.textContent = v;
     });
+    applyTitleLooks();
     const aboutValues = document.getElementById('aboutValues');
     if (aboutValues) {
       const valuesText = cmsRaw.de.about_values_text;
@@ -844,12 +932,16 @@
   }
 
   function start() {
-    // Render immediately with the built-in defaults + the static fallback
-    // markup, so text appears instantly (no waiting on the content fetch).
+    // Normal case: the build baked the current CMS content into the page, so
+    // the first render is already the final one — nothing old ever shows.
+    if (useBakedContent()) {
+      try { init(); } finally { revealPage(); }
+      return;
+    }
+    // Fallback (content not baked in): render the built-in defaults, then
+    // load the CMS files and re-render once they arrive.
     init();
-    // Then load the CMS content in the background and re-render once it
-    // arrives — same text in almost all cases, so the swap is invisible.
-    loadCMSContent(function () { applyLang(currentLang); });
+    loadCMSContent(function () { applyLang(currentLang); revealPage(); });
   }
 
   /* ─── VANILLA SPA ROUTER ─────────────────────────────────────── */

@@ -58,11 +58,12 @@
   function renderTextBlocks(blocks) {
     return asArray(blocks)
       .filter(function (block) {
-        return block && (block.type === 'text' || block.type === 'heading' || block.type === 'subheading' || block.type === 'quote');
+        return block && (block.type === 'text' || block.type === 'heading' || block.type === 'mediumheading' || block.type === 'subheading' || block.type === 'quote');
       })
       .slice(0, 5)
       .map(function (block, index) {
         if (block.type === 'heading') return h('h3', { className: 'cms-preview-subheading', key: 'block-' + index }, block.text || '');
+        if (block.type === 'mediumheading') return h('h4', { className: 'cms-preview-subheading', key: 'block-' + index }, block.text || '');
         if (block.type === 'subheading') return h('h4', { className: 'cms-preview-miniheading', key: 'block-' + index }, block.text || '');
         if (block.type === 'quote') return htmlTag('blockquote', 'cms-preview-quote', block.text);
         return htmlTag('p', 'cms-preview-paragraph', block.text);

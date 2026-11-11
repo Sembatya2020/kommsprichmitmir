@@ -42,6 +42,8 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 - **Feste Überschriften** (z.B. auf der Startseite „Willkommen", „Angebote",
   „Galerie"): direkt unter dem Textfeld gibt es **„Darstellung (Stil,
   Grösse)"**. Dort wählst du Stil und Grösse nur für diese eine Überschrift.
+  Auch die Hauptüberschrift und der Untertitel im Titelbild der Seite „Über
+  mich" haben eigene Darstellungseinstellungen.
 - **Neue Abschnitte:** Unter **„Zusätzliche Abschnitte"** (Startseite Bereich 8,
   Preise, Kontakt) kannst du frei neue Abschnitte mit Titeln, Text und Bildern
   anlegen. Mit **„Trennlinie (neuer Abschnitt)"** trennst du Abschnitte.
@@ -76,6 +78,8 @@ You edit the site at **/admin/** (with your Netlify login). After clicking
 - **Fixed headings** (e.g. the home page section headings) have an
   **appearance (style, size)** group right below the text field, which applies
   to that one heading only.
+  The About page's main heading and subtitle also have their own appearance
+  settings.
 - **New sections:** use **Additional sections** (home section 8, Pricing,
   Contact) to add free sections with titles, text and images; the **Divider**
   block separates sections. Nothing is shown while the list is empty.

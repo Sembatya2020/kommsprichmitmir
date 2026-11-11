@@ -489,8 +489,8 @@
   /* Fixed section headings: <h2 data-i18n="welcome.h2"> reads its look from
      the CMS object "welcome_h2_look". */
   function applyTitleLooks() {
-    var tagStyle = { H1: 'title', H2: 'title', H3: 'medium', H4: 'subtitle' };
-    document.querySelectorAll('h1[data-i18n],h2[data-i18n],h3[data-i18n],h4[data-i18n]').forEach(function(el) {
+    var tagStyle = { H1: 'title', H2: 'title', H3: 'medium', H4: 'subtitle', P: 'subtitle' };
+    document.querySelectorAll('h1[data-i18n],h2[data-i18n],h3[data-i18n],h4[data-i18n],p.legal-subtitle--name[data-i18n]').forEach(function(el) {
       var look = cmsRaw.de[el.dataset.i18n.replace(/\./g, '_') + '_look'];
       if (look && typeof look === 'object') setTitleLook(el, look, tagStyle[el.tagName]);
     });

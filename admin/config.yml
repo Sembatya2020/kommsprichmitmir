@@ -240,7 +240,9 @@ collections:
         fields:
           - { name: about_page_title, label: "Über mich – Browser-/SEO-Titel", widget: string, required: false, hint: "Der vollständige Titel im Browser-Tab und beim Teilen der Seite." }
           - { name: about_h1,         label: "Über mich – Hauptüberschrift", widget: string, required: false }
+          - { name: about_h1_look, label: "Über mich – Hauptüberschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: about_subtitle,   label: "Über mich – Untertitel", widget: string, required: false }
+          - { name: about_subtitle_look, label: "Über mich – Untertitel – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: about_intro_heading, label: "Über mich – Überschrift über dem Einleitungstext", widget: string, required: false }
           - { name: about_intro_heading_look, label: "Über mich – Überschrift – Darstellung (Stil, Grösse)", widget: object, collapsed: true, required: false, fields: *look_fields_de }
           - { name: about_intro_blocks, label: "Über mich – Einleitung", label_singular: "Element", widget: list, required: false, types: *blocktypes_de }

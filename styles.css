@@ -120,19 +120,6 @@ a { color: inherit; }
   }
 }
 
-.page-content-enter {
-  animation: page-content-enter 180ms ease-out both;
-}
-
-@keyframes page-content-enter {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page-content-enter { animation: none; }
-}
-
 /* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif;

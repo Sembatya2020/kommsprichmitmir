@@ -978,7 +978,6 @@
       
       const footer = document.querySelector('footer');
       newContent.forEach(el => {
-        el.classList.add('page-content-enter');
         if (footer) {
           document.body.insertBefore(el, footer);
         } else {

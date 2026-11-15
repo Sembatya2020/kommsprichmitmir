@@ -81,6 +81,9 @@
       "font_style": "standard"
     }
   ],
+  "about_subtitle_look": {
+    "title_style": "title"
+  },
   "about_values_heading": "Werte",
   "about_values_text": "",
   "about_page_title": "Über mich – Komm sprich mit mir",

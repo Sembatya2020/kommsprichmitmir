@@ -5,7 +5,8 @@
   "beratung_blocks": [
     {
       "type": "heading",
-      "text": "Beratung"
+      "text": "Beratung",
+      "size": "l"
     },
     {
       "type": "text",

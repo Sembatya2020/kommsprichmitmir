@@ -5,7 +5,8 @@
   "supervision_blocks": [
     {
       "type": "heading",
-      "text": "Raum zum Reflektieren"
+      "text": "Raum zum Reflektieren",
+      "size": "l"
     },
     {
       "type": "text",

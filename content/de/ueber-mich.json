@@ -1,4 +1,7 @@
 {
+  "about_intro_heading_look": {
+    "title_style": "title"
+  },
   "about_background_blocks": [
     {
       "type": "heading",
